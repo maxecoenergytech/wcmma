@@ -127,7 +127,7 @@ export default function Hero() {
 
                 <div className="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80 flex items-center gap-3">
                   <img
-                    src="/assets/sifu_sankar_dutta_card.jpg"
+                    src="/assets/sifu_sankar_dutta_portrait.jpg"
                     alt="General Secretary Sifu Sankar Dutta"
                     className="w-12 h-12 rounded-lg object-cover ring-1 ring-amber-500/50"
                   />

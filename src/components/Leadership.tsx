@@ -64,9 +64,9 @@ export default function Leadership() {
           <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 shadow-xl relative overflow-hidden group hover:border-amber-500/40 transition-colors">
             <div className="w-full sm:w-48 h-64 sm:h-auto rounded-xl overflow-hidden shrink-0 relative bg-slate-950 border border-slate-700">
               <img
-                src="/assets/sifu_sankar_dutta_card.jpg"
-                alt="Sifu Sankar Dutta practicing on Muk Yan Jong"
-                className="w-full h-full object-cover object-right group-hover:scale-105 transition-transform duration-300"
+                src="/assets/sifu_sankar_dutta_portrait.jpg"
+                alt="Sifu Sankar Dutta - General Secretary"
+                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute top-2 left-2 bg-blue-500 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">
                 General Secretary
