@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { UPCOMING_EVENT, ASSOCIATION_INFO } from "@/data/associationData";
+import { getAssetPath } from "@/utils/paths";
 import { Calendar, MapPin, Clock, QrCode, CheckCircle2, Ticket, ArrowRight, Sparkles } from "lucide-react";
 
 export default function FoundationEvent() {
@@ -50,7 +51,7 @@ export default function FoundationEvent() {
               {/* Event Poster image */}
               <div className="rounded-xl overflow-hidden border border-slate-800 shadow-lg">
                 <img
-                  src="/assets/event_35th_foundation.jpg"
+                  src={getAssetPath("/assets/event_35th_foundation.jpg")}
                   alt="35th Foundation of Day Wing Chun Martial Arts Association India"
                   className="w-full h-auto object-cover"
                 />

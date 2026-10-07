@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { VERIFIED_MEMBERS, MemberRecord } from "@/data/associationData";
+import { getAssetPath } from "@/utils/paths";
 import { ShieldCheck, Search, CheckCircle2, AlertCircle, Award, Calendar, Droplet, User, Hash, FileCheck } from "lucide-react";
 
 export default function VerificationPortal() {
@@ -108,7 +109,7 @@ export default function VerificationPortal() {
                   {/* Watermark in background */}
                   <div className="absolute right-6 top-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
                     <img
-                      src="/assets/wcmaai_logo.png"
+                      src={getAssetPath("/assets/wcmaai_logo.png")}
                       alt="Watermark"
                       className="w-80 h-80 object-contain"
                     />
@@ -119,7 +120,7 @@ export default function VerificationPortal() {
                     <div className="flex items-center justify-between flex-wrap gap-2">
                       <div className="flex items-center gap-3">
                         <img
-                          src="/assets/wcmaai_logo.png"
+                          src={getAssetPath("/assets/wcmaai_logo.png")}
                           alt="WCMAA Logo"
                           className="w-12 h-12 object-contain bg-white rounded-full p-0.5"
                         />

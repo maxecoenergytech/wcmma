@@ -1,3 +1,5 @@
+import { getAssetPath } from "@/utils/paths";
+
 export interface MemberRecord {
   membershipNo: string;
   name: string;
@@ -80,7 +82,7 @@ export const ASSOCIATION_INFO = {
       role: "Founder President & Chief Instructor",
       affiliation: "WCMAA, India",
       bio: "Pioneer of authentic Wing Chun in Northeast India, authorized signature authority for national belt passports and certificates under WCMAA Singapore charter.",
-      image: "/assets/grandmaster_portrait.jpg",
+      image: getAssetPath("/assets/grandmaster_portrait.jpg"),
     },
     {
       name: "Sifu Sankar Dutta",
@@ -90,7 +92,7 @@ export const ASSOCIATION_INFO = {
         "Vice President Assam Kungfu Federation",
       ],
       bio: "Veteran master dedicated to grassroots Wing Chun training, Wooden Dummy mastery, referee certifications, and youth self-defense camps.",
-      image: "/assets/sifu_sankar_dutta_portrait.jpg",
+      image: getAssetPath("/assets/sifu_sankar_dutta_portrait.jpg"),
     },
   ],
 };

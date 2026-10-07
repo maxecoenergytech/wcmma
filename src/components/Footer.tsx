@@ -1,5 +1,6 @@
 import React from "react";
 import { ASSOCIATION_INFO } from "@/data/associationData";
+import { getAssetPath, getRoutePath } from "@/utils/paths";
 import { MapPin, Phone, Mail, Award, Shield, ArrowUp } from "lucide-react";
 
 export default function Footer() {
@@ -32,7 +33,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img
-                src="/assets/wcmaai_logo.png"
+                src={getAssetPath("/assets/wcmaai_logo.png")}
                 alt="WCMAA India Logo"
                 className="w-12 h-12 rounded-full bg-white p-0.5 object-contain"
               />
@@ -61,37 +62,37 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="#about" className="hover:text-amber-400 transition-colors">
+                <a href={getRoutePath("#about")} className="hover:text-amber-400 transition-colors">
                   About Association & Lineage
                 </a>
               </li>
               <li>
-                <a href="#leadership" className="hover:text-amber-400 transition-colors">
+                <a href={getRoutePath("#leadership")} className="hover:text-amber-400 transition-colors">
                   Executive Sifus & Committee
                 </a>
               </li>
               <li>
-                <a href="#syllabus" className="hover:text-amber-400 transition-colors">
+                <a href={getRoutePath("#syllabus")} className="hover:text-amber-400 transition-colors">
                   Syllabus & Forms Breakdown
                 </a>
               </li>
               <li>
-                <a href="#branches" className="hover:text-amber-400 transition-colors">
+                <a href={getRoutePath("#branches")} className="hover:text-amber-400 transition-colors">
                   All-India Dojo Locator
                 </a>
               </li>
               <li>
-                <a href="#event" className="hover:text-amber-400 transition-colors">
+                <a href={getRoutePath("#event")} className="hover:text-amber-400 transition-colors">
                   35th Foundation Day Seminar
                 </a>
               </li>
               <li>
-                <a href="/affiliation" className="hover:text-amber-400 transition-colors text-amber-300 font-semibold">
+                <a href={getRoutePath("/affiliation")} className="hover:text-amber-400 transition-colors text-amber-300 font-semibold">
                   Dojo Affiliation & Sifu Accreditation
                 </a>
               </li>
               <li>
-                <a href="#verify" className="hover:text-emerald-400 transition-colors text-emerald-300">
+                <a href={getRoutePath("#verify")} className="hover:text-emerald-400 transition-colors text-emerald-300">
                   Verify Membership Card
                 </a>
               </li>

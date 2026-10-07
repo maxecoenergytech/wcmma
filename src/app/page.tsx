@@ -10,6 +10,7 @@ import MembershipApplication from "@/components/MembershipApplication";
 import AffiliationShowcase from "@/components/AffiliationShowcase";
 import Footer from "@/components/Footer";
 import { ASSOCIATION_INFO } from "@/data/associationData";
+import { getAssetPath } from "@/utils/paths";
 import { ShieldCheck, Award, HeartHandshake, BookOpen, Target, Sparkles, CheckCircle2 } from "lucide-react";
 
 export default function Home() {
@@ -74,7 +75,7 @@ export default function Home() {
               <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative space-y-6">
                 <div className="flex items-center gap-3 pb-4 border-b border-slate-800">
                   <img
-                    src="/assets/wcmaai_logo.png"
+                    src={getAssetPath("/assets/wcmaai_logo.png")}
                     alt="Emblem"
                     className="w-12 h-12 rounded-full bg-white p-1"
                   />

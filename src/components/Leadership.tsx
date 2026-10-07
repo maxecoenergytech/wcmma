@@ -1,5 +1,6 @@
 import React from "react";
 import { ASSOCIATION_INFO } from "@/data/associationData";
+import { getAssetPath } from "@/utils/paths";
 import { Shield, Award, Globe, Users, CheckCircle } from "lucide-react";
 
 export default function Leadership() {
@@ -26,7 +27,7 @@ export default function Leadership() {
           <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 shadow-xl relative overflow-hidden group hover:border-amber-500/40 transition-colors">
             <div className="w-full sm:w-48 h-64 sm:h-auto rounded-xl overflow-hidden shrink-0 relative bg-slate-950 border border-slate-700">
               <img
-                src="/assets/grandmaster_portrait.jpg"
+                src={getAssetPath("/assets/grandmaster_portrait.jpg")}
                 alt="Sifu Amar Singh Deori"
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
               />
@@ -64,7 +65,7 @@ export default function Leadership() {
           <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 shadow-xl relative overflow-hidden group hover:border-amber-500/40 transition-colors">
             <div className="w-full sm:w-48 h-64 sm:h-auto rounded-xl overflow-hidden shrink-0 relative bg-slate-950 border border-slate-700">
               <img
-                src="/assets/sifu_sankar_dutta_portrait.jpg"
+                src={getAssetPath("/assets/sifu_sankar_dutta_portrait.jpg")}
                 alt="Sifu Sankar Dutta - General Secretary"
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
               />
@@ -109,7 +110,7 @@ export default function Leadership() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 rounded-xl overflow-hidden border border-slate-800 shadow-md">
               <img
-                src="/assets/association_team.jpg"
+                src={getAssetPath("/assets/association_team.jpg")}
                 alt="Wing Chun Martial Arts Association India Team & Students"
                 className="w-full h-auto object-cover hover:scale-102 transition-transform duration-500"
               />

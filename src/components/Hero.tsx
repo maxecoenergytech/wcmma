@@ -1,5 +1,6 @@
 import React from "react";
 import { ASSOCIATION_INFO } from "@/data/associationData";
+import { getAssetPath } from "@/utils/paths";
 import { ShieldCheck, Calendar, MapPin, Award, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function Hero() {
@@ -96,7 +97,7 @@ export default function Hero() {
               {/* Poster / Founder Image Container */}
               <div className="relative w-full h-64 sm:h-72 rounded-xl overflow-hidden border border-slate-800 bg-slate-950 mb-4 group">
                 <img
-                  src="/assets/event_35th_foundation.jpg"
+                  src={getAssetPath("/assets/event_35th_foundation.jpg")}
                   alt="35th Foundation Day Wing Chun Martial Arts Association India"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -115,7 +116,7 @@ export default function Hero() {
               <div className="grid grid-cols-2 gap-3 pt-2 text-left">
                 <div className="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80 flex items-center gap-3">
                   <img
-                    src="/assets/grandmaster_portrait.jpg"
+                    src={getAssetPath("/assets/grandmaster_portrait.jpg")}
                     alt="Founder President Amar Singh Deori"
                     className="w-12 h-12 rounded-lg object-cover ring-1 ring-amber-500/50"
                   />
@@ -127,7 +128,7 @@ export default function Hero() {
 
                 <div className="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80 flex items-center gap-3">
                   <img
-                    src="/assets/sifu_sankar_dutta_portrait.jpg"
+                    src={getAssetPath("/assets/sifu_sankar_dutta_portrait.jpg")}
                     alt="General Secretary Sifu Sankar Dutta"
                     className="w-12 h-12 rounded-lg object-cover ring-1 ring-amber-500/50"
                   />

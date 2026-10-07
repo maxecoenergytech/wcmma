@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { ASSOCIATION_INFO } from "@/data/associationData";
-import { Menu, X, ShieldCheck, Phone, Award } from "lucide-react";
+import { getAssetPath, getRoutePath } from "@/utils/paths";
+import { Menu, X, ShieldCheck, Award } from "lucide-react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,10 +21,10 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo & Association Name */}
-          <a href="#" className="flex items-center gap-3 group">
+          <a href={getRoutePath("/")} className="flex items-center gap-3 group">
             <div className="relative w-14 h-14 bg-white rounded-full p-1 ring-2 ring-amber-500/80 shadow-md group-hover:scale-105 transition-transform duration-300">
               <img
-                src="/assets/wcmaai_logo.png"
+                src={getAssetPath("/assets/wcmaai_logo.png")}
                 alt="Wing Chun Martial Arts Association India Logo"
                 className="w-full h-full object-contain rounded-full"
               />
@@ -46,26 +46,26 @@ export default function Navbar() {
 
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-200">
-            <a href="#about" className="hover:text-amber-400 transition-colors">
+            <a href={getRoutePath("#about")} className="hover:text-amber-400 transition-colors">
               About & Lineage
             </a>
-            <a href="#leadership" className="hover:text-amber-400 transition-colors">
+            <a href={getRoutePath("#leadership")} className="hover:text-amber-400 transition-colors">
               Leadership
             </a>
-            <a href="#syllabus" className="hover:text-amber-400 transition-colors">
+            <a href={getRoutePath("#syllabus")} className="hover:text-amber-400 transition-colors">
               Syllabus
             </a>
-            <a href="#branches" className="hover:text-amber-400 transition-colors">
+            <a href={getRoutePath("#branches")} className="hover:text-amber-400 transition-colors">
               Branches & Sifus
             </a>
-            <a href="#event" className="hover:text-amber-400 transition-colors text-amber-300 font-semibold flex items-center gap-1.5">
+            <a href={getRoutePath("#event")} className="hover:text-amber-400 transition-colors text-amber-300 font-semibold flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
               35th Anniversary
             </a>
-            <a href="/affiliation" className="hover:text-amber-400 transition-colors font-semibold text-amber-300">
+            <a href={getRoutePath("/affiliation")} className="hover:text-amber-400 transition-colors font-semibold text-amber-300">
               Affiliation
             </a>
-            <a href="#verify" className="hover:text-amber-400 transition-colors flex items-center gap-1 text-slate-300">
+            <a href={getRoutePath("#verify")} className="hover:text-amber-400 transition-colors flex items-center gap-1 text-slate-300">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
               Verify Card
             </a>
@@ -74,13 +74,13 @@ export default function Navbar() {
           {/* Quick CTA */}
           <div className="hidden sm:flex items-center gap-3">
             <a
-              href="#verify"
+              href={getRoutePath("#verify")}
               className="px-4 py-2 text-xs uppercase tracking-wider font-bold rounded-lg border border-amber-500/60 text-amber-400 hover:bg-amber-500/10 transition-colors"
             >
               Verify ID
             </a>
             <a
-              href="#join"
+              href={getRoutePath("#join")}
               className="px-4 py-2 text-xs uppercase tracking-wider font-bold rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 hover:from-amber-400 hover:to-amber-500 shadow-md transition-all"
             >
               Join / Affiliate
@@ -104,49 +104,49 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="lg:hidden bg-slate-900 border-b border-slate-800 px-4 pt-3 pb-6 space-y-3">
           <a
-            href="#about"
+            href={getRoutePath("#about")}
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-amber-400"
           >
             About & Lineage
           </a>
           <a
-            href="#leadership"
+            href={getRoutePath("#leadership")}
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-amber-400"
           >
             Leadership & Sifus
           </a>
           <a
-            href="#syllabus"
+            href={getRoutePath("#syllabus")}
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-amber-400"
           >
             Curriculum & Syllabus
           </a>
           <a
-            href="#branches"
+            href={getRoutePath("#branches")}
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-amber-400"
           >
             Branch Locator
           </a>
           <a
-            href="#event"
+            href={getRoutePath("#event")}
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-md text-base font-semibold text-amber-400 hover:bg-slate-800"
           >
             35th Foundation Anniversary
           </a>
           <a
-            href="/affiliation"
+            href={getRoutePath("/affiliation")}
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-md text-base font-semibold text-amber-400 hover:bg-slate-800"
           >
             Dojo Affiliation & Sifu Certification
           </a>
           <a
-            href="#verify"
+            href={getRoutePath("#verify")}
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-md text-base font-medium text-emerald-400 hover:bg-slate-800 flex items-center gap-2"
           >
@@ -155,7 +155,7 @@ export default function Navbar() {
           </a>
           <div className="pt-2 flex flex-col gap-2">
             <a
-              href="#join"
+              href={getRoutePath("#join")}
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center px-4 py-2.5 rounded-lg bg-amber-500 font-bold text-slate-950 text-sm"
             >
