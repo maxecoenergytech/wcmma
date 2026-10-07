@@ -90,7 +90,7 @@ export const ASSOCIATION_INFO = {
         "Vice President Assam Kungfu Federation",
       ],
       bio: "Veteran master dedicated to grassroots Wing Chun training, Wooden Dummy mastery, referee certifications, and youth self-defense camps.",
-      image: "/assets/sifu_sankar_dutta_card.jpg",
+      image: "/assets/sifu_sankar_dutta_portrait.jpg",
     },
   ],
 };
