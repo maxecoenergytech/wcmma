@@ -1,7 +1,7 @@
 # Wing Chun Martial Arts Association India (WCMAA India)
 
 > **Official National Portal**  
-> **Live Website:** [https://maxecoenergytech.github.io/wcmma/](https://maxecoenergytech.github.io/wcmma/)  
+> **Official National Portal:** [https://www.wcmaaindia.com/](https://www.wcmaaindia.com/) (Also available via [GitHub Pages](https://maxecoenergytech.github.io/wcmma/))  
 > **Repository:** [https://github.com/maxecoenergytech/wcmma.git](https://github.com/maxecoenergytech/wcmma.git)  
 > **Heritage:** 35 Years of Wing Chun Heritage in India (1991–2026)  
 > **Registration:** KAM/240/W/08 of 2005–2006 (Assam)  
@@ -12,8 +12,9 @@
 
 This repository contains the official website for the **Wing Chun Martial Arts Association India (WCMAA India)**. It is built using modern, open, and portable web technologies (Next.js, React, Tailwind CSS, TypeScript) and is statically exported to standard HTML, CSS, JavaScript, and WebP images.
 
-The website is hosted on **GitHub Pages**, meaning:
-* **No hosting fees** — 100% free hosting provided by GitHub Pages.
+The website is hosted on **GitHub Pages** with custom domain connection via **Cloudflare DNS / CDN**:
+* **Official Custom Domain:** `www.wcmaaindia.com`
+* **No hosting fees** — 100% free hosting provided by GitHub Pages / Cloudflare.
 * **No database servers to crash** — It runs as high-speed static web pages.
 * **No proprietary lock-in** — Any competent web developer can download, edit, and maintain this project on any computer.
 
@@ -25,6 +26,7 @@ For complete step-by-step guides, open the [`docs/`](./docs/) folder:
 
 | Document | Who It's For | Description |
 | :--- | :--- | :--- |
+| [**CLOUDFLARE-SETUP-GUIDE.md**](./docs/CLOUDFLARE-SETUP-GUIDE.md) | **Owner / Dev** | Step-by-step setup to connect domain `www.wcmaaindia.com` with Cloudflare DNS, SSL, and redirect rules. |
 | [**OWNER-GUIDE.md**](./docs/OWNER-GUIDE.md) | **Website Owner** | Simple English guide: *"If I want to change something, what do I tell my developer?"* |
 | [**VERSION-SWITCHING-GUIDE.md**](./docs/VERSION-SWITCHING-GUIDE.md) | **Owner / Dev** | How to switch between the **Simple (Lightweight)** and **Premium (3D Cinematic)** versions with 1 click. |
 | [**WEBSITE-HANDOVER.md**](./docs/WEBSITE-HANDOVER.md) | **New Developers** | Complete technical handover explaining the architecture, portability, and structure. |

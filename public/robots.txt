@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://maxecoenergytech.github.io/wcmma/sitemap.xml
+Sitemap: https://www.wcmaaindia.com/sitemap.xml

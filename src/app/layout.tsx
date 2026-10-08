@@ -10,7 +10,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://maxecoenergytech.github.io/wcmma/"),
+  metadataBase: new URL("https://www.wcmaaindia.com/"),
   title: "Wing Chun Martial Arts Association India | Traditional Wing Chun Training",
   description:
     "Wing Chun Martial Arts Association India promotes structured traditional Wing Chun training, instructor development, academy affiliation, grading, seminars and martial arts education across India.",
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     "Wing Chun training India",
   ],
   alternates: {
-    canonical: "https://maxecoenergytech.github.io/wcmma/",
+    canonical: "https://www.wcmaaindia.com/",
   },
   openGraph: {
     title: "Wing Chun Martial Arts Association India | Traditional Wing Chun Training",
     description:
       "Wing Chun Martial Arts Association India promotes structured traditional Wing Chun training, instructor development, academy affiliation, grading, seminars and martial arts education across India. 35 Years of Heritage (1991–2026).",
-    url: "https://maxecoenergytech.github.io/wcmma/",
+    url: "https://www.wcmaaindia.com/",
     siteName: "Wing Chun Martial Arts Association India",
     locale: "en_IN",
     type: "website",
@@ -69,12 +69,12 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "SportsOrganization",
-        "@id": "https://maxecoenergytech.github.io/wcmma/#organization",
+        "@id": "https://www.wcmaaindia.com/#organization",
         "name": "Wing Chun Martial Arts Association India",
         "alternateName": "WCMAA India",
         "foundingDate": "1991",
-        "url": "https://maxecoenergytech.github.io/wcmma/",
-        "logo": "https://maxecoenergytech.github.io/wcmma/assets/wcmaai_logo.webp",
+        "url": "https://www.wcmaaindia.com/",
+        "logo": "https://www.wcmaaindia.com/assets/wcmaai_logo.webp",
         "description":
           "National martial arts association dedicated to the promotion and structured teaching of traditional Wing Chun Kung Fu in India.",
         "identifier": "KAM/240/W/08 of 2005–2006",
@@ -100,15 +100,15 @@ export default function RootLayout({
       },
       {
         "@type": "WebSite",
-        "@id": "https://maxecoenergytech.github.io/wcmma/#website",
-        "url": "https://maxecoenergytech.github.io/wcmma/",
+        "@id": "https://www.wcmaaindia.com/#website",
+        "url": "https://www.wcmaaindia.com/",
         "name": "Wing Chun Martial Arts Association India",
-        "publisher": { "@id": "https://maxecoenergytech.github.io/wcmma/#organization" },
+        "publisher": { "@id": "https://www.wcmaaindia.com/#organization" },
         "inLanguage": "en-IN"
       },
       {
         "@type": "SportsActivityLocation",
-        "@id": "https://maxecoenergytech.github.io/wcmma/#training-ground",
+        "@id": "https://www.wcmaaindia.com/#training-ground",
         "name": "North East Academy Wing Chun Training Ground",
         "address": {
           "@type": "PostalAddress",
@@ -122,39 +122,39 @@ export default function RootLayout({
       },
       {
         "@type": "Person",
-        "@id": "https://maxecoenergytech.github.io/wcmma/#founder",
+        "@id": "https://www.wcmaaindia.com/#founder",
         "name": "Sifu Amar Singh Deori",
         "jobTitle": "Founder President & Chief Instructor",
-        "worksFor": { "@id": "https://maxecoenergytech.github.io/wcmma/#organization" }
+        "worksFor": { "@id": "https://www.wcmaaindia.com/#organization" }
       },
       {
         "@type": "Person",
-        "@id": "https://maxecoenergytech.github.io/wcmma/#general-secretary",
+        "@id": "https://www.wcmaaindia.com/#general-secretary",
         "name": "Sifu Sankar Dutta",
         "jobTitle": "General Secretary",
-        "worksFor": { "@id": "https://maxecoenergytech.github.io/wcmma/#organization" }
+        "worksFor": { "@id": "https://www.wcmaaindia.com/#organization" }
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://maxecoenergytech.github.io/wcmma/#breadcrumb",
+        "@id": "https://www.wcmaaindia.com/#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://maxecoenergytech.github.io/wcmma/"
+            "item": "https://www.wcmaaindia.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Affiliation",
-            "item": "https://maxecoenergytech.github.io/wcmma/affiliation/"
+            "item": "https://www.wcmaaindia.com/affiliation/"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Legal & Governance",
-            "item": "https://maxecoenergytech.github.io/wcmma/legal/"
+            "item": "https://www.wcmaaindia.com/legal/"
           }
         ]
       }
