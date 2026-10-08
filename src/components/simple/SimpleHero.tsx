@@ -12,7 +12,7 @@ import {
 
 export default function SimpleHero() {
   return (
-    <section className="relative bg-slate-950 text-white border-b border-slate-800 py-16 sm:py-24">
+    <section className="relative bg-slate-950 text-white border-b border-slate-800 py-10 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left: Clean Federation Text */}

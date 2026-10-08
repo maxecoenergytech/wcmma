@@ -68,12 +68,12 @@ export default function HeritageTimeline() {
         </div>
 
         {/* Timeline Flow */}
-        <div className="relative border-l-2 border-slate-800 ml-4 md:ml-32 pl-6 md:pl-10 space-y-12">
+        <div className="relative border-l-2 border-slate-800 ml-8 md:ml-32 pl-6 md:pl-10 space-y-12">
           {milestones.map((item, idx) => (
             <div key={idx} className="relative group">
-              {/* Timeline Pin Indicator */}
+              {/* Timeline Pin Indicator accurately centered on border line */}
               <div
-                className={`absolute -left-[31px] md:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-slate-950 border-4 ${item.border} group-hover:scale-125 transition-transform shadow`}
+                className={`absolute -left-[35px] md:-left-[51px] top-1.5 w-5 h-5 rounded-full bg-slate-950 border-4 ${item.border} group-hover:scale-125 transition-transform shadow`}
               />
 
               {/* Year Label for Desktop */}

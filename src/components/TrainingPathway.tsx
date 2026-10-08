@@ -97,7 +97,7 @@ export default function TrainingPathway() {
         </div>
 
         {/* 5 Interactive Cards with Subtle 3D Hover Treatment */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 relative">
           {pathwaySteps.map((step, idx) => (
             <div key={idx} className="flex flex-col items-center">
               <div

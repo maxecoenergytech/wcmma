@@ -70,7 +70,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden xl:flex items-center space-x-5 text-xs font-bold uppercase tracking-wider text-slate-300">
+          <div className="hidden xl:flex items-center space-x-3.5 2xl:space-x-4 text-[11px] 2xl:text-xs font-bold uppercase tracking-wider text-slate-300">
             <a href={getRoutePath("/")} className="hover:text-amber-400 transition-colors">
               HOME
             </a>
@@ -79,9 +79,6 @@ export default function Navbar() {
             </a>
             <a href={getRoutePath("#syllabus")} className="hover:text-amber-400 transition-colors">
               WING CHUN
-            </a>
-            <a href={getRoutePath("#syllabus")} className="hover:text-amber-400 transition-colors">
-              SYLLABUS
             </a>
             <a href={getRoutePath("#branches")} className="hover:text-amber-400 transition-colors">
               DOJO DIRECTORY

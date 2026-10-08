@@ -268,14 +268,14 @@ export default function WoodenDummyCanvas({ className = "" }: WoodenDummyCanvasP
       // Adapt dummy position based on screen width
       if (w < 768) {
         // Mobile: center the dummy and push camera slightly back
-        dummyGroup.position.set(0, -0.3, 0);
-        camera.position.set(0, 1.2, 4.8);
+        dummyGroup.position.set(0, -0.32, 0);
+        camera.position.set(0, 1.25, 4.8);
       } else if (w < 1024) {
-        dummyGroup.position.set(0.35, -0.25, 0);
-        camera.position.set(0, 1.25, 4.5);
+        dummyGroup.position.set(0.45, -0.25, 0);
+        camera.position.set(0, 1.25, 4.4);
       } else {
-        dummyGroup.position.set(0.7, -0.2, 0);
-        camera.position.set(0, 1.25, 4.3);
+        dummyGroup.position.set(0.85, -0.2, 0);
+        camera.position.set(0, 1.25, 4.2);
       }
 
       camera.updateProjectionMatrix();

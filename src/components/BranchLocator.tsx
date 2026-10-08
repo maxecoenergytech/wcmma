@@ -71,7 +71,7 @@ export default function BranchLocator() {
           </div>
 
           {/* Quick Filter Chips */}
-          <div className="flex items-center justify-start sm:justify-center gap-2 pt-3 overflow-x-auto pb-1 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div className="flex items-center justify-start sm:justify-center gap-2 pt-3 overflow-x-auto pb-1 scrollbar-none max-w-full">
             {regions.map((reg) => (
               <button
                 key={reg}

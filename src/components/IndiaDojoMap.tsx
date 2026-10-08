@@ -86,7 +86,7 @@ export default function IndiaDojoMap() {
             </div>
 
             {/* Map Container */}
-            <div className="relative w-full h-[360px] sm:h-[420px] my-4 flex items-center justify-center">
+            <div className="relative w-full h-[360px] sm:h-[420px] my-4 flex items-center justify-center overflow-hidden">
               {/* Stylized SVG Map of India */}
               <svg
                 viewBox="0 0 500 550"
