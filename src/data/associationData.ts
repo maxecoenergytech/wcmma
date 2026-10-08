@@ -49,6 +49,7 @@ export const ASSOCIATION_INFO = {
   contacts: {
     phones: ["+91 78969 62207", "+91 90852 96178", "+91 88766 53722"],
     email: "duttasankar88@gmail.com",
+    facebook: "https://www.facebook.com/wingchunkungfuindiaofficial",
     hqAddress: "Bathoupuri, ISBT Lokhra, Guwahati - 781035, Assam, India",
     trainingGround: "North East Academy Playground, Bhetapara, Beltola, Guwahati, Assam",
     residenceOffice: "H.No. 9, Bhaskar Nagar, Bamunimaidam, Guwahati - 781021, Assam",
