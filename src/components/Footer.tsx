@@ -33,8 +33,11 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img
-                src={getAssetPath("/assets/wcmaai_logo.png")}
+                src={getAssetPath("/assets/wcmaai_logo_sm.webp")}
                 alt="WCMAA India Logo"
+                width={48}
+                height={48}
+                loading="lazy"
                 className="w-12 h-12 rounded-full bg-white p-0.5 object-contain"
               />
               <div>

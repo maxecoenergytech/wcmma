@@ -3,7 +3,22 @@
 import React, { useState } from "react";
 import { VERIFIED_MEMBERS, MemberRecord } from "@/data/associationData";
 import { getAssetPath } from "@/utils/paths";
-import { ShieldCheck, Search, CheckCircle2, AlertCircle, Award, Calendar, Droplet, User, Hash, FileCheck } from "lucide-react";
+import {
+  ShieldCheck,
+  Search,
+  CheckCircle2,
+  AlertCircle,
+  Award,
+  Calendar,
+  Droplet,
+  User,
+  Hash,
+  FileCheck,
+  Printer,
+  Sparkles,
+  QrCode,
+  Download,
+} from "lucide-react";
 
 export default function VerificationPortal() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -31,8 +46,12 @@ export default function VerificationPortal() {
     setResult(found || null);
   };
 
+  const handlePrint = () => {
+    window.print();
+  };
+
   return (
-    <section id="verify" className="py-20 bg-slate-950 border-b border-slate-800 relative">
+    <section id="verify" className="py-16 sm:py-24 bg-[#050a12] border-b border-slate-800 martial-bg-pattern relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
@@ -40,10 +59,10 @@ export default function VerificationPortal() {
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
             National Accreditation & Security Registry
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
             Official Credential & Member Verification
           </h2>
-          <p className="text-slate-400 text-base">
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
             Authenticate genuine Wing Chun practitioner credentials, instructor licenses, and belt gradings issued under Government Registration <strong>KAM/240/W/08</strong> and <strong>WCMAA Singapore</strong>.
           </p>
         </div>
@@ -63,24 +82,24 @@ export default function VerificationPortal() {
             </div>
             <button
               type="submit"
-              className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-black text-sm tracking-wide shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 transition-all"
+              className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 via-emerald-400 to-emerald-500 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-black text-sm tracking-wide shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 transition-all hover:scale-[1.02]"
             >
-              <FileCheck className="w-4 h-4" />
+              <FileCheck className="w-4 h-4 text-slate-950" />
               Verify Now
             </button>
           </form>
 
           {/* Quick Click Samples */}
           <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs text-slate-400">
-            <span>Try sample numbers:</span>
+            <span>Instant test queries:</span>
             {VERIFIED_MEMBERS.map((m) => (
               <button
                 key={m.membershipNo}
                 type="button"
                 onClick={() => handleQuickLookup(m.membershipNo)}
-                className="underline hover:text-amber-400 font-mono text-slate-300 bg-slate-900 px-2 py-0.5 rounded border border-slate-800"
+                className="underline hover:text-amber-400 font-mono text-slate-300 bg-slate-900/90 px-2.5 py-1 rounded-md border border-slate-800 transition-colors"
               >
-                #{m.membershipNo} ({m.name.split(" ")[0]})
+                #{m.membershipNo} ({m.name.split(" ")[0]} - {m.rank})
               </button>
             ))}
           </div>
@@ -92,54 +111,76 @@ export default function VerificationPortal() {
             {result ? (
               <div className="space-y-6">
                 {/* Official Verification Notice */}
-                <div className="bg-emerald-950/40 border border-emerald-500/40 p-4 rounded-xl flex items-center gap-3 text-emerald-300">
-                  <CheckCircle2 className="w-6 h-6 text-emerald-400 shrink-0" />
-                  <div>
-                    <h4 className="font-bold text-sm text-white">
-                      Verified Official National Member
-                    </h4>
-                    <p className="text-xs text-emerald-300/90">
-                      Record matches official WCMAAI National Archives under authority of Founder President Amar Singh Deori.
-                    </p>
+                <div className="bg-emerald-950/60 border-2 border-emerald-500/50 p-4 rounded-xl flex items-center justify-between flex-wrap gap-3 text-emerald-300 shadow-xl">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-emerald-400 shrink-0" />
+                    <div>
+                      <h4 className="font-extrabold text-sm sm:text-base text-white">
+                        Authenticated Active National Member
+                      </h4>
+                      <p className="text-xs text-emerald-200/90">
+                        Record verified in official WCMAAI National Archives under authority of Founder President Amar Singh Deori.
+                      </p>
+                    </div>
                   </div>
+                  <button
+                    onClick={handlePrint}
+                    className="px-3.5 py-1.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-400/40 text-emerald-300 text-xs font-bold flex items-center gap-1.5 transition-colors"
+                  >
+                    <Printer className="w-3.5 h-3.5" />
+                    Print / Save Pass
+                  </button>
                 </div>
 
                 {/* Digital Replica of the Physical Membership Card */}
-                <div className="relative bg-slate-900 border-2 border-amber-500/60 rounded-2xl p-6 sm:p-8 shadow-2xl overflow-hidden text-slate-100">
-                  {/* Watermark in background */}
-                  <div className="absolute right-6 top-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
+                <div
+                  id="printable-member-card"
+                  className="relative bg-gradient-to-br from-slate-900 via-slate-950 to-[#071322] border-2 border-amber-500/70 rounded-2xl p-6 sm:p-8 shadow-2xl overflow-hidden text-slate-100 gold-border-glow"
+                >
+                  {/* Subtle Watermark in background */}
+                  <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
                     <img
-                      src={getAssetPath("/assets/wcmaai_logo.png")}
+                      src={getAssetPath("/assets/wcmaai_logo.webp")}
                       alt="Watermark"
-                      className="w-80 h-80 object-contain"
+                      width={320}
+                      height={320}
+                      className="w-72 h-72 object-contain"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
 
                   {/* Card Header matching physical card */}
                   <div className="border-b border-slate-800 pb-4 mb-6">
-                    <div className="flex items-center justify-between flex-wrap gap-2">
+                    <div className="flex items-center justify-between flex-wrap gap-3">
                       <div className="flex items-center gap-3">
-                        <img
-                          src={getAssetPath("/assets/wcmaai_logo.png")}
-                          alt="WCMAA Logo"
-                          className="w-12 h-12 object-contain bg-white rounded-full p-0.5"
-                        />
+                        <div className="w-12 h-12 rounded-full bg-white p-0.5 ring-2 ring-amber-500 shadow-sm shrink-0">
+                          <img
+                            src={getAssetPath("/assets/wcmaai_logo_sm.webp")}
+                            alt="WCMAA Logo"
+                            width={48}
+                            height={48}
+                            className="w-full h-full object-contain rounded-full"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
                         <div>
-                          <p className="text-[11px] font-mono tracking-widest text-amber-400 font-bold uppercase">
-                            MEMBERSHIP CARD
+                          <p className="text-[10px] font-mono tracking-widest text-amber-400 font-extrabold uppercase">
+                            OFFICIAL DIGITAL MEMBERSHIP PASSPORT
                           </p>
-                          <h3 className="text-base sm:text-lg font-black text-white tracking-wide">
+                          <h3 className="text-sm sm:text-lg font-black text-white tracking-wide">
                             WING CHUN MARTIAL ARTS ASSOCIATION INDIA
                           </h3>
                           <p className="text-xs font-bold text-red-500 tracking-wider">
-                            WING CHUN KUNG-FU
+                            WING CHUN KUNG-FU • 詠春拳
                           </p>
                         </div>
                       </div>
-                      <div className="text-right text-[11px] font-mono text-slate-400">
+                      <div className="text-left sm:text-right text-[10px] sm:text-[11px] font-mono text-slate-400">
                         <p>HQ: BATHOUPURI ISBT LOKHRA, GUWAHATI-35</p>
-                        <p className="text-amber-300">REGN. NO. KAM/240/W/08 OF 2005-2006</p>
-                        <p className="text-emerald-400 font-semibold">REGN. WCMAA SINGAPORE</p>
+                        <p className="text-amber-300 font-semibold">REGN. NO. KAM/240/W/08 OF 2005-2006</p>
+                        <p className="text-emerald-400 font-bold">REGN. WCMAA SINGAPORE</p>
                       </div>
                     </div>
                   </div>
@@ -148,54 +189,58 @@ export default function VerificationPortal() {
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center">
                     {/* Left: Cardholder Photo Placeholder / Avatar */}
                     <div className="flex flex-col items-center sm:items-start space-y-2">
-                      <div className="w-32 h-40 bg-slate-800 rounded-lg border-2 border-slate-700 flex flex-col items-center justify-center p-2 text-center shadow-inner relative overflow-hidden">
-                        <User className="w-16 h-16 text-slate-600 mb-1" />
-                        <span className="text-[10px] text-slate-400 font-mono">
+                      <div className="w-32 h-40 bg-gradient-to-b from-slate-800 to-slate-900 rounded-xl border-2 border-slate-700 flex flex-col items-center justify-center p-2 text-center shadow-inner relative overflow-hidden">
+                        <User className="w-16 h-16 text-slate-500 mb-1" />
+                        <span className="text-[10px] text-slate-300 font-mono font-bold">
                           CERTIFIED HOLDER
                         </span>
-                        <div className="absolute bottom-1 bg-emerald-600/90 text-white text-[9px] font-bold px-2 py-0.5 rounded">
+                        {/* Simulated Smart Card Hologram Chip */}
+                        <div className="w-7 h-5 rounded bg-amber-400/30 border border-amber-400/50 mt-1 flex items-center justify-center">
+                          <span className="text-[8px] font-mono text-amber-200">CHIP</span>
+                        </div>
+                        <div className="absolute bottom-1 bg-emerald-600 text-white text-[9px] font-black px-2 py-0.5 rounded shadow">
                           STATUS: {result.status}
                         </div>
                       </div>
                     </div>
 
                     {/* Middle: Member Credentials */}
-                    <div className="sm:col-span-2 space-y-3 text-xs sm:text-sm font-sans">
+                    <div className="sm:col-span-2 space-y-2.5 text-xs sm:text-sm font-sans">
                       <div className="grid grid-cols-3 border-b border-slate-800/80 pb-1.5">
                         <span className="text-slate-400 font-medium">NAME:</span>
-                        <span className="col-span-2 font-bold text-white text-base">
+                        <span className="col-span-2 font-black text-white text-base">
                           {result.name}
                         </span>
                       </div>
                       <div className="grid grid-cols-3 border-b border-slate-800/80 pb-1.5">
                         <span className="text-slate-400 font-medium">RANK:</span>
-                        <span className="col-span-2 font-extrabold text-amber-400">
+                        <span className="col-span-2 font-black text-amber-400 text-base">
                           {result.rank}
                         </span>
                       </div>
                       <div className="grid grid-cols-3 border-b border-slate-800/80 pb-1.5">
                         <span className="text-slate-400 font-medium">MEMBERSHIP NO.:</span>
-                        <span className="col-span-2 font-mono font-bold text-white">
-                          {result.membershipNo}
+                        <span className="col-span-2 font-mono font-extrabold text-white">
+                          #{result.membershipNo}
                         </span>
                       </div>
                       <div className="grid grid-cols-3 border-b border-slate-800/80 pb-1.5">
                         <span className="text-slate-400 font-medium">DOB:</span>
-                        <span className="col-span-2 text-slate-200">{result.dob}</span>
+                        <span className="col-span-2 text-slate-200 font-medium">{result.dob}</span>
                       </div>
                       <div className="grid grid-cols-3 border-b border-slate-800/80 pb-1.5">
                         <span className="text-slate-400 font-medium">BLOOD GROUP:</span>
-                        <span className="col-span-2 font-bold text-red-400">{result.bloodGroup}</span>
+                        <span className="col-span-2 font-black text-red-400">{result.bloodGroup}</span>
                       </div>
                       <div className="grid grid-cols-3 border-b border-slate-800/80 pb-1.5">
                         <span className="text-slate-400 font-medium">VALIDITY:</span>
-                        <span className="col-span-2 text-slate-200">
+                        <span className="col-span-2 text-slate-200 font-medium">
                           {result.issueDate} to <strong className="text-white">{result.validUpto}</strong>
                         </span>
                       </div>
                       <div className="grid grid-cols-3">
                         <span className="text-slate-400 font-medium">BRANCH / DOJO:</span>
-                        <span className="col-span-2 text-slate-200">{result.branch}</span>
+                        <span className="col-span-2 text-slate-200 font-medium">{result.branch}</span>
                       </div>
                     </div>
                   </div>
@@ -203,8 +248,8 @@ export default function VerificationPortal() {
                   {/* Card Footer: Signature & Motto */}
                   <div className="mt-6 pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div className="text-center sm:text-left">
-                      <p className="text-[11px] text-slate-500 font-mono">AUTHORIZED SIGNATORY</p>
-                      <p className="font-serif italic text-amber-300 text-sm font-semibold">
+                      <p className="text-[10px] text-slate-500 font-mono">AUTHORIZED SIGNATURE</p>
+                      <p className="font-serif italic text-amber-300 text-base font-bold">
                         Amar Singh Deori
                       </p>
                       <p className="text-[10px] text-slate-400">
@@ -212,18 +257,18 @@ export default function VerificationPortal() {
                       </p>
                     </div>
 
-                    <div className="px-3 py-1.5 rounded bg-slate-950 border border-slate-800 text-[11px] font-bold text-amber-400 uppercase tracking-widest text-center">
+                    <div className="px-3.5 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-[10px] sm:text-[11px] font-black text-amber-400 uppercase tracking-widest text-center shadow">
                       LEARN WING CHUN KUNG FU FOR SELF DEFENSE
                     </div>
                   </div>
                 </div>
               </div>
             ) : (
-              <div className="bg-red-950/30 border border-red-500/40 p-6 rounded-xl flex items-start gap-3 text-red-300">
+              <div className="bg-red-950/40 border-2 border-red-500/40 p-6 rounded-2xl flex items-start gap-3.5 text-red-300 shadow-xl">
                 <AlertCircle className="w-6 h-6 text-red-400 shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-bold text-base text-white">Record Not Found</h4>
-                  <p className="text-xs text-red-200/90 mt-1 leading-relaxed">
+                  <h4 className="font-extrabold text-base text-white">Record Not Found</h4>
+                  <p className="text-xs sm:text-sm text-red-200/90 mt-1 leading-relaxed">
                     No active membership record was found for "{searchQuery}". Please verify that the membership number is entered correctly, or contact the association administrative office at <strong>duttasankar88@gmail.com</strong> or call <strong>+91 78969 62207</strong> for manual verification.
                   </p>
                 </div>
@@ -234,29 +279,29 @@ export default function VerificationPortal() {
 
         {/* Association Authenticity Guarantee Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto pt-6">
-          <div className="bg-slate-900/60 p-5 rounded-xl border border-slate-800 flex items-start gap-3">
+          <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-3.5 shadow-lg">
             <Award className="w-5 h-5 text-amber-400 shrink-0 mt-1" />
             <div>
               <h5 className="font-bold text-sm text-white">Govt. Recognized Charter</h5>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-slate-400 mt-1 leading-relaxed">
                 Registered under Societies Registration Act: Regn. No. KAM/240/W/08 of 2005-2006.
               </p>
             </div>
           </div>
-          <div className="bg-slate-900/60 p-5 rounded-xl border border-slate-800 flex items-start gap-3">
+          <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-3.5 shadow-lg">
             <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0 mt-1" />
             <div>
               <h5 className="font-bold text-sm text-white">International Lineage Seal</h5>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-slate-400 mt-1 leading-relaxed">
                 Affiliated with WCMAA Singapore & The World Kuoshu Federation (TWKSF).
               </p>
             </div>
           </div>
-          <div className="bg-slate-900/60 p-5 rounded-xl border border-slate-800 flex items-start gap-3">
+          <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-3.5 shadow-lg">
             <FileCheck className="w-5 h-5 text-blue-400 shrink-0 mt-1" />
             <div>
               <h5 className="font-bold text-sm text-white">Tamper-Proof Grading</h5>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-slate-400 mt-1 leading-relaxed">
                 Centralized registry safeguarding genuine practitioners against counterfeit dojos.
               </p>
             </div>

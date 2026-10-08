@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { UPCOMING_EVENT, ASSOCIATION_INFO } from "@/data/associationData";
 import { getAssetPath } from "@/utils/paths";
-import { Calendar, MapPin, Clock, QrCode, CheckCircle2, Ticket, ArrowRight, Sparkles } from "lucide-react";
+import { Calendar, MapPin, Clock, QrCode, CheckCircle2, Ticket, ArrowRight, Sparkles, Timer, MessageSquare } from "lucide-react";
 
 export default function FoundationEvent() {
   const [formData, setFormData] = useState({
@@ -16,6 +16,30 @@ export default function FoundationEvent() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    // Target date: September 6, 2026 09:00:00 IST
+    const eventDate = new Date("2026-09-06T09:00:00+05:30").getTime();
+
+    const updateTimer = () => {
+      const now = new Date().getTime();
+      const difference = eventDate - now;
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        });
+      }
+    };
+
+    updateTimer();
+    const interval = setInterval(updateTimer, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,13 +48,13 @@ export default function FoundationEvent() {
   };
 
   return (
-    <section id="event" className="py-20 bg-gradient-to-b from-[#070e1b] via-slate-950 to-[#070e1b] border-b border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="event" className="py-20 bg-gradient-to-b from-[#070e1b] via-slate-950 to-[#070e1b] border-b border-slate-800 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider">
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
-            Historic Milestone Event
+            Historic Milestone Event • 35-Year Heritage
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
             35th Foundation Day Celebration
@@ -41,6 +65,29 @@ export default function FoundationEvent() {
           <p className="text-xs uppercase tracking-widest text-slate-400 font-semibold">
             {ASSOCIATION_INFO.taglines.secondary}
           </p>
+
+          {/* Live Countdown Timer */}
+          <div className="pt-4 flex items-center justify-center gap-2 sm:gap-4">
+            <div className="bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 text-center min-w-[64px] sm:min-w-[76px] shadow-lg">
+              <span className="block text-xl sm:text-2xl font-black text-amber-400 font-mono">{timeLeft.days}</span>
+              <span className="text-[10px] uppercase font-bold text-slate-400">Days</span>
+            </div>
+            <span className="text-slate-600 font-bold text-xl">:</span>
+            <div className="bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 text-center min-w-[64px] sm:min-w-[76px] shadow-lg">
+              <span className="block text-xl sm:text-2xl font-black text-white font-mono">{String(timeLeft.hours).padStart(2, "0")}</span>
+              <span className="text-[10px] uppercase font-bold text-slate-400">Hours</span>
+            </div>
+            <span className="text-slate-600 font-bold text-xl">:</span>
+            <div className="bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 text-center min-w-[64px] sm:min-w-[76px] shadow-lg">
+              <span className="block text-xl sm:text-2xl font-black text-white font-mono">{String(timeLeft.minutes).padStart(2, "0")}</span>
+              <span className="text-[10px] uppercase font-bold text-slate-400">Mins</span>
+            </div>
+            <span className="text-slate-600 font-bold text-xl">:</span>
+            <div className="bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 text-center min-w-[64px] sm:min-w-[76px] shadow-lg">
+              <span className="block text-xl sm:text-2xl font-black text-amber-400 font-mono">{String(timeLeft.seconds).padStart(2, "0")}</span>
+              <span className="text-[10px] uppercase font-bold text-slate-400">Secs</span>
+            </div>
+          </div>
         </div>
 
         {/* Main Event Showcase Grid */}
@@ -48,11 +95,14 @@ export default function FoundationEvent() {
           {/* Left: Poster & Event Details */}
           <div className="lg:col-span-7 space-y-6">
             <div className="bg-slate-900 rounded-2xl border border-slate-800 p-6 sm:p-8 shadow-2xl space-y-6">
-              {/* Event Poster image */}
-              <div className="rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+              {/* Event Poster image - Optimized WebP with explicit dimensions */}
+              <div className="rounded-xl overflow-hidden border border-slate-800 shadow-xl bg-slate-950">
                 <img
-                  src={getAssetPath("/assets/event_35th_foundation.jpg")}
-                  alt="35th Foundation of Day Wing Chun Martial Arts Association India"
+                  src={getAssetPath("/assets/event_35th_foundation.webp")}
+                  alt="35th Foundation Day Celebration Wing Chun Martial Arts Association India"
+                  width={718}
+                  height={474}
+                  loading="lazy"
                   className="w-full h-auto object-cover"
                 />
               </div>

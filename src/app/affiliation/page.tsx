@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MobileActionDock from "@/components/MobileActionDock";
 import { ASSOCIATION_INFO } from "@/data/associationData";
 import {
   ShieldCheck,
@@ -527,7 +528,10 @@ export default function AffiliationPage() {
         </div>
       </section>
 
-      <Footer />
+      <div className="pb-16 lg:pb-0">
+        <Footer />
+      </div>
+      <MobileActionDock />
     </main>
   );
 }

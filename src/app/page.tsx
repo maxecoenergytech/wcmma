@@ -9,6 +9,7 @@ import BranchLocator from "@/components/BranchLocator";
 import MembershipApplication from "@/components/MembershipApplication";
 import AffiliationShowcase from "@/components/AffiliationShowcase";
 import Footer from "@/components/Footer";
+import MobileActionDock from "@/components/MobileActionDock";
 import { ASSOCIATION_INFO } from "@/data/associationData";
 import { getAssetPath } from "@/utils/paths";
 import { ShieldCheck, Award, HeartHandshake, BookOpen, Target, Sparkles, CheckCircle2 } from "lucide-react";
@@ -75,9 +76,12 @@ export default function Home() {
               <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative space-y-6">
                 <div className="flex items-center gap-3 pb-4 border-b border-slate-800">
                   <img
-                    src={getAssetPath("/assets/wcmaai_logo.png")}
+                    src={getAssetPath("/assets/wcmaai_logo_sm.webp")}
                     alt="Emblem"
-                    className="w-12 h-12 rounded-full bg-white p-1"
+                    width={48}
+                    height={48}
+                    loading="lazy"
+                    className="w-12 h-12 rounded-full bg-white p-1 object-contain"
                   />
                   <div>
                     <h3 className="font-extrabold text-white text-base">Association Heritage</h3>
@@ -140,7 +144,10 @@ export default function Home() {
       <FoundationEvent />
       <BranchLocator />
       <MembershipApplication />
-      <Footer />
+      <div className="pb-16 lg:pb-0">
+        <Footer />
+      </div>
+      <MobileActionDock />
     </main>
   );
 }
