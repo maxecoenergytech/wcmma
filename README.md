@@ -26,6 +26,7 @@ For complete step-by-step guides, open the [`docs/`](./docs/) folder:
 | Document | Who It's For | Description |
 | :--- | :--- | :--- |
 | [**OWNER-GUIDE.md**](./docs/OWNER-GUIDE.md) | **Website Owner** | Simple English guide: *"If I want to change something, what do I tell my developer?"* |
+| [**VERSION-SWITCHING-GUIDE.md**](./docs/VERSION-SWITCHING-GUIDE.md) | **Owner / Dev** | How to switch between the **Simple (Lightweight)** and **Premium (3D Cinematic)** versions with 1 click. |
 | [**WEBSITE-HANDOVER.md**](./docs/WEBSITE-HANDOVER.md) | **New Developers** | Complete technical handover explaining the architecture, portability, and structure. |
 | [**CONTENT-UPDATE-GUIDE.md**](./docs/CONTENT-UPDATE-GUIDE.md) | **Developers** | Step-by-step guide to updating phone numbers, dojos, instructors, events, and credentials. |
 | [**DEPLOYMENT-GUIDE.md**](./docs/DEPLOYMENT-GUIDE.md) | **Developers** | How to test locally, build, and publish changes to GitHub Pages. |
