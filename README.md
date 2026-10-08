@@ -31,7 +31,8 @@ For complete step-by-step guides, open the [`docs/`](./docs/) folder:
 | [**CONTENT-UPDATE-GUIDE.md**](./docs/CONTENT-UPDATE-GUIDE.md) | **Developers** | Step-by-step guide to updating phone numbers, dojos, instructors, events, and credentials. |
 | [**DEPLOYMENT-GUIDE.md**](./docs/DEPLOYMENT-GUIDE.md) | **Developers** | How to test locally, build, and publish changes to GitHub Pages. |
 | [**IMAGE-GUIDE.md**](./docs/IMAGE-GUIDE.md) | **Developers / Owner** | Image sizes, WebP formats, naming rules, and how to replace photos. |
-| [**BACKUP-GUIDE.md**](./docs/BACKUP-GUIDE.md) | **Everyone** | How to create a safe offline backup on a USB pendrive or external drive. |
+| [**SECURITY-GUIDE.md**](./docs/SECURITY-GUIDE.md) | **Everyone** | Official anti-scam policy, strict no-payment rule, and privacy safeguards. |
+| [**BACKUP-AND-ROLLBACK-GUIDE.md**](./docs/BACKUP-AND-ROLLBACK-GUIDE.md) | **Owner / Dev** | Complete offline backup instructions and 30-second version rollback procedures. |
 | [**CHANGELOG.md**](./docs/CHANGELOG.md) | **Developers** | Record of all website updates, version history, and compliance adjustments. |
 
 ---

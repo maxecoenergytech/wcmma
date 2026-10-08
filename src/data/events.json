@@ -1,0 +1,40 @@
+{
+  "completedEvent": {
+    "title": "35th Foundation Day Celebration & Seminar",
+    "badge": "35th Anniversary Celebration — Event Completed",
+    "status": "Completed",
+    "date": "6 September 2026",
+    "location": "Guwahati, Assam",
+    "venue": "Bamunimaidam Bihu Mancha Auditorium, Guwahati, Assam",
+    "statement": "WCMAA India successfully commemorated its 35th Foundation Day on 6 September 2026 in Guwahati, Assam, bringing together instructors, practitioners, students and members of the Wing Chun community.",
+    "highlights": [
+      "Grand Wooden Dummy (Muk Yan Jong) Masterclass with Sifu Amar Singh Deori & Sifu Sankar Dutta",
+      "National Belt & Sash Grading Examinations",
+      "Chi Sau / Lat Sau Partner Drills & Dynamic Movement Demonstrations",
+      "Felicitation of Senior Sifus & Longstanding Practitioners",
+      "Commemorative 35th Foundation Anniversary Certificate & Memento Distribution"
+    ],
+    "recapPhotos": [
+      {
+        "src": "/assets/association_camp_group.webp",
+        "alt": "35th Anniversary Seminar Group Photograph - Guwahati, Assam",
+        "caption": "Group Photo: Instructors and delegates gathered at the commemorative seminar."
+      },
+      {
+        "src": "/assets/sifu_chisau_practice.webp",
+        "alt": "Dynamic Chi Sau Movement Practice - Sifu Amar Singh & Sifu Sankar Dutta",
+        "caption": "Technical Demonstration: Sifu Amar Singh Deori & Sifu Sankar Dutta demonstrating Chi Sau sensitivity."
+      },
+      {
+        "src": "/assets/association_team.webp",
+        "alt": "WCMAA India Instructors & Technical Council",
+        "caption": "Leadership & Senior Council: Instructors uniting under traditional martial discipline."
+      },
+      {
+        "src": "/assets/event_35th_foundation.webp",
+        "alt": "35th Foundation Anniversary Commemorative Emblem Poster",
+        "caption": "Commemorative Poster: Official celebration of 35 years (1991–2026) of Wing Chun in India."
+      }
+    ]
+  }
+}

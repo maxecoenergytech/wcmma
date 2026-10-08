@@ -242,8 +242,16 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Security & Anti-Fraud Notice */}
+        <div className="mt-8 p-4 rounded-xl bg-slate-900/90 border border-slate-800 text-[11px] text-slate-300 flex items-start gap-3">
+          <Shield className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+          <p>
+            <strong className="text-white">Security & Anti-Fraud Notice:</strong> WCMAA India does not collect online payments, UPI transfers, donations, registration fees, OTPs, PINs, passwords, or banking credentials through this website. All interactions are strictly informational and conducted through official secretariat communication channels. Beware of fraudulent requests or unauthorized impersonation.
+          </p>
+        </div>
+
         {/* Bottom Bar per Prompt Item 14 */}
-        <div className="mt-12 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 text-[11px]">
+        <div className="mt-8 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 text-[11px]">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
             <p>
               © 1991–2026 Wing Chun Martial Arts Association India. All Rights Reserved.

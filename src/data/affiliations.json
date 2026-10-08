@@ -1,0 +1,28 @@
+[
+  {
+    "name": "WCMAA Singapore",
+    "relationship": "International Charter",
+    "since": "1991",
+    "badge": "International Charter",
+    "purpose": "Technical charter and traditional curriculum framework alignment."
+  },
+  {
+    "name": "The World Kuoshu Federation (TWKSF)",
+    "relationship": "Technical Association",
+    "badge": "Global Technical Association",
+    "website": "https://www.twksf.org",
+    "purpose": "International association dedicated to traditional Chinese martial arts and refereeing standards."
+  },
+  {
+    "name": "KUOSHU Federation of India",
+    "relationship": "National Association",
+    "badge": "National Association Partner",
+    "purpose": "Cooperation on traditional Kuoshu and Kung Fu training standards in India."
+  },
+  {
+    "name": "Assam Kungfu Federation",
+    "relationship": "State Affiliate",
+    "badge": "State Association Affiliate",
+    "purpose": "Regional promotion of martial arts education and technical seminars in Assam."
+  }
+]
