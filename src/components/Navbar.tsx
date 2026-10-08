@@ -24,13 +24,14 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-2xl"
-          : "bg-slate-950/70 backdrop-blur-sm border-b border-slate-800/40"
-      }`}
-    >
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-2xl"
+            : "bg-slate-950/90 backdrop-blur-md border-b border-slate-800/60 shadow-lg"
+        }`}
+      >
       {/* Top Federation Announcement Bar */}
       <div className="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-slate-950 text-[10px] sm:text-xs font-bold py-1.5 px-3 text-center tracking-wide flex items-center justify-center gap-1.5 shadow-sm">
         <Award className="w-3.5 h-3.5 shrink-0" />
@@ -170,7 +171,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="xl:hidden bg-slate-900 border-b border-slate-800 px-4 pt-3 pb-6 space-y-2.5 animate-fadeIn shadow-2xl">
+        <div className="xl:hidden bg-slate-900 border-b border-slate-800 px-4 pt-3 pb-6 space-y-2.5 animate-fadeIn shadow-2xl max-h-[calc(100vh-108px)] overflow-y-auto">
           <a
             href={getRoutePath("/")}
             onClick={() => setMobileMenuOpen(false)}
@@ -246,6 +247,10 @@ export default function Navbar() {
           </div>
         </div>
       )}
-    </header>
+      </header>
+
+      {/* Fixed Header Height Compensating Spacer so content is never covered */}
+      <div className="h-[108px] w-full shrink-0" aria-hidden="true" />
+    </>
   );
 }
