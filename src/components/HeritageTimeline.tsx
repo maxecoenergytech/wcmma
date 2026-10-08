@@ -31,7 +31,7 @@ export default function HeritageTimeline() {
       border: "border-emerald-500",
     },
     {
-      year: "National Development",
+      year: "National Expansion",
       title: "Pan-India Expansion & TWKSF Kuoshu Alignment",
       description:
         "Expansion of recognized dojos across states including West Bengal, Delhi NCR, and Karnataka. Association leadership joins the Joint Secretariat of KUOSHU Federation of India and affiliates with The World Kuoshu Federation (TWKSF) for international refereeing and tournaments.",
@@ -51,19 +51,19 @@ export default function HeritageTimeline() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-[#050a12] border-b border-slate-800 relative">
+    <section className="py-20 sm:py-24 bg-[#050a12] border-b border-slate-800 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider">
             <Award className="w-3.5 h-3.5" />
-            35 Years of Living Martial History
+            1991 to 2026
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-            Heritage & Historical Timeline
+            35 YEARS. ONE VISION.
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            The 35-year journey of Wing Chun Martial Arts Association India—from its grassroots inception in 1991 to a recognized national martial-arts federation.
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-sans">
+            From its beginnings in 1991 to its continuing development in 2026, WCMAA India is dedicated to structured Wing Chun training, instructor development, academy affiliation and martial arts education.
           </p>
         </div>
 
@@ -84,7 +84,7 @@ export default function HeritageTimeline() {
               </div>
 
               {/* Content Card */}
-              <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 sm:p-7 shadow-xl hover:border-slate-700 transition-all">
+              <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 sm:p-7 shadow-xl hover:border-amber-500/40 hover:-translate-y-1 transition-all">
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                   <span className="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-slate-950 text-slate-300 border border-slate-800">
                     {item.badge}

@@ -2,19 +2,21 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
+import HeritageTimeline from "@/components/HeritageTimeline";
 import AboutSection from "@/components/AboutSection";
-import WhyTrainSection from "@/components/WhyTrainSection";
 import TrainingPathway from "@/components/TrainingPathway";
-import Leadership from "@/components/Leadership";
+import WoodenDummySection from "@/components/WoodenDummySection";
+import WhyTrainSection from "@/components/WhyTrainSection";
+import IndiaDojoMap from "@/components/IndiaDojoMap";
 import BranchLocator from "@/components/BranchLocator";
+import Leadership from "@/components/Leadership";
 import StudentsParentsSection from "@/components/StudentsParentsSection";
 import AffiliationShowcase from "@/components/AffiliationShowcase";
 import VerificationPortal from "@/components/VerificationPortal";
 import FoundationEvent from "@/components/FoundationEvent";
-import HeritageTimeline from "@/components/HeritageTimeline";
 import GallerySection from "@/components/GallerySection";
-import FinalCta from "@/components/FinalCta";
 import MembershipApplication from "@/components/MembershipApplication";
+import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import MobileActionDock from "@/components/MobileActionDock";
@@ -22,63 +24,69 @@ import MobileActionDock from "@/components/MobileActionDock";
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-amber-500 selection:text-slate-950">
-      {/* 1. Header & Navigation */}
+      {/* 1. Header & Navigation (Transparent over hero, frosted glass on scroll) */}
       <Navbar />
 
-      {/* 2. Section 1: Hero Section */}
+      {/* 2. Hero Section (Full-screen 3D WebGL Muk Yan Jong with subtle mouse parallax) */}
       <Hero />
 
-      {/* 3. Section 2: Trust Bar */}
+      {/* 3. Trust Bar (Registration & Credentials) */}
       <TrustBar />
 
-      {/* 4. Section 3: About WCMAA India */}
-      <AboutSection />
-
-      {/* 5. Section 4: Why Train with WCMAA India? (6 Cards) */}
-      <WhyTrainSection />
-
-      {/* 6. Section 5: Wing Chun Training Pathway */}
-      <TrainingPathway />
-
-      {/* 7. Section 6: Leadership & Authentic Masters Practice */}
-      <Leadership />
-
-      {/* 8. Section 7: Find a Dojo (Dojo Directory) */}
-      <BranchLocator />
-
-      {/* 9. Section 8: Students and Parents (Who Can Train) */}
-      <StudentsParentsSection />
-
-      {/* 10. Section 9: Academy Affiliation */}
-      <AffiliationShowcase />
-
-      {/* 11. Section 10: Official Credential Verification */}
-      <VerificationPortal />
-
-      {/* 12. Section 11: Events & 35th Foundation Seminar */}
-      <FoundationEvent />
-
-      {/* 13. Section 12: 35 Years of Heritage Timeline */}
+      {/* 4. Section: 35 Years Heritage Timeline (1991 to 2026) */}
       <HeritageTimeline />
 
-      {/* 14. Section 13: Image Gallery */}
+      {/* 5. Section: About WCMAA India */}
+      <AboutSection />
+
+      {/* 6. Section: The Art of Wing Chun (5 Interactive Cards) */}
+      <TrainingPathway />
+
+      {/* 7. Section: Wooden Dummy Apparatus (Train The Structure. Develop The Skill.) */}
+      <WoodenDummySection />
+
+      {/* 8. Section: Why WCMAA India? (6 Premium Pillars) */}
+      <WhyTrainSection />
+
+      {/* 9. Section: India Dojo Network (Interactive Vector Map) */}
+      <IndiaDojoMap />
+
+      {/* 10. Section: Find a Dojo (Filterable Directory & Contact) */}
+      <BranchLocator />
+
+      {/* 11. Section: Executive Leadership & Verified Profiles */}
+      <Leadership />
+
+      {/* 12. Section: Students & Parents (Who Can Train) */}
+      <StudentsParentsSection />
+
+      {/* 13. Section: Affiliations & Associations */}
+      <AffiliationShowcase />
+
+      {/* 14. Section: Official Credential Verification */}
+      <VerificationPortal />
+
+      {/* 15. Section: Events & 35th Foundation Seminar (Completed Event Recap) */}
+      <FoundationEvent />
+
+      {/* 16. Section: Photographic Archive Gallery */}
       <GallerySection />
 
-      {/* 15. Section 14: Final Call to Action */}
-      <FinalCta />
-
-      {/* 16. In-Page Membership & Affiliation Application */}
+      {/* 17. Section: Your Journey Starts Here (Membership & Affiliation Forms) */}
       <MembershipApplication />
 
-      {/* 17. Footer */}
+      {/* 18. Section: Final Cinematic Call to Action (Discipline Is The Foundation) */}
+      <FinalCta />
+
+      {/* 19. Footer */}
       <div className="pb-16 lg:pb-0">
         <Footer />
       </div>
 
-      {/* 18. Floating WhatsApp Desk */}
+      {/* 20. Floating WhatsApp Desk */}
       <FloatingWhatsApp />
 
-      {/* 19. Mobile Action Dock */}
+      {/* 21. Mobile Action Dock */}
       <MobileActionDock />
     </main>
   );

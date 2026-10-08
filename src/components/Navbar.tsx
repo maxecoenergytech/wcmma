@@ -1,15 +1,36 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ASSOCIATION_INFO } from "@/data/associationData";
 import { getAssetPath, getRoutePath } from "@/utils/paths";
-import { Menu, X, ShieldCheck, Award, Phone, Users, ChevronRight } from "lucide-react";
+import { Menu, X, ShieldCheck, Award, Phone, Compass, MapPin } from "lucide-react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 40) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-2xl">
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-2xl"
+          : "bg-slate-950/70 backdrop-blur-sm border-b border-slate-800/40"
+      }`}
+    >
       {/* Top Federation Announcement Bar */}
       <div className="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-slate-950 text-[10px] sm:text-xs font-bold py-1.5 px-3 text-center tracking-wide flex items-center justify-center gap-1.5 shadow-sm">
         <Award className="w-3.5 h-3.5 shrink-0" />
@@ -69,7 +90,7 @@ export default function Navbar() {
               INSTRUCTORS
             </a>
             <a href={getRoutePath("/affiliation")} className="hover:text-amber-400 transition-colors text-amber-300">
-              AFFILIATION
+              AFFILIATIONS
             </a>
             <a href={getRoutePath("#event")} className="hover:text-amber-400 transition-colors text-amber-300">
               EVENTS
@@ -97,7 +118,7 @@ export default function Navbar() {
               </svg>
             </a>
             <a
-              href="tel:+917896962207"
+              href={`tel:${ASSOCIATION_INFO.contacts.primaryPhone.replace(/[^0-9+]/g, "")}`}
               className="p-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 hover:text-amber-400 transition-colors"
               title="Call National Secretariat"
               aria-label="Call National Secretariat"
@@ -112,9 +133,10 @@ export default function Navbar() {
             </a>
             <a
               href={getRoutePath("#branches")}
-              className="px-4 py-2 text-xs uppercase tracking-wider font-black rounded-lg bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-slate-950 hover:from-amber-400 hover:to-amber-500 shadow-md transition-all hover:scale-105 active:scale-95"
+              className="px-4 py-2 text-xs uppercase tracking-wider font-black rounded-lg bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-slate-950 hover:from-amber-400 hover:to-amber-500 shadow-md transition-all hover:scale-105 active:scale-95 flex items-center gap-1.5"
             >
-              JOIN NOW
+              <MapPin className="w-3.5 h-3.5" />
+              FIND A DOJO
             </a>
           </div>
 
@@ -132,7 +154,7 @@ export default function Navbar() {
               </svg>
             </a>
             <a
-              href="tel:+917896962207"
+              href={`tel:${ASSOCIATION_INFO.contacts.primaryPhone.replace(/[^0-9+]/g, "")}`}
               className="p-2 rounded-lg bg-slate-900 border border-slate-700 text-amber-400"
               aria-label="Call Secretariat"
             >
@@ -151,7 +173,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="xl:hidden bg-slate-900 border-b border-slate-800 px-4 pt-3 pb-6 space-y-2.5 animate-fadeIn">
+        <div className="xl:hidden bg-slate-900 border-b border-slate-800 px-4 pt-3 pb-6 space-y-2.5 animate-fadeIn shadow-2xl">
           <a
             href={getRoutePath("/")}
             onClick={() => setMobileMenuOpen(false)}
@@ -192,7 +214,7 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-md text-sm font-bold text-amber-300 hover:bg-slate-800"
           >
-            ACADEMY AFFILIATION (NDAP)
+            ACADEMY AFFILIATION
           </a>
           <a
             href={getRoutePath("#event")}
@@ -216,25 +238,13 @@ export default function Navbar() {
           >
             CONTACT US
           </a>
-          <a
-            href={ASSOCIATION_INFO.contacts.facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-sm font-bold text-[#1877F2] hover:bg-slate-800 flex items-center gap-2"
-          >
-            <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-            </svg>
-            Follow on Facebook
-          </a>
           <div className="pt-2">
             <a
               href={getRoutePath("#branches")}
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center block px-4 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 font-black text-slate-950 text-xs uppercase tracking-wider shadow"
             >
-              JOIN NOW
+              FIND A DOJO
             </a>
           </div>
         </div>

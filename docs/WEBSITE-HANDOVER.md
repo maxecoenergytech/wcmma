@@ -36,11 +36,14 @@
 | `src/app/disclaimer/page.tsx` | Route | Direct link to Martial Arts Health & Training Disclaimer. |
 | `src/app/copyright/page.tsx` | Route | Direct link to Copyright & IP statement. |
 | `src/components/Navbar.tsx` | Component | Responsive header with desktop navigation, mobile drawer, and call/social actions. |
-| `src/components/Hero.tsx` | Component | Above-the-fold hero with 3 primary action buttons and completed anniversary badge. |
+| `src/components/Hero.tsx` | Component | Above-the-fold full-screen hero with 3D WebGL Muk Yan Jong canvas, mouse parallax, and primary action buttons. |
+| `src/components/WoodenDummyCanvas.tsx` | 3D Component | WebGL Three.js canvas rendering a procedural Wing Chun Wooden Dummy (Muk Yan Jong) with lighting and atmospheric dust particles. |
+| `src/components/WoodenDummySection.tsx` | Component | Dedicated 116 Muk Yan Jong apparatus feature highlighting structure and technique. |
+| `src/components/IndiaDojoMap.tsx` | Component | Interactive vector map of India with verified branch pins and inspector card. |
 | `src/components/TrustBar.tsx` | Component | 5-pillar credentials strip and registration badge. |
 | `src/components/AboutSection.tsx` | Component | Association history, mission, and expandable overview modal. |
-| `src/components/WhyTrainSection.tsx` | Component | 6 core martial discipline cards. |
-| `src/components/TrainingPathway.tsx` | Component | Progressive 5-step curriculum with full modal syllabus viewer. |
+| `src/components/WhyTrainSection.tsx` | Component | 6 core martial discipline cards with 3D hover effects. |
+| `src/components/TrainingPathway.tsx` | Component | "The Art of Wing Chun" 5 interactive cards with full modal syllabus viewer. |
 | `src/components/Leadership.tsx` | Component | Master profiles of Sifu Amar Singh Deori and Sifu Sankar Dutta with action Chi Sau drills. |
 | `src/components/BranchLocator.tsx` | Component | Filterable Dojo Directory with location search and "Verify Dojo" reporting modal. |
 | `src/components/StudentsParentsSection.tsx` | Component | Audience guides for Beginners, Adults, Children, and Women. |
@@ -103,5 +106,22 @@ npm run build
 ## 5. Security & Privacy Safeguards
 
 * **No Secrets Committed:** No API keys, passwords, or database credentials exist in this repository.
+* **Static Execution:** Zero backend vulnerabilities (no SQL injection, no server-side execution attacks).
+* **Privacy Compliant:** Verification data masks private citizen details (DOB and blood groups omitted).
+
+---
+
+## 6. 3D WebGL Architecture (Three.js)
+
+The cinematic hero utilizes standard open-source **Three.js** to render a traditional Wing Chun Wooden Dummy (**Muk Yan Jong**):
+
+* **Source File:** `src/components/WoodenDummyCanvas.tsx`
+* **Zero 3D File Bloat:** Rather than downloading heavy 50MB 3D files over mobile networks, the wooden dummy is procedurally generated using mathematical geometries (cylinders, spheres, and rectangular timber beams) with aged teak wood materials (`MeshStandardMaterial`).
+* **Performance Protections:**
+  * **Device Pixel Ratio Cap:** Capped at `Math.min(window.devicePixelRatio, 2)` to protect mobile GPUs.
+  * **Viewport Auto-Pause:** An `IntersectionObserver` automatically stops the `requestAnimationFrame` loop whenever the user scrolls down past the hero.
+  * **Reduced Motion Detection:** If the visitor's device requests reduced motion (`prefers-reduced-motion: reduce`), the canvas renders a clean, static, non-animating martial arts scene.
+  * **Fallback:** If WebGL is unavailable or disabled, a stylized fallback card is automatically presented without throwing any JavaScript errors.
+
 * **Privacy in Credential Lookups:** Member search results display only Credential ID, Name/Initials, Rank, Status, Issue Year, and Branch. Sensitive dates of birth and blood groups are never exposed to public search results.
 * **Test Records Labeled:** Sample lookups are flagged with `DEMO RECORD — NOT AN OFFICIAL CREDENTIAL`.

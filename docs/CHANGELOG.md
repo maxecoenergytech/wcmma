@@ -5,6 +5,20 @@
 
 ---
 
+## [Version 2.3.0] — October 2026
+
+### Safe Premium 3D Landing Page Redesign
+* **Procedural 3D Muk Yan Jong (Three.js):** Created `src/components/WoodenDummyCanvas.tsx` rendering a realistic 3D Wing Chun wooden dummy with aged teak wood textures, cinematic key/rim spotlights, warm golden ambient bounce, and drifting atmospheric golden dust particles.
+* **Subtle Desktop Mouse Parallax:** Implemented smooth mouse parallax on desktop that gracefully shifts perspective without fast rotation or distracting animations.
+* **Mobile & Reduced Motion Safeguards:** The 3D canvas automatically caps pixel density at 2x, pauses rendering via `IntersectionObserver` when scrolled out of view, and honors `prefers-reduced-motion` by displaying a tranquil static scene.
+* **Interactive India Dojo Map:** Created `src/components/IndiaDojoMap.tsx` with an aesthetic vector map of India highlighting verified training hubs (Guwahati HQ, New Delhi, Kolkata, and Bengaluru) with tap/click inspection.
+* **Dedicated Wooden Dummy Section:** Created `src/components/WoodenDummySection.tsx` ("Train The Structure. Develop The Skill.") showcasing the 116 classical movements and linking directly to the syllabus.
+* **Upgraded Hero & Navigation:** Full-screen 100vh hero layout with transparent-to-frosted glass navbar transition, "FIND A DOJO" CTA, and exact brand typography ("35 Years of Wing Chun Heritage").
+* **Enhanced Section Styling:** Updated "The Art of Wing Chun" 5 interactive cards and "Why WCMAA India" 6 pillar cards with subtle 3D hover depth effects.
+* **Cinematic Final Call to Action:** Updated `src/components/FinalCta.tsx` with wooden hall ambiance and the motto "Discipline Is The Foundation. Strength Through Discipline • Honor Through Tradition."
+
+---
+
 ## [Version 2.2.0] — October 2026
 
 ### Milestone & Event Status

@@ -51,6 +51,19 @@ body {
   box-shadow: 0 0 30px -8px rgba(220, 38, 38, 0.25);
 }
 
+.timber-glow {
+  box-shadow: 0 0 35px -5px rgba(180, 83, 9, 0.25);
+}
+
+/* 3D Perspective Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
 /* Traditional Watermark Grid */
 .martial-bg-pattern {
   background-image: radial-gradient(rgba(245, 158, 11, 0.05) 1px, transparent 1px), radial-gradient(rgba(30, 58, 106, 0.08) 1px, transparent 1px);
