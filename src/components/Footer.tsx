@@ -20,7 +20,7 @@ export default function Footer() {
             </div>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 font-bold">
               <Award className="w-4 h-4 text-amber-400" />
-              <span>Celebrating 35 Years of Dedicated Martial Heritage</span>
+              <span>Celebrating 35 Years of Dedicated Martial Heritage (1991–2026)</span>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Wing Chun Martial Arts Association India. Dedicated to preserving authentic traditional Wing Chun Kung Fu, wooden dummy mechanics, and practical self-defense.
+              Wing Chun Martial Arts Association India. National governing body dedicated to preserving authentic traditional Wing Chun Kung Fu, wooden dummy mechanics, instructor development, and structured martial education.
             </p>
             <div className="text-[11px] text-slate-400 space-y-1">
               <p>
@@ -54,6 +54,9 @@ export default function Footer() {
               </p>
               <p>
                 <strong className="text-slate-300">International:</strong> {ASSOCIATION_INFO.singaporeAffiliation}
+              </p>
+              <p>
+                <strong className="text-slate-300">Global Body:</strong> The World Kuoshu Federation (TWKSF)
               </p>
             </div>
             <div className="pt-1">
@@ -64,14 +67,14 @@ export default function Footer() {
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#1877F2]/10 border border-[#1877F2]/30 text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition-all text-xs font-bold group"
               >
                 <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
                 <span>Official Facebook Page</span>
               </a>
             </div>
           </div>
 
-          {/* Col 2: Quick Links */}
+          {/* Col 2: Quick Links (8 Core Links) */}
           <div className="space-y-3">
             <h4 className="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">
               Navigation
@@ -79,43 +82,48 @@ export default function Footer() {
             <ul className="space-y-2 text-xs">
               <li>
                 <a href={getRoutePath("#about")} className="hover:text-amber-400 transition-colors">
-                  About Association & Lineage
-                </a>
-              </li>
-              <li>
-                <a href={getRoutePath("#leadership")} className="hover:text-amber-400 transition-colors">
-                  Executive Sifus & Committee
+                  About WCMAA India
                 </a>
               </li>
               <li>
                 <a href={getRoutePath("#syllabus")} className="hover:text-amber-400 transition-colors">
-                  Syllabus & Forms Breakdown
+                  Wing Chun Principles
+                </a>
+              </li>
+              <li>
+                <a href={getRoutePath("#syllabus")} className="hover:text-amber-400 transition-colors">
+                  Syllabus & Grading Standards
                 </a>
               </li>
               <li>
                 <a href={getRoutePath("#branches")} className="hover:text-amber-400 transition-colors">
-                  All-India Dojo Locator
-                </a>
-              </li>
-              <li>
-                <a href={getRoutePath("#event")} className="hover:text-amber-400 transition-colors">
-                  35th Foundation Day Seminar
+                  Dojo Directory (All-India)
                 </a>
               </li>
               <li>
                 <a href={getRoutePath("/affiliation")} className="hover:text-amber-400 transition-colors text-amber-300 font-semibold">
-                  Dojo Affiliation & Sifu Accreditation
+                  Academy Affiliation (NDAP)
+                </a>
+              </li>
+              <li>
+                <a href={getRoutePath("#event")} className="hover:text-amber-400 transition-colors">
+                  Events & 35th Foundation Seminar
                 </a>
               </li>
               <li>
                 <a href={getRoutePath("#verify")} className="hover:text-emerald-400 transition-colors text-emerald-300">
-                  Verify Membership Card
+                  Credential Verification
+                </a>
+              </li>
+              <li>
+                <a href={getRoutePath("#join")} className="hover:text-amber-400 transition-colors">
+                  Contact National Secretariat
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Official Addresses */}
+          {/* Col 3: Official Centers */}
           <div className="space-y-3">
             <h4 className="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">
               Official Centers
@@ -126,11 +134,11 @@ export default function Footer() {
                 <p className="text-slate-400">{ASSOCIATION_INFO.contacts.hqAddress}</p>
               </div>
               <div>
-                <p className="text-slate-300 font-bold">Training Ground:</p>
+                <p className="text-slate-300 font-bold">Official Training Ground:</p>
                 <p className="text-slate-400">{ASSOCIATION_INFO.contacts.trainingGround}</p>
               </div>
               <div>
-                <p className="text-slate-300 font-bold">Secretariat & Office:</p>
+                <p className="text-slate-300 font-bold">Secretariat & Admin Office:</p>
                 <p className="text-slate-400">{ASSOCIATION_INFO.contacts.residenceOffice}</p>
               </div>
             </div>
@@ -159,7 +167,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 pt-1">
                 <svg className="w-3.5 h-3.5 text-[#1877F2] fill-current shrink-0" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
                 <a
                   href={ASSOCIATION_INFO.contacts.facebook}
@@ -178,7 +186,7 @@ export default function Footer() {
         <div className="mt-12 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 text-[11px]">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
             <p>
-              © {new Date().getFullYear()} Wing Chun Martial Arts Association India. All Rights Reserved.
+              © 1991–2026 Wing Chun Martial Arts Association India. All Rights Reserved.
             </p>
             <span className="hidden sm:inline text-slate-700">•</span>
             <p className="text-slate-400">
@@ -198,7 +206,7 @@ export default function Footer() {
               title="Official Facebook Page"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
             </a>
             <span className="text-amber-400 font-semibold">

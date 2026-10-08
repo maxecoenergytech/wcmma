@@ -60,10 +60,10 @@ export default function VerificationPortal() {
             National Accreditation & Security Registry
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-            Official Credential & Member Verification
+            Official Credential Verification
           </h2>
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Authenticate genuine Wing Chun practitioner credentials, instructor licenses, and belt gradings issued under Government Registration <strong>KAM/240/W/08</strong> and <strong>WCMAA Singapore</strong>.
+            Verify a WCMAA India membership or certificate using the official credential number.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export default function VerificationPortal() {
               <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
-                placeholder="Enter Membership No. (e.g. 2060) or Practitioner Name"
+                placeholder="Enter Certificate / Membership ID (e.g. 2060)"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full bg-slate-900 border border-slate-700 rounded-xl pl-12 pr-4 py-3.5 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 text-sm shadow-inner"
@@ -82,10 +82,10 @@ export default function VerificationPortal() {
             </div>
             <button
               type="submit"
-              className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 via-emerald-400 to-emerald-500 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-black text-sm tracking-wide shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 transition-all hover:scale-[1.02]"
+              className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 via-emerald-400 to-emerald-500 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-black text-sm tracking-wider uppercase shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95"
             >
               <FileCheck className="w-4 h-4 text-slate-950" />
-              Verify Now
+              <span>VERIFY</span>
             </button>
           </form>
 

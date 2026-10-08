@@ -25,14 +25,17 @@ export default function AffiliationShowcase() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
             <Building2 className="w-4 h-4 text-amber-400" />
-            National Dojo Affiliation & Sifu Accreditation Program (NDAP)
+            National Dojo Affiliation Program (NDAP)
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
-            Empower Your Academy with Official Federation Affiliation
+            Are You a Martial Arts Academy Owner?
           </h2>
+          <p className="text-amber-300 text-base sm:text-lg font-bold">
+            Bring your academy into the WCMAA India network.
+          </p>
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
             Elevate your martial arts school under India's 35-year government-registered federation. 
-            Bridge traditional Ip Man Wing Chun, comprehensive weapon defense, and international accreditation under <strong>WCMAA Singapore</strong> and <strong>TWKSF</strong>.
+            Enjoy structured Wing Chun training, instructor development, standardized grading programs, and international accreditation under <strong>WCMAA Singapore</strong> and <strong>TWKSF</strong>.
           </p>
         </div>
 
@@ -202,17 +205,17 @@ export default function AffiliationShowcase() {
         {/* CTA Banner to Full Affiliation Page */}
         <div className="bg-gradient-to-r from-amber-500/10 via-slate-900 to-blue-500/10 rounded-2xl border border-amber-500/30 p-8 text-center space-y-4">
           <h3 className="text-2xl font-black text-white">
-            Ready to Affiliate Your Academy with WCMAA India?
+            Bring Your Academy Into the WCMAA India Network
           </h3>
           <p className="text-sm text-slate-300 max-w-2xl mx-auto">
-            Review the complete technical syllabus breakdown, instructor eligibility requirements, and submit your official affiliation dossier.
+            Benefit from structured syllabus manuals, instructor development workshops, authorized belt examinations, and official state/national recognition without commercial franchise royalties.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <Link
               href="/affiliation"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-sm shadow-xl shadow-amber-500/20 transition-all hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider shadow-xl shadow-amber-500/20 transition-all hover:scale-105 active:scale-95"
             >
-              Explore Full Affiliation Prospectus & Apply
+              <span>APPLY FOR ACADEMY AFFILIATION</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

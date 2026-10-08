@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { ASSOCIATION_INFO } from "@/data/associationData";
 import { getAssetPath, getRoutePath } from "@/utils/paths";
-import { Menu, X, ShieldCheck, Award, Phone, Sparkles } from "lucide-react";
+import { Menu, X, ShieldCheck, Award, Phone, Users, ChevronRight } from "lucide-react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,7 +18,7 @@ export default function Navbar() {
         </span>
       </div>
 
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav aria-label="Main Navigation" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo & Association Name */}
           <a href={getRoutePath("/")} className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
@@ -49,29 +49,36 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8 text-sm font-semibold text-slate-200">
-            <a href={getRoutePath("#about")} className="hover:text-amber-400 transition-colors">
-              About & Lineage
+          <div className="hidden xl:flex items-center space-x-5 text-xs font-bold uppercase tracking-wider text-slate-300">
+            <a href={getRoutePath("/")} className="hover:text-amber-400 transition-colors">
+              HOME
             </a>
-            <a href={getRoutePath("#leadership")} className="hover:text-amber-400 transition-colors">
-              Leadership
+            <a href={getRoutePath("#about")} className="hover:text-amber-400 transition-colors">
+              ABOUT
             </a>
             <a href={getRoutePath("#syllabus")} className="hover:text-amber-400 transition-colors">
-              Syllabus
+              WING CHUN
+            </a>
+            <a href={getRoutePath("#syllabus")} className="hover:text-amber-400 transition-colors">
+              SYLLABUS
             </a>
             <a href={getRoutePath("#branches")} className="hover:text-amber-400 transition-colors">
-              Dojos
+              DOJO DIRECTORY
             </a>
-            <a href={getRoutePath("#event")} className="hover:text-amber-400 transition-colors text-amber-300 font-bold flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
-              35th Anniversary
+            <a href={getRoutePath("#leadership")} className="hover:text-amber-400 transition-colors">
+              INSTRUCTORS
             </a>
-            <a href={getRoutePath("/affiliation")} className="hover:text-amber-400 transition-colors text-amber-300 font-bold">
-              Affiliation
+            <a href={getRoutePath("/affiliation")} className="hover:text-amber-400 transition-colors text-amber-300">
+              AFFILIATION
             </a>
-            <a href={getRoutePath("#verify")} className="hover:text-amber-400 transition-colors flex items-center gap-1 text-slate-300">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              Verify Card
+            <a href={getRoutePath("#event")} className="hover:text-amber-400 transition-colors text-amber-300">
+              EVENTS
+            </a>
+            <a href={getRoutePath("#verify")} className="hover:text-emerald-400 transition-colors">
+              VERIFY
+            </a>
+            <a href={getRoutePath("#join")} className="hover:text-amber-400 transition-colors">
+              CONTACT
             </a>
           </div>
 
@@ -86,13 +93,13 @@ export default function Navbar() {
               aria-label="Official Facebook Page"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
             </a>
             <a
               href="tel:+917896962207"
               className="p-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 hover:text-amber-400 transition-colors"
-              title="Call National Desk"
+              title="Call National Secretariat"
               aria-label="Call National Secretariat"
             >
               <Phone className="w-4 h-4" />
@@ -101,28 +108,27 @@ export default function Navbar() {
               href={getRoutePath("#verify")}
               className="px-3 py-2 text-xs uppercase tracking-wider font-bold rounded-lg border border-amber-500/60 text-amber-400 hover:bg-amber-500/10 transition-colors"
             >
-              Verify ID
+              VERIFY ID
             </a>
             <a
-              href={getRoutePath("#join")}
-              className="px-3.5 py-2 text-xs uppercase tracking-wider font-extrabold rounded-lg bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-slate-950 hover:from-amber-400 hover:to-amber-500 shadow-md transition-all hover:scale-[1.02]"
+              href={getRoutePath("#branches")}
+              className="px-4 py-2 text-xs uppercase tracking-wider font-black rounded-lg bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-slate-950 hover:from-amber-400 hover:to-amber-500 shadow-md transition-all hover:scale-105 active:scale-95"
             >
-              Join / Affiliate
+              JOIN NOW
             </a>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center gap-2">
+          {/* Mobile menu trigger */}
+          <div className="xl:hidden flex items-center gap-2">
             <a
               href={ASSOCIATION_INFO.contacts.facebook}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg bg-slate-900 border border-slate-700 text-[#1877F2]"
               aria-label="Official Facebook Page"
-              title="Facebook"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
             </a>
             <a
@@ -145,56 +151,70 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-slate-900 border-b border-slate-800 px-4 pt-3 pb-6 space-y-2.5 animate-fadeIn">
+        <div className="xl:hidden bg-slate-900 border-b border-slate-800 px-4 pt-3 pb-6 space-y-2.5 animate-fadeIn">
+          <a
+            href={getRoutePath("/")}
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-sm font-bold text-slate-200 hover:bg-slate-800 hover:text-amber-400"
+          >
+            HOME
+          </a>
           <a
             href={getRoutePath("#about")}
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-amber-400"
+            className="block px-3 py-2 rounded-md text-sm font-bold text-slate-200 hover:bg-slate-800 hover:text-amber-400"
           >
-            About Association & Lineage
-          </a>
-          <a
-            href={getRoutePath("#leadership")}
-            onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-amber-400"
-          >
-            Leadership (Sifu Amar Singh & Sifu Sankar Dutta)
+            ABOUT WCMAA INDIA
           </a>
           <a
             href={getRoutePath("#syllabus")}
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-amber-400"
+            className="block px-3 py-2 rounded-md text-sm font-bold text-slate-200 hover:bg-slate-800 hover:text-amber-400"
           >
-            Curriculum & Forms (Siu Nim Tao, Dummy, Weapons)
+            WING CHUN & SYLLABUS
           </a>
           <a
             href={getRoutePath("#branches")}
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-amber-400"
+            className="block px-3 py-2 rounded-md text-sm font-bold text-slate-200 hover:bg-slate-800 hover:text-amber-400"
           >
-            All-India Training Grounds & Dojos
+            DOJO DIRECTORY (ALL-INDIA)
           </a>
           <a
-            href={getRoutePath("#event")}
+            href={getRoutePath("#leadership")}
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-sm font-bold text-amber-400 hover:bg-slate-800"
+            className="block px-3 py-2 rounded-md text-sm font-bold text-slate-200 hover:bg-slate-800 hover:text-amber-400"
           >
-            35th Foundation Anniversary (6th Sept)
+            INSTRUCTORS & LEADERSHIP
           </a>
           <a
             href={getRoutePath("/affiliation")}
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-md text-sm font-bold text-amber-300 hover:bg-slate-800"
           >
-            Dojo Affiliation & Sifu Certification (NDAP)
+            ACADEMY AFFILIATION (NDAP)
+          </a>
+          <a
+            href={getRoutePath("#event")}
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-sm font-bold text-amber-400 hover:bg-slate-800"
+          >
+            EVENTS & 35TH ANNIVERSARY
           </a>
           <a
             href={getRoutePath("#verify")}
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-sm font-medium text-emerald-400 hover:bg-slate-800 flex items-center gap-2"
+            className="block px-3 py-2 rounded-md text-sm font-bold text-emerald-400 hover:bg-slate-800 flex items-center gap-2"
           >
             <ShieldCheck className="w-4 h-4" />
-            Verify Credential & ID Card
+            VERIFY CREDENTIAL
+          </a>
+          <a
+            href={getRoutePath("#join")}
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-sm font-bold text-slate-200 hover:bg-slate-800 hover:text-amber-400"
+          >
+            CONTACT US
           </a>
           <a
             href={ASSOCIATION_INFO.contacts.facebook}
@@ -204,17 +224,17 @@ export default function Navbar() {
             className="block px-3 py-2 rounded-md text-sm font-bold text-[#1877F2] hover:bg-slate-800 flex items-center gap-2"
           >
             <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
             </svg>
             Follow on Facebook
           </a>
-          <div className="pt-2 flex flex-col gap-2">
+          <div className="pt-2">
             <a
-              href={getRoutePath("#join")}
+              href={getRoutePath("#branches")}
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center px-4 py-2.5 rounded-lg bg-amber-500 font-extrabold text-slate-950 text-xs uppercase tracking-wider"
+              className="w-full text-center block px-4 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 font-black text-slate-950 text-xs uppercase tracking-wider shadow"
             >
-              Apply for Membership / Affiliation
+              JOIN NOW
             </a>
           </div>
         </div>
