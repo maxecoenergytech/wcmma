@@ -19,25 +19,25 @@ export default function TrustBar() {
     {
       icon: BookOpen,
       title: "Structured Curriculum",
-      subtitle: "Authentic Ip Man Forms",
+      subtitle: "Traditional Wing Chun Forms",
       accent: "text-emerald-400",
     },
     {
       icon: GraduationCap,
       title: "Instructor Development",
-      subtitle: "Accredited Sifus & Dan Grading",
+      subtitle: "Standardized Technical Grading",
       accent: "text-purple-400",
     },
     {
       icon: Building2,
       title: "Academy Affiliation",
-      subtitle: "Non-Franchise Federation Charter",
+      subtitle: "Structured Affiliation Charter",
       accent: "text-amber-400",
     },
   ];
 
   return (
-    <section aria-label="Federation Credentials" className="bg-[#040810] border-b border-slate-800 py-6 relative z-20">
+    <section aria-label="Association Credentials" className="bg-[#040810] border-b border-slate-800 py-6 relative z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 5 Core Trust Pillars */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 items-center">
@@ -64,12 +64,12 @@ export default function TrustBar() {
           })}
         </div>
 
-        {/* Legal & Accreditation Verification Strip */}
+        {/* Legal & Technical Association Verification Strip */}
         <div className="mt-4 pt-4 border-t border-slate-800/60 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
           <div className="flex flex-wrap items-center gap-3 sm:gap-6">
             <span className="flex items-center gap-1.5 text-slate-300">
               <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>Govt. Registration: <strong className="text-white font-mono">{ASSOCIATION_INFO.registrationNo}</strong></span>
+              <span>Registration: <strong className="text-white font-mono">{ASSOCIATION_INFO.registrationNo}</strong></span>
             </span>
             <span className="hidden sm:inline text-slate-700">•</span>
             <span className="flex items-center gap-1.5 text-slate-300">
@@ -83,7 +83,7 @@ export default function TrustBar() {
             </span>
           </div>
           <span className="text-[11px] text-amber-400/90 font-medium tracking-wide">
-            Official All-India Federation
+            Traditional Wing Chun Kung Fu India
           </span>
         </div>
       </div>

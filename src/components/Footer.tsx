@@ -7,20 +7,23 @@ export default function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 text-xs border-t border-slate-800">
       {/* Top Banner inside Footer */}
-      <div className="bg-slate-900 border-b border-slate-800 py-8">
+      <div className="bg-slate-900 border-b border-slate-800 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
             <div>
-              <p className="text-sm font-extrabold text-amber-400">
-                "{ASSOCIATION_INFO.taglines.primary}"
+              <h3 className="text-base font-extrabold text-white">
+                Wing Chun Martial Arts Association India
+              </h3>
+              <p className="text-xs text-amber-400 font-semibold mt-0.5">
+                35 Years of Wing Chun Heritage in India | 1991–2026
               </p>
-              <p className="text-xs uppercase tracking-widest text-slate-400 font-bold">
-                {ASSOCIATION_INFO.taglines.secondary}
+              <p className="text-[11px] text-slate-400 mt-1">
+                Traditional Wing Chun Training • Academy Network • Instructor Development • Grading • Events
               </p>
             </div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 font-bold">
-              <Award className="w-4 h-4 text-amber-400" />
-              <span>Celebrating 35 Years of Dedicated Martial Heritage (1991–2026)</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 font-bold text-xs">
+              <Award className="w-4 h-4 text-amber-400 shrink-0" />
+              <span>Registration: {ASSOCIATION_INFO.registrationNo}</span>
             </div>
           </div>
         </div>
@@ -46,17 +49,20 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Wing Chun Martial Arts Association India. National governing body dedicated to preserving authentic traditional Wing Chun Kung Fu, wooden dummy mechanics, instructor development, and structured martial education.
+              Wing Chun Martial Arts Association India — an organization focused on traditional Wing Chun training, instructor development, academy affiliation, grading, and martial arts education.
             </p>
             <div className="text-[11px] text-slate-400 space-y-1">
               <p>
-                <strong className="text-slate-300">Govt. Regn:</strong> {ASSOCIATION_INFO.registrationNo}
+                <strong className="text-slate-300">Registration:</strong> {ASSOCIATION_INFO.registrationNo}
+              </p>
+              <p className="text-[10px] text-slate-500">
+                (Registered under the applicable society/association registration framework in Assam)
               </p>
               <p>
-                <strong className="text-slate-300">International:</strong> {ASSOCIATION_INFO.singaporeAffiliation}
+                <strong className="text-slate-300">International Charter:</strong> {ASSOCIATION_INFO.singaporeAffiliation}
               </p>
               <p>
-                <strong className="text-slate-300">Global Body:</strong> The World Kuoshu Federation (TWKSF)
+                <strong className="text-slate-300">Technical Association:</strong> The World Kuoshu Federation (TWKSF)
               </p>
             </div>
             <div className="pt-1">
@@ -74,115 +80,169 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Quick Links (8 Core Links) */}
+          {/* Col 2: Quick Links */}
           <div className="space-y-3">
             <h4 className="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">
-              Navigation
+              Quick Links
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
+                <a href={getRoutePath("/")} className="hover:text-amber-400 transition-colors">
+                  Home
+                </a>
+              </li>
+              <li>
                 <a href={getRoutePath("#about")} className="hover:text-amber-400 transition-colors">
-                  About WCMAA India
+                  About
                 </a>
               </li>
               <li>
                 <a href={getRoutePath("#syllabus")} className="hover:text-amber-400 transition-colors">
-                  Wing Chun Principles
+                  Wing Chun
                 </a>
               </li>
               <li>
                 <a href={getRoutePath("#syllabus")} className="hover:text-amber-400 transition-colors">
-                  Syllabus & Grading Standards
+                  Syllabus
                 </a>
               </li>
               <li>
                 <a href={getRoutePath("#branches")} className="hover:text-amber-400 transition-colors">
-                  Dojo Directory (All-India)
+                  Dojo Directory
+                </a>
+              </li>
+              <li>
+                <a href={getRoutePath("#leadership")} className="hover:text-amber-400 transition-colors">
+                  Instructors
                 </a>
               </li>
               <li>
                 <a href={getRoutePath("/affiliation")} className="hover:text-amber-400 transition-colors text-amber-300 font-semibold">
-                  Academy Affiliation (NDAP)
+                  Affiliations
                 </a>
               </li>
               <li>
-                <a href={getRoutePath("#event")} className="hover:text-amber-400 transition-colors">
-                  Events & 35th Foundation Seminar
+                <a href={getRoutePath("#event")} className="hover:text-amber-400 transition-colors text-amber-300">
+                  Events
                 </a>
               </li>
               <li>
                 <a href={getRoutePath("#verify")} className="hover:text-emerald-400 transition-colors text-emerald-300">
-                  Credential Verification
+                  Verify
                 </a>
               </li>
               <li>
                 <a href={getRoutePath("#join")} className="hover:text-amber-400 transition-colors">
-                  Contact National Secretariat
+                  Contact
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Official Centers */}
+          {/* Col 3: Legal & Governance Links */}
           <div className="space-y-3">
             <h4 className="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">
-              Official Centers
+              Legal
             </h4>
-            <div className="space-y-3 text-xs">
+            <ul className="space-y-2 text-xs">
+              <li>
+                <a href={getRoutePath("/privacy")} className="hover:text-amber-400 transition-colors">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href={getRoutePath("/terms")} className="hover:text-amber-400 transition-colors">
+                  Terms & Conditions
+                </a>
+              </li>
+              <li>
+                <a href={getRoutePath("/disclaimer")} className="hover:text-amber-400 transition-colors">
+                  Disclaimer
+                </a>
+              </li>
+              <li>
+                <a href={getRoutePath("/copyright")} className="hover:text-amber-400 transition-colors">
+                  Copyright & Intellectual Property
+                </a>
+              </li>
+              <li>
+                <a href={getRoutePath("/legal")} className="hover:text-amber-400 transition-colors text-amber-300 font-medium">
+                  Legal & Organizational Information →
+                </a>
+              </li>
+            </ul>
+
+            <div className="pt-4 space-y-2 text-xs">
+              <h5 className="font-bold text-slate-300 uppercase tracking-wider text-[11px]">
+                Official Secretariats
+              </h5>
               <div>
-                <p className="text-slate-300 font-bold">National Headquarters:</p>
-                <p className="text-slate-400">{ASSOCIATION_INFO.contacts.hqAddress}</p>
+                <p className="text-slate-300 font-semibold">Registered HQ:</p>
+                <p className="text-slate-400 text-[11px]">{ASSOCIATION_INFO.contacts.hqAddress}</p>
               </div>
               <div>
-                <p className="text-slate-300 font-bold">Official Training Ground:</p>
-                <p className="text-slate-400">{ASSOCIATION_INFO.contacts.trainingGround}</p>
-              </div>
-              <div>
-                <p className="text-slate-300 font-bold">Secretariat & Admin Office:</p>
-                <p className="text-slate-400">{ASSOCIATION_INFO.contacts.residenceOffice}</p>
+                <p className="text-slate-300 font-semibold">Training Grounds:</p>
+                <p className="text-slate-400 text-[11px]">{ASSOCIATION_INFO.contacts.trainingGround}</p>
               </div>
             </div>
           </div>
 
-          {/* Col 4: Contact & Leadership Helpline */}
+          {/* Col 4: Contact & General Secretary Desk */}
           <div className="space-y-3">
             <h4 className="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">
-              Contact & Helplines
+              Contact Information
             </h4>
-            <div className="space-y-2 text-xs">
-              <p className="text-slate-300 font-bold">General Secretary Desk:</p>
-              {ASSOCIATION_INFO.contacts.phones.map((phone, idx) => (
-                <div key={idx} className="flex items-center gap-2">
-                  <Phone className="w-3.5 h-3.5 text-amber-400" />
-                  <a href={`tel:${phone.replace(/[^0-9+]/g, "")}`} className="hover:text-amber-300">
-                    {phone}
+            <div className="space-y-2.5 text-xs">
+              <div>
+                <span className="text-[11px] text-amber-400 uppercase font-bold block">
+                  General Secretary Desk
+                </span>
+                <p className="text-white font-bold">{ASSOCIATION_INFO.contacts.generalSecretary}</p>
+              </div>
+
+              <div className="space-y-1.5 pt-1">
+                <div className="flex items-center gap-2">
+                  <Phone className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <a
+                    href={`tel:${ASSOCIATION_INFO.contacts.primaryPhone.replace(/[^0-9+]/g, "")}`}
+                    className="hover:text-amber-300 font-medium"
+                  >
+                    {ASSOCIATION_INFO.contacts.primaryPhone}
                   </a>
                 </div>
-              ))}
-              <div className="flex items-center gap-2 pt-2">
-                <Mail className="w-3.5 h-3.5 text-blue-400" />
-                <a href={`mailto:${ASSOCIATION_INFO.contacts.email}`} className="hover:text-blue-300">
+                <div className="flex items-center gap-2">
+                  <Phone className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+                  <a
+                    href="tel:+919085296178"
+                    className="hover:text-slate-200"
+                  >
+                    +91 90852 96178
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 pt-1">
+                <Mail className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                <a
+                  href={`mailto:${ASSOCIATION_INFO.contacts.email}`}
+                  className="hover:text-blue-300 truncate"
+                >
                   {ASSOCIATION_INFO.contacts.email}
                 </a>
               </div>
-              <div className="flex items-center gap-2 pt-1">
-                <svg className="w-3.5 h-3.5 text-[#1877F2] fill-current shrink-0" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                </svg>
-                <a
-                  href={ASSOCIATION_INFO.contacts.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#1877F2] transition-colors truncate"
-                >
-                  Facebook Community
-                </a>
+
+              <div className="pt-2">
+                <p className="text-[11px] text-slate-400">
+                  <strong className="text-slate-300">Administrative Office:</strong>
+                  <br />
+                  {ASSOCIATION_INFO.contacts.residenceOffice}
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom Bar per Prompt Item 14 */}
         <div className="mt-12 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 text-[11px]">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
             <p>
@@ -197,25 +257,15 @@ export default function Footer() {
             </p>
           </div>
           <div className="flex items-center gap-3">
-            <a
-              href={ASSOCIATION_INFO.contacts.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition-all"
-              aria-label="Visit Facebook Page"
-              title="Official Facebook Page"
-            >
-              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-              </svg>
-            </a>
-            <span className="text-amber-400 font-semibold">
-              {ASSOCIATION_INFO.taglines.motto}
+            <span className="text-slate-400">
+              Last Updated: October 2026
             </span>
+            <span className="text-slate-700">•</span>
             <a
               href="#"
-              className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:text-white"
+              className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:text-white transition-colors"
               aria-label="Back to top"
+              title="Back to top"
             >
               <ArrowUp className="w-4 h-4" />
             </a>

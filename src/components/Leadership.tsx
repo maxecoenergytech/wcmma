@@ -15,13 +15,13 @@ export default function Leadership() {
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider">
             <Shield className="w-3.5 h-3.5 text-blue-400" />
-            National Executive Council & Lineage Guardians
+            Executive Leadership Council
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
             Leadership & Traditional Lineage
           </h2>
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Guided by senior martial masters with decades of dedicated practice, preserving authentic Ip Man lineage principles and fostering national discipline across India.
+            Guided by senior martial instructors with decades of dedicated practice, preserving traditional Wing Chun principles and fostering discipline across India.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export default function Leadership() {
                   Wing Chun Martial Arts Association, India
                 </p>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-2">
-                  Pioneer of authentic Wing Chun Kung Fu education in North East India. Serving as the National Chief Instructor and authorized signing authority on all official WCMAAI grading passports and national certificates under WCMAA Singapore accreditation.
+                  Pioneer of traditional Wing Chun Kung Fu education in North East India. Serving as National Chief Instructor and authorized examiner on national technical gradings and certificates under the WCMAA Singapore charter.
                 </p>
               </div>
 
@@ -67,10 +67,10 @@ export default function Leadership() {
                   ✓ Regn. WCMAA Singapore
                 </span>
                 <span className="bg-slate-800/90 px-3 py-1 rounded-lg border border-slate-700">
-                  ✓ Master Examiner
+                  ✓ Chief Examiner
                 </span>
                 <span className="bg-slate-800/90 px-3 py-1 rounded-lg border border-slate-700">
-                  ✓ 35+ Years Teaching
+                  ✓ 35+ Years Experience
                 </span>
               </div>
             </div>
@@ -112,13 +112,13 @@ export default function Leadership() {
                   </p>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-2">
-                  Specialist in the 116 movements of the Wooden Dummy (Muk Yan Jong) and traditional weapon forms. Oversees national camps, tournament judging, and grassroot youth self-defense initiatives across India.
+                  Specialist in the 116 movements of the Wooden Dummy (Muk Yan Jong) and traditional weapon forms. Oversees curriculum dissemination, national camps, referee development, and youth martial arts programs across India.
                 </p>
               </div>
 
               <div className="pt-3 border-t border-slate-800/80 flex flex-wrap gap-2 text-[11px] text-slate-300 font-semibold">
                 <span className="bg-slate-800/90 px-3 py-1 rounded-lg border border-slate-700">
-                  ✓ Wooden Dummy (116) Master
+                  ✓ Wooden Dummy (116) Specialist
                 </span>
                 <span className="bg-slate-800/90 px-3 py-1 rounded-lg border border-slate-700">
                   ✓ National Referee
@@ -185,26 +185,26 @@ export default function Leadership() {
 
                 <div>
                   <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400">
-                    Grandmasters in Free Movement Drills
+                    Senior Instructors in Sensitivity Practice
                   </span>
                   <h4 className="text-xl font-black text-white group-hover:text-amber-300 transition-colors mt-0.5">
-                    Sifu Amar Singh & Sifu Sankar Dutta in Playful Movement Training
+                    Sifu Amar Singh & Sifu Sankar Dutta in Dynamic Chi Sau Movement Practice
                   </h4>
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  Caught during an energetic training session, Founder President <strong>Sifu Amar Singh Deori</strong> and General Secretary <strong>Sifu Sankar Dutta</strong> engage in spontaneous <strong>Chi Sau (黏手 - Sticking Hands)</strong> drills. Wing Chun practitioners use playful sensitivity practice to borrow incoming kinetic energy, maintain constant bridge contact, and neutralize strikes with zero tension or rigid force.
+                  Caught during an energetic training session, Founder President <strong>Sifu Amar Singh Deori</strong> and General Secretary <strong>Sifu Sankar Dutta</strong> engage in spontaneous <strong>Chi Sau (黏手 - Sticking Hands)</strong> drills. Wing Chun practitioners use sensitivity practice to maintain constant bridge contact and redirect force with relaxed structure.
                 </p>
               </div>
 
               <div className="pt-4 mt-4 border-t border-slate-800/80 grid grid-cols-2 gap-2 text-[11px] text-slate-300 font-semibold">
                 <span className="flex items-center gap-1.5 text-amber-300">
                   <CheckCircle className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                  Tactile Spring Sensitivity
+                  Tactile Sensitivity Drills
                 </span>
                 <span className="flex items-center gap-1.5 text-amber-300">
                   <CheckCircle className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                  Centerline Trapping Flow
+                  Centerline Deflection Flow
                 </span>
               </div>
             </div>
@@ -276,7 +276,7 @@ export default function Leadership() {
         {/* Affiliation Badges Banner */}
         <div className="mt-12 pt-10 border-t border-slate-800">
           <p className="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">
-            Official Alliances & International Accreditation
+            Affiliations & Technical Associations
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {ASSOCIATION_INFO.affiliations.map((affil, idx) => (
@@ -286,12 +286,17 @@ export default function Leadership() {
               >
                 <div className="text-xs font-semibold text-amber-400 mb-1">{affil.badge}</div>
                 <div className="text-sm font-bold text-white mb-2">{affil.name}</div>
-                <p className="text-xs text-slate-400 leading-relaxed">{affil.detail}</p>
+                <p className="text-xs text-slate-400 leading-relaxed">{affil.purpose}</p>
                 {affil.website && (
-                  <p className="text-[11px] text-blue-400 mt-2 font-mono flex items-center gap-1">
-                    <span>{affil.website}</span>
+                  <a
+                    href={affil.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] text-blue-400 hover:text-blue-300 mt-2 font-mono flex items-center gap-1 inline-flex"
+                  >
+                    <span>{affil.website.replace("https://", "")}</span>
                     <ExternalLink className="w-3 h-3" />
-                  </p>
+                  </a>
                 )}
               </div>
             ))}

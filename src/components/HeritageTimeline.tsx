@@ -23,10 +23,10 @@ export default function HeritageTimeline() {
     },
     {
       year: "2005–2006",
-      title: "Official Government Registration & International Charter",
+      title: "Government Registration & International Charter",
       description:
-        "The association is formally incorporated under the Societies Registration Act (Regn. No. KAM/240/W/08 of 2005-2006) by the Government of Assam and chartered internationally with WCMAA Singapore as the authorized national body.",
-      badge: "Legal Charter",
+        "The association is registered under the applicable society/association registration framework in Assam (Regn. No. KAM/240/W/08 of 2005–2006) and chartered internationally with WCMAA Singapore.",
+      badge: "Legal Registration",
       accent: "text-emerald-400",
       border: "border-emerald-500",
     },
@@ -34,17 +34,17 @@ export default function HeritageTimeline() {
       year: "National Development",
       title: "Pan-India Expansion & TWKSF Kuoshu Alignment",
       description:
-        "Expansion of certified dojos across states including West Bengal, Delhi NCR, and Karnataka. Association leadership joins the Joint Secretariat of KUOSHU Federation of India and affiliates with The World Kuoshu Federation (TWKSF) for international refereeing and tournaments.",
+        "Expansion of recognized dojos across states including West Bengal, Delhi NCR, and Karnataka. Association leadership joins the Joint Secretariat of KUOSHU Federation of India and affiliates with The World Kuoshu Federation (TWKSF) for international refereeing and tournaments.",
       badge: "National Presence",
       accent: "text-purple-400",
       border: "border-purple-500",
     },
     {
       year: "2026",
-      title: "35th Anniversary Milestone Celebration",
+      title: "35th Anniversary Milestone Commemoration",
       description:
-        "Celebrating three and a half decades of unbroken transmission with the 35th Foundation Day Celebration & National Kung Fu Seminar at Bamunimaidam Bihu Mancha, uniting practitioners, Sifus, and affiliated academies from across India.",
-      badge: "Historic Milestone",
+        "WCMAA India successfully commemorated its 35th Foundation Day on 6 September 2026 in Guwahati, Assam, bringing together instructors, practitioners, students and members of the Wing Chun community.",
+      badge: "Event Completed",
       accent: "text-amber-400",
       border: "border-amber-400",
     },

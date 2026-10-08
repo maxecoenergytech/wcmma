@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { VERIFIED_MEMBERS, MemberRecord } from "@/data/associationData";
+import { VERIFIED_MEMBERS, MemberRecord, ASSOCIATION_INFO } from "@/data/associationData";
 import { getAssetPath } from "@/utils/paths";
 import {
   ShieldCheck,
@@ -9,15 +9,12 @@ import {
   CheckCircle2,
   AlertCircle,
   Award,
-  Calendar,
-  Droplet,
-  User,
-  Hash,
   FileCheck,
   Printer,
   Sparkles,
-  QrCode,
-  Download,
+  User,
+  Building,
+  Info,
 } from "lucide-react";
 
 export default function VerificationPortal() {
@@ -57,7 +54,7 @@ export default function VerificationPortal() {
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider">
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            National Accreditation & Security Registry
+            Registry Verification
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
             Official Credential Verification
@@ -71,7 +68,7 @@ export default function VerificationPortal() {
         <div className="max-w-2xl mx-auto mb-10">
           <form onSubmit={handleSearch} className="relative flex flex-col sm:flex-row gap-3">
             <div className="relative flex-grow">
-              <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
+              <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
               <input
                 type="text"
                 placeholder="Enter Certificate / Membership ID (e.g. 2060)"
@@ -89,176 +86,125 @@ export default function VerificationPortal() {
             </button>
           </form>
 
-          {/* Quick Click Samples */}
+          {/* Test / Sample Queries Strip with DEMO label */}
           <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs text-slate-400">
-            <span>Instant test queries:</span>
-            {VERIFIED_MEMBERS.map((m) => (
-              <button
-                key={m.membershipNo}
-                type="button"
-                onClick={() => handleQuickLookup(m.membershipNo)}
-                className="underline hover:text-amber-400 font-mono text-slate-300 bg-slate-900/90 px-2.5 py-1 rounded-md border border-slate-800 transition-colors"
-              >
-                #{m.membershipNo} ({m.name.split(" ")[0]} - {m.rank})
-              </button>
-            ))}
+            <span className="text-[11px] text-slate-400 font-medium">Sample Queries:</span>
+            <button
+              type="button"
+              onClick={() => handleQuickLookup("2060")}
+              className="underline hover:text-amber-400 font-mono text-slate-300 bg-slate-900 px-2.5 py-1 rounded-md border border-slate-800 transition-colors text-[11px]"
+            >
+              #2060 (Active Credential)
+            </button>
+            <button
+              type="button"
+              onClick={() => handleQuickLookup("DEMO-101")}
+              className="underline hover:text-amber-400 font-mono text-amber-300 bg-slate-900 px-2.5 py-1 rounded-md border border-amber-500/30 transition-colors text-[11px]"
+            >
+              #DEMO-101 (Demo Sample)
+            </button>
           </div>
         </div>
 
         {/* Search Results Area */}
         {searched && (
-          <div className="max-w-3xl mx-auto mb-14 animate-fadeIn">
+          <div className="max-w-2xl mx-auto mb-14 animate-fadeIn">
             {result ? (
-              <div className="space-y-6">
-                {/* Official Verification Notice */}
-                <div className="bg-emerald-950/60 border-2 border-emerald-500/50 p-4 rounded-xl flex items-center justify-between flex-wrap gap-3 text-emerald-300 shadow-xl">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-emerald-400 shrink-0" />
+              <div className="space-y-4">
+                {/* Demo record warning if applicable */}
+                {result.isDemo && (
+                  <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/40 text-amber-300 text-xs font-bold flex items-center gap-2 shadow">
+                    <Info className="w-4 h-4 shrink-0 text-amber-400" />
+                    <span>DEMO RECORD — NOT AN OFFICIAL CREDENTIAL</span>
+                  </div>
+                )}
+
+                {/* Professional Privacy-Conscious Result Card */}
+                <div className="bg-slate-900/95 border-2 border-emerald-500/60 rounded-2xl p-6 sm:p-8 shadow-2xl space-y-6">
+                  {/* Status Banner */}
+                  <div className="flex items-center justify-between pb-4 border-b border-slate-800">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-9 h-9 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
+                        <CheckCircle2 className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm sm:text-base font-black text-white">
+                            Credential Verified
+                          </span>
+                          <span className="px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 text-[10px] font-extrabold uppercase">
+                            STATUS: {result.status}
+                          </span>
+                        </div>
+                        <p className="text-[11px] text-slate-400">
+                          WCMAA India Official Central Records
+                        </p>
+                      </div>
+                    </div>
+
+                    <button
+                      onClick={handlePrint}
+                      className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-bold flex items-center gap-1.5 transition-colors"
+                      title="Print or Save Verification Record"
+                    >
+                      <Printer className="w-3.5 h-3.5" />
+                      <span>Print</span>
+                    </button>
+                  </div>
+
+                  {/* Clean Specification List */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                    <div className="bg-slate-950 p-3.5 rounded-xl border border-slate-800 space-y-1">
+                      <span className="text-[11px] text-slate-400 font-medium block">Credential ID:</span>
+                      <strong className="text-white font-mono text-base">
+                        WCMAA-{result.membershipNo}
+                      </strong>
+                    </div>
+
+                    <div className="bg-slate-950 p-3.5 rounded-xl border border-slate-800 space-y-1">
+                      <span className="text-[11px] text-slate-400 font-medium block">Status:</span>
+                      <strong className="text-emerald-400 font-extrabold text-base flex items-center gap-1.5">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                        {result.status}
+                      </strong>
+                    </div>
+
+                    <div className="bg-slate-950 p-3.5 rounded-xl border border-slate-800 space-y-1">
+                      <span className="text-[11px] text-slate-400 font-medium block">Name / Initials:</span>
+                      <strong className="text-white text-sm">
+                        {result.name}
+                      </strong>
+                    </div>
+
+                    <div className="bg-slate-950 p-3.5 rounded-xl border border-slate-800 space-y-1">
+                      <span className="text-[11px] text-slate-400 font-medium block">Grade / Rank:</span>
+                      <strong className="text-amber-400 text-sm">
+                        {result.rank}
+                      </strong>
+                    </div>
+
+                    <div className="bg-slate-950 p-3.5 rounded-xl border border-slate-800 space-y-1">
+                      <span className="text-[11px] text-slate-400 font-medium block">Issue Year:</span>
+                      <strong className="text-slate-200 text-sm font-mono">
+                        {result.issueYear} (Valid thru {result.validUpto})
+                      </strong>
+                    </div>
+
+                    <div className="bg-slate-950 p-3.5 rounded-xl border border-slate-800 space-y-1">
+                      <span className="text-[11px] text-slate-400 font-medium block">Issuing Organization:</span>
+                      <strong className="text-slate-200 text-xs">
+                        {ASSOCIATION_INFO.name}
+                      </strong>
+                    </div>
+                  </div>
+
+                  {/* Issuer & Branch Footer */}
+                  <div className="pt-3 border-t border-slate-800/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-slate-400">
                     <div>
-                      <h4 className="font-extrabold text-sm sm:text-base text-white">
-                        Authenticated Active National Member
-                      </h4>
-                      <p className="text-xs text-emerald-200/90">
-                        Record verified in official WCMAAI National Archives under authority of Founder President Amar Singh Deori.
-                      </p>
+                      <span>Registered Branch: <strong>{result.branch}</strong></span>
                     </div>
-                  </div>
-                  <button
-                    onClick={handlePrint}
-                    className="px-3.5 py-1.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-400/40 text-emerald-300 text-xs font-bold flex items-center gap-1.5 transition-colors"
-                  >
-                    <Printer className="w-3.5 h-3.5" />
-                    Print / Save Pass
-                  </button>
-                </div>
-
-                {/* Digital Replica of the Physical Membership Card */}
-                <div
-                  id="printable-member-card"
-                  className="relative bg-gradient-to-br from-slate-900 via-slate-950 to-[#071322] border-2 border-amber-500/70 rounded-2xl p-6 sm:p-8 shadow-2xl overflow-hidden text-slate-100 gold-border-glow"
-                >
-                  {/* Subtle Watermark in background */}
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
-                    <img
-                      src={getAssetPath("/assets/wcmaai_logo.webp")}
-                      alt="Watermark"
-                      width={320}
-                      height={320}
-                      className="w-72 h-72 object-contain"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-
-                  {/* Card Header matching physical card */}
-                  <div className="border-b border-slate-800 pb-4 mb-6">
-                    <div className="flex items-center justify-between flex-wrap gap-3">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-full bg-white p-0.5 ring-2 ring-amber-500 shadow-sm shrink-0">
-                          <img
-                            src={getAssetPath("/assets/wcmaai_logo_sm.webp")}
-                            alt="WCMAA Logo"
-                            width={48}
-                            height={48}
-                            className="w-full h-full object-contain rounded-full"
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                        <div>
-                          <p className="text-[10px] font-mono tracking-widest text-amber-400 font-extrabold uppercase">
-                            OFFICIAL DIGITAL MEMBERSHIP PASSPORT
-                          </p>
-                          <h3 className="text-sm sm:text-lg font-black text-white tracking-wide">
-                            WING CHUN MARTIAL ARTS ASSOCIATION INDIA
-                          </h3>
-                          <p className="text-xs font-bold text-red-500 tracking-wider">
-                            WING CHUN KUNG-FU • 詠春拳
-                          </p>
-                        </div>
-                      </div>
-                      <div className="text-left sm:text-right text-[10px] sm:text-[11px] font-mono text-slate-400">
-                        <p>HQ: BATHOUPURI ISBT LOKHRA, GUWAHATI-35</p>
-                        <p className="text-amber-300 font-semibold">REGN. NO. KAM/240/W/08 OF 2005-2006</p>
-                        <p className="text-emerald-400 font-bold">REGN. WCMAA SINGAPORE</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Card Details Grid */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center">
-                    {/* Left: Cardholder Photo Placeholder / Avatar */}
-                    <div className="flex flex-col items-center sm:items-start space-y-2">
-                      <div className="w-32 h-40 bg-gradient-to-b from-slate-800 to-slate-900 rounded-xl border-2 border-slate-700 flex flex-col items-center justify-center p-2 text-center shadow-inner relative overflow-hidden">
-                        <User className="w-16 h-16 text-slate-500 mb-1" />
-                        <span className="text-[10px] text-slate-300 font-mono font-bold">
-                          CERTIFIED HOLDER
-                        </span>
-                        {/* Simulated Smart Card Hologram Chip */}
-                        <div className="w-7 h-5 rounded bg-amber-400/30 border border-amber-400/50 mt-1 flex items-center justify-center">
-                          <span className="text-[8px] font-mono text-amber-200">CHIP</span>
-                        </div>
-                        <div className="absolute bottom-1 bg-emerald-600 text-white text-[9px] font-black px-2 py-0.5 rounded shadow">
-                          STATUS: {result.status}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Middle: Member Credentials */}
-                    <div className="sm:col-span-2 space-y-2.5 text-xs sm:text-sm font-sans">
-                      <div className="grid grid-cols-3 border-b border-slate-800/80 pb-1.5">
-                        <span className="text-slate-400 font-medium">NAME:</span>
-                        <span className="col-span-2 font-black text-white text-base">
-                          {result.name}
-                        </span>
-                      </div>
-                      <div className="grid grid-cols-3 border-b border-slate-800/80 pb-1.5">
-                        <span className="text-slate-400 font-medium">RANK:</span>
-                        <span className="col-span-2 font-black text-amber-400 text-base">
-                          {result.rank}
-                        </span>
-                      </div>
-                      <div className="grid grid-cols-3 border-b border-slate-800/80 pb-1.5">
-                        <span className="text-slate-400 font-medium">MEMBERSHIP NO.:</span>
-                        <span className="col-span-2 font-mono font-extrabold text-white">
-                          #{result.membershipNo}
-                        </span>
-                      </div>
-                      <div className="grid grid-cols-3 border-b border-slate-800/80 pb-1.5">
-                        <span className="text-slate-400 font-medium">DOB:</span>
-                        <span className="col-span-2 text-slate-200 font-medium">{result.dob}</span>
-                      </div>
-                      <div className="grid grid-cols-3 border-b border-slate-800/80 pb-1.5">
-                        <span className="text-slate-400 font-medium">BLOOD GROUP:</span>
-                        <span className="col-span-2 font-black text-red-400">{result.bloodGroup}</span>
-                      </div>
-                      <div className="grid grid-cols-3 border-b border-slate-800/80 pb-1.5">
-                        <span className="text-slate-400 font-medium">VALIDITY:</span>
-                        <span className="col-span-2 text-slate-200 font-medium">
-                          {result.issueDate} to <strong className="text-white">{result.validUpto}</strong>
-                        </span>
-                      </div>
-                      <div className="grid grid-cols-3">
-                        <span className="text-slate-400 font-medium">BRANCH / DOJO:</span>
-                        <span className="col-span-2 text-slate-200 font-medium">{result.branch}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Card Footer: Signature & Motto */}
-                  <div className="mt-6 pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div className="text-center sm:text-left">
-                      <p className="text-[10px] text-slate-500 font-mono">AUTHORIZED SIGNATURE</p>
-                      <p className="font-serif italic text-amber-300 text-base font-bold">
-                        Amar Singh Deori
-                      </p>
-                      <p className="text-[10px] text-slate-400">
-                        Founder President & Chief Instructor, WCMAA India
-                      </p>
-                    </div>
-
-                    <div className="px-3.5 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-[10px] sm:text-[11px] font-black text-amber-400 uppercase tracking-widest text-center shadow">
-                      LEARN WING CHUN KUNG FU FOR SELF DEFENSE
+                    <div>
+                      <span>Examining Instructor: <strong>{result.instructor}</strong></span>
                     </div>
                   </div>
                 </div>
@@ -266,10 +212,15 @@ export default function VerificationPortal() {
             ) : (
               <div className="bg-red-950/40 border-2 border-red-500/40 p-6 rounded-2xl flex items-start gap-3.5 text-red-300 shadow-xl">
                 <AlertCircle className="w-6 h-6 text-red-400 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-extrabold text-base text-white">Record Not Found</h4>
-                  <p className="text-xs sm:text-sm text-red-200/90 mt-1 leading-relaxed">
-                    No active membership record was found for "{searchQuery}". Please verify that the membership number is entered correctly, or contact the association administrative office at <strong>duttasankar88@gmail.com</strong> or call <strong>+91 78969 62207</strong> for manual verification.
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <h4 className="font-extrabold text-base text-white">Record Not Found</h4>
+                    <span className="px-2 py-0.5 rounded-full bg-red-950 text-red-400 border border-red-800 text-[10px] font-bold">
+                      INVALID / UNVERIFIED
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-red-200/90 leading-relaxed">
+                    No active membership record was found for "{searchQuery}". Please verify that the membership number is entered correctly, or contact the association administrative office at <strong>duttasankar88@gmail.com</strong> or call <strong>+91 78969 62207</strong> for manual assistance.
                   </p>
                 </div>
               </div>
@@ -277,32 +228,32 @@ export default function VerificationPortal() {
           </div>
         )}
 
-        {/* Association Authenticity Guarantee Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto pt-6">
+        {/* Association Authenticity Standards Strip */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto pt-4">
           <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-3.5 shadow-lg">
             <Award className="w-5 h-5 text-amber-400 shrink-0 mt-1" />
             <div>
-              <h5 className="font-bold text-sm text-white">Govt. Recognized Charter</h5>
+              <h5 className="font-bold text-sm text-white">Government Registration</h5>
               <p className="text-xs text-slate-400 mt-1 leading-relaxed">
-                Registered under Societies Registration Act: Regn. No. KAM/240/W/08 of 2005-2006.
+                Registered under the applicable society framework in Assam: KAM/240/W/08 of 2005–2006.
               </p>
             </div>
           </div>
           <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-3.5 shadow-lg">
             <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0 mt-1" />
             <div>
-              <h5 className="font-bold text-sm text-white">International Lineage Seal</h5>
+              <h5 className="font-bold text-sm text-white">International Charter</h5>
               <p className="text-xs text-slate-400 mt-1 leading-relaxed">
-                Affiliated with WCMAA Singapore & The World Kuoshu Federation (TWKSF).
+                Chartered with WCMAA Singapore and aligned with The World Kuoshu Federation (TWKSF).
               </p>
             </div>
           </div>
           <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-3.5 shadow-lg">
             <FileCheck className="w-5 h-5 text-blue-400 shrink-0 mt-1" />
             <div>
-              <h5 className="font-bold text-sm text-white">Tamper-Proof Grading</h5>
+              <h5 className="font-bold text-sm text-white">Standardized Examinations</h5>
               <p className="text-xs text-slate-400 mt-1 leading-relaxed">
-                Centralized registry safeguarding genuine practitioners against counterfeit dojos.
+                Structured technical grading maintaining curriculum integrity across affiliated academies.
               </p>
             </div>
           </div>

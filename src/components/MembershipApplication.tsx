@@ -35,7 +35,7 @@ export default function MembershipApplication() {
             Join the WCMAA India Family
           </h2>
           <p className="text-slate-400 text-base">
-            Whether you are a beginner seeking authentic self-defense or a martial school director seeking national federation affiliation, apply below.
+            Whether you are a beginner seeking structured Wing Chun training or a martial school director seeking academy affiliation, apply below.
           </p>
 
           {/* Toggle Tab */}

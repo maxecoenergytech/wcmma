@@ -88,7 +88,7 @@ export default function TrainingPathway() {
             Wing Chun Training Pathway
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            A progressive, structured martial-arts curriculum adhering to authentic Ip Man lineage principles—from fundamental centerline roots to master-level wooden dummy and weaponry.
+            Traditional Wing Chun curriculum and training principles taught within the WCMAA India system—from foundational centerline roots to apparatus Wooden Dummy techniques and traditional weapons.
           </p>
         </div>
 

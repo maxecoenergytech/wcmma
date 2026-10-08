@@ -142,9 +142,9 @@ export default function AffiliationPage() {
               <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
                 <MapPin className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-bold text-white">Territorial District Rights</h3>
+              <h3 className="text-base font-bold text-white">Territorial Considerations</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Protect your territory. Affiliated academies receive regional priority for student referrals in their designated district and city jurisdiction.
+                Territorial considerations may apply according to the academy affiliation policy, supporting regional training coordination in your city or zone.
               </p>
             </div>
 
@@ -152,9 +152,9 @@ export default function AffiliationPage() {
               <div className="w-10 h-10 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400">
                 <GraduationCap className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-bold text-white">Free Annual Master Upgrade Camps</h3>
+              <h3 className="text-base font-bold text-white">Annual Instructor Upgrade Camps</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Attend regular instructor-only technical development camps led by Chief Instructor Amar Singh Deori and General Secretary Sifu Sankar Dutta.
+                Attend periodic instructor-only technical development camps led by Chief Instructor Amar Singh Deori and General Secretary Sifu Sankar Dutta.
               </p>
             </div>
 
@@ -162,9 +162,9 @@ export default function AffiliationPage() {
               <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
                 <Briefcase className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-bold text-white">Zero Monthly Royalties</h3>
+              <h3 className="text-base font-bold text-white">Student Fee Retention</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Keep 100% of your student tuition and admission fees. We do not extract ongoing monthly cuts from your academy's hard-earned revenue.
+                No monthly royalty — subject to the applicable WCMAA India affiliation terms. Academies retain student fees according to the applicable affiliation agreement.
               </p>
             </div>
           </div>
