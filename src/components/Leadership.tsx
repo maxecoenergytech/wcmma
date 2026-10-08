@@ -1,11 +1,15 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { ASSOCIATION_INFO } from "@/data/associationData";
 import { getAssetPath } from "@/utils/paths";
-import { Shield, Award, Globe, Users, CheckCircle, Sparkles, ExternalLink } from "lucide-react";
+import { Shield, Award, Globe, Users, CheckCircle, Sparkles, ExternalLink, ZoomIn, X, Flame } from "lucide-react";
 
 export default function Leadership() {
+  const [activeModalImg, setActiveModalImg] = useState<{ src: string; title: string; desc: string } | null>(null);
+
   return (
-    <section id="leadership" className="py-16 sm:py-24 bg-[#050a12] border-b border-slate-800 martial-bg-pattern">
+    <section id="leadership" className="py-16 sm:py-24 bg-[#050a12] border-b border-slate-800 martial-bg-pattern relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
@@ -127,45 +131,144 @@ export default function Leadership() {
           </div>
         </div>
 
-        {/* Association Seminar & Practitioner Family Photo */}
-        <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 sm:p-8 shadow-2xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-7 rounded-xl overflow-hidden border border-slate-800 shadow-md">
-              <img
-                src={getAssetPath("/assets/association_team.webp")}
-                alt="Wing Chun Martial Arts Association India Team & Students"
-                width={720}
-                height={540}
-                className="w-full h-auto object-cover hover:scale-102 transition-transform duration-500"
-                loading="lazy"
-                decoding="async"
-              />
+        {/* SECTION: Authentic Training Ground & Masters in Action Showcase */}
+        <div className="space-y-8 mb-16">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
+              <Flame className="w-3.5 h-3.5 text-amber-400" />
+              Living Martial Heritage • Lineage in Action
             </div>
-            <div className="lg:col-span-5 space-y-4">
-              <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-amber-400">
-                <Users className="w-4 h-4" />
-                Brotherhood of Martial Artists
+            <h3 className="text-2xl sm:text-3xl font-black text-white">
+              Authentic Training & Dynamic Chi Sau Practice
+            </h3>
+            <p className="text-slate-400 text-xs sm:text-sm">
+              Capturing genuine moments of tactile sensitivity drills, joyful movement, and the martial arts brotherhood at our open-air training grounds.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            {/* Card 1: Mr. Amar Singh & Mr. Shankar Dutta Playful Movement Practicing Time */}
+            <div className="bg-slate-900/90 rounded-2xl border-2 border-amber-500/40 p-6 flex flex-col justify-between shadow-2xl hover:border-amber-400 transition-all duration-300 group">
+              <div className="space-y-4">
+                <div
+                  className="rounded-xl overflow-hidden border border-slate-800 shadow-lg relative bg-slate-950 cursor-pointer aspect-[3/2]"
+                  onClick={() =>
+                    setActiveModalImg({
+                      src: getAssetPath("/assets/sifu_chisau_practice.webp"),
+                      title: "Sifu Amar Singh Deori & Sifu Sankar Dutta — Dynamic Chi Sau Movement Practice",
+                      desc: "Demonstrating Chi Sau (sticking hands), tactile bridging, and centerline redirection during open-air sparring and movement practice at the training grounds.",
+                    })
+                  }
+                >
+                  <img
+                    src={getAssetPath("/assets/sifu_chisau_practice.webp")}
+                    alt="Mr. Amar Singh and Mr. Shankar Dutta playful movement practicing time - Chi Sau Wing Chun"
+                    width={960}
+                    height={640}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity"></div>
+                  
+                  {/* Floating Action Badge */}
+                  <div className="absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-[10px] font-black uppercase px-2.5 py-1 rounded-md shadow-lg flex items-center gap-1">
+                    <Sparkles className="w-3 h-3" />
+                    Chi Sau (黐手) Movement
+                  </div>
+
+                  {/* Click to zoom prompt */}
+                  <div className="absolute bottom-3 right-3 bg-slate-900/90 text-amber-300 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-700 flex items-center gap-1.5 opacity-90 group-hover:opacity-100 transition-opacity">
+                    <ZoomIn className="w-3.5 h-3.5" />
+                    <span>View Photo</span>
+                  </div>
+                </div>
+
+                <div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400">
+                    Grandmasters in Free Movement Drills
+                  </span>
+                  <h4 className="text-xl font-black text-white group-hover:text-amber-300 transition-colors mt-0.5">
+                    Sifu Amar Singh & Sifu Sankar Dutta in Playful Movement Training
+                  </h4>
+                </div>
+
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  Caught during an energetic training session, Founder President <strong>Sifu Amar Singh Deori</strong> and General Secretary <strong>Sifu Sankar Dutta</strong> engage in spontaneous <strong>Chi Sau (黏手 - Sticking Hands)</strong> drills. Wing Chun practitioners use playful sensitivity practice to borrow incoming kinetic energy, maintain constant bridge contact, and neutralize strikes with zero tension or rigid force.
+                </p>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-black text-white font-serif">
-                "One Family • One Lineage • One Vision"
-              </h3>
-              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-sans">
-                The association brings together practitioners of all ages and walks of life—cultivating physical resilience, mental calmness, tactical self-preservation, and respect for the traditional art of Wing Chun.
-              </p>
-              <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-                  Standardized curriculum and belt progression.
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-                  Direct line of transmission from verified masters.
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-                  National self-defense seminars for men, women & children.
-                </li>
-              </ul>
+
+              <div className="pt-4 mt-4 border-t border-slate-800/80 grid grid-cols-2 gap-2 text-[11px] text-slate-300 font-semibold">
+                <span className="flex items-center gap-1.5 text-amber-300">
+                  <CheckCircle className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  Tactile Spring Sensitivity
+                </span>
+                <span className="flex items-center gap-1.5 text-amber-300">
+                  <CheckCircle className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  Centerline Trapping Flow
+                </span>
+              </div>
+            </div>
+
+            {/* Card 2: Full Association Training Camp & Practitioner Family */}
+            <div className="bg-slate-900/90 rounded-2xl border-2 border-slate-800 p-6 flex flex-col justify-between shadow-2xl hover:border-blue-400 transition-all duration-300 group">
+              <div className="space-y-4">
+                <div
+                  className="rounded-xl overflow-hidden border border-slate-800 shadow-lg relative bg-slate-950 cursor-pointer aspect-[3/2]"
+                  onClick={() =>
+                    setActiveModalImg({
+                      src: getAssetPath("/assets/association_camp_group.webp"),
+                      title: "WCMAA India National Training Ground — Students, Disciples & Sifus",
+                      desc: "The extended Wing Chun family gathered at North East Academy training ground with Sifu Amar Singh Deori and Sifu Sankar Dutta.",
+                    })
+                  }
+                >
+                  <img
+                    src={getAssetPath("/assets/association_camp_group.webp")}
+                    alt="Wing Chun Martial Arts Association India training camp students and instructors"
+                    width={960}
+                    height={640}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity"></div>
+
+                  {/* Floating Action Badge */}
+                  <div className="absolute top-3 left-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-md shadow-lg flex items-center gap-1">
+                    <Users className="w-3 h-3" />
+                    All-India Martial Family
+                  </div>
+
+                  {/* Click to zoom prompt */}
+                  <div className="absolute bottom-3 right-3 bg-slate-900/90 text-blue-300 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-700 flex items-center gap-1.5 opacity-90 group-hover:opacity-100 transition-opacity">
+                    <ZoomIn className="w-3.5 h-3.5" />
+                    <span>View Photo</span>
+                  </div>
+                </div>
+
+                <div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-blue-400">
+                    Open-Air Academy Training Grounds
+                  </span>
+                  <h4 className="text-xl font-black text-white group-hover:text-blue-300 transition-colors mt-0.5">
+                    WCMAA India Disciples, Black Sashes & Students
+                  </h4>
+                </div>
+
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  The association unites practitioners of all age groups and backgrounds under the motto <em>"One Family • One Lineage • One Vision"</em>. From beginner children developing discipline to senior instructors mastering advanced Wooden Dummy and weaponry, this close-knit brotherhood preserves traditional martial heritage in Assam and throughout India.
+                </p>
+              </div>
+
+              <div className="pt-4 mt-4 border-t border-slate-800/80 grid grid-cols-2 gap-2 text-[11px] text-slate-300 font-semibold">
+                <span className="flex items-center gap-1.5 text-blue-300">
+                  <CheckCircle className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                  35 Years Unbroken Transmission
+                </span>
+                <span className="flex items-center gap-1.5 text-blue-300">
+                  <CheckCircle className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                  Youth & Adult Development
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -195,6 +298,38 @@ export default function Leadership() {
           </div>
         </div>
       </div>
+
+      {/* Lightbox Modal for Photo Preview */}
+      {activeModalImg && (
+        <div
+          className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-fadeIn"
+          onClick={() => setActiveModalImg(null)}
+        >
+          <div
+            className="bg-slate-900 border border-slate-800 rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setActiveModalImg(null)}
+              className="absolute top-3 right-3 z-10 p-2 rounded-full bg-slate-950/80 text-slate-300 hover:text-white border border-slate-700 hover:bg-slate-800"
+              aria-label="Close Preview"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <div className="bg-slate-950 aspect-[3/2] w-full overflow-hidden">
+              <img
+                src={activeModalImg.src}
+                alt={activeModalImg.title}
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="p-5 sm:p-6 space-y-2">
+              <h4 className="text-lg font-black text-white">{activeModalImg.title}</h4>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{activeModalImg.desc}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
