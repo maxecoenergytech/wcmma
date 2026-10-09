@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { getAssetPath } from "@/utils/paths";
+import SecurityProtection from "@/components/SecurityProtection";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -164,12 +165,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta httpEquiv="X-Frame-Options" content="SAMEORIGIN" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </head>
       <body className="antialiased min-h-screen bg-slate-950 text-slate-100 flex flex-col">
+        {/* Anti-Scraping, Anti-Inspection & Right-Click Security Guard */}
+        <SecurityProtection />
         {children}
       </body>
     </html>

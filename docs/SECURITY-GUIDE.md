@@ -55,3 +55,25 @@ The Certificate Verification Portal (`src/components/VerificationPortal.tsx`) en
 If anyone encounters an unauthorized entity claiming to represent WCMAA India and requesting payment or bank details:
 1. Do not transfer funds or share financial details.
 2. Immediately report the incident to the Secretariat via WhatsApp or phone: `+91 78969 62207`.
+
+---
+
+## 6. Content Protection & Anti-Scraping Compliance
+
+To prevent scammers, impostors, and malicious scrapers from duplicating the website, certificates, emblems, or leadership records:
+
+* **Right-Click Disabled:** Right-clicking anywhere on the website is blocked and triggers a Security Compliance warning.
+* **Developer Tools & Inspection Shortcuts Blocked:**
+  - `F12` (Developer Tools)
+  - `Ctrl + U` / `Cmd + U` (View Page Source)
+  - `Ctrl + Shift + I` / `Cmd + Option + I` (Inspect Elements)
+  - `Ctrl + Shift + J` / `Cmd + Option + J` (Developer Console)
+  - `Ctrl + Shift + C` / `Cmd + Option + C` (Element Picker)
+  - `Ctrl + S` / `Cmd + S` (Save Page as HTML)
+* **Emblem & Image Drag Protection:** Logos, trademarks, photos, and canvas elements cannot be dragged or copied via mobile long-press menus (`user-drag: none`, `-webkit-touch-callout: none`).
+* **HTTP Security Headers (`public/_headers`):**
+  - `X-Frame-Options: SAMEORIGIN` (prevents clickjacking and fraudulent iframe embedding).
+  - `X-Content-Type-Options: nosniff` (prevents MIME-type sniffing attacks).
+  - `Permissions-Policy: payment=(), camera=(), microphone=(), geolocation=()` (strictly disables browser payment APIs and unauthorized hardware access).
+  - `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload` (enforces encrypted HTTPS everywhere).
+
