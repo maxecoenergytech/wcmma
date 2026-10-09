@@ -1,5 +1,13 @@
 [
   {
+    "name": "Sifu Amar Singh Deori",
+    "role": "Founder President & Chief Instructor",
+    "affiliation": "WCMAA, India",
+    "experience": "Practicing and teaching Wing Chun in Northeast India since 1991",
+    "bio": "Pioneer of traditional Wing Chun Kung Fu education in North East India. Serving as National Chief Instructor and authorized examiner on national technical gradings and certificates under the WCMAA Singapore charter.",
+    "image": "/assets/grandmaster_portrait.webp"
+  },
+  {
     "name": "Sifu Sankar Dutta",
     "role": "Founder & General Secretary",
     "honoraryTitles": [
@@ -9,13 +17,5 @@
     "experience": "Senior master instructor with extensive technical practice in traditional forms & Wooden Dummy",
     "bio": "Founder of Wing Chun Martial Arts Association India and General Secretary. Specialist in the 116 movements of the Wooden Dummy (Muk Yan Jong) and traditional weapon forms. Oversees curriculum dissemination, national camps, referee development, and youth martial arts programs across India.",
     "image": "/assets/sifu_sankar_dutta_portrait.webp"
-  },
-  {
-    "name": "Sifu Amar Singh Deori",
-    "role": "Chief Instructor",
-    "affiliation": "WCMAA, India",
-    "experience": "Practicing and teaching Wing Chun in Northeast India since 1991",
-    "bio": "Sifu Amar Singh Deori is Chief Instructor in Wing Chun Martial Arts Association, India, he is the Pioneer of traditional Wing Chun Kung Fu education in North East India. Serving as National Chief Instructor and authorized examiner on national technical gradings and certificates under the WCMAA Singapore charter.",
-    "image": "/assets/wcmaai_logo_sm.webp"
   }
 ]

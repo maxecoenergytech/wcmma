@@ -134,16 +134,16 @@ export default function RootLayout({
       },
       {
         "@type": "Person",
-        "@id": "https://www.wcmaaindia.com/#founder",
-        "name": "Sifu Sankar Dutta",
-        "jobTitle": "Founder & General Secretary",
+        "@id": "https://www.wcmaaindia.com/#founder-president",
+        "name": "Sifu Amar Singh Deori",
+        "jobTitle": "Founder President & Chief Instructor",
         "worksFor": { "@id": "https://www.wcmaaindia.com/#organization" }
       },
       {
         "@type": "Person",
-        "@id": "https://www.wcmaaindia.com/#chief-instructor",
-        "name": "Sifu Amar Singh Deori",
-        "jobTitle": "Chief Instructor",
+        "@id": "https://www.wcmaaindia.com/#founder-gen-sec",
+        "name": "Sifu Sankar Dutta",
+        "jobTitle": "Founder & General Secretary",
         "worksFor": { "@id": "https://www.wcmaaindia.com/#organization" }
       },
       {

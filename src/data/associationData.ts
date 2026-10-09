@@ -102,6 +102,14 @@ export const ASSOCIATION_INFO = {
   ] as AffiliationRecord[],
   leadership: [
     {
+      name: "Sifu Amar Singh Deori",
+      role: "Founder President & Chief Instructor",
+      affiliation: "WCMAA, India",
+      experience: "Practicing and teaching Wing Chun in Northeast India since 1991",
+      bio: "Pioneer of traditional Wing Chun Kung Fu education in North East India. Serving as National Chief Instructor and authorized examiner on national technical gradings and certificates under the WCMAA Singapore charter.",
+      image: getAssetPath("/assets/grandmaster_portrait.webp"),
+    },
+    {
       name: "Sifu Sankar Dutta",
       role: "Founder & General Secretary",
       honoraryTitles: [
@@ -111,14 +119,6 @@ export const ASSOCIATION_INFO = {
       experience: "Senior master instructor with extensive technical practice in traditional forms & Wooden Dummy",
       bio: "Founder of Wing Chun Martial Arts Association India and General Secretary. Specialist in the 116 movements of the Wooden Dummy (Muk Yan Jong) and traditional weapon forms. Oversees curriculum dissemination, national camps, referee development, and youth martial arts programs across India.",
       image: getAssetPath("/assets/sifu_sankar_dutta_portrait.webp"),
-    },
-    {
-      name: "Sifu Amar Singh Deori",
-      role: "Chief Instructor",
-      affiliation: "WCMAA, India",
-      experience: "Practicing and teaching Wing Chun in Northeast India since 1991",
-      bio: "Sifu Amar Singh Deori is Chief Instructor in Wing Chun Martial Arts Association, India, he is the Pioneer of traditional Wing Chun Kung Fu education in North East India. Serving as National Chief Instructor and authorized examiner on national technical gradings and certificates under the WCMAA Singapore charter.",
-      image: getAssetPath("/assets/wcmaai_logo_sm.webp"),
     },
   ],
   stats: {
@@ -251,7 +251,7 @@ export const BRANCHES: BranchRecord[] = [
     state: "Assam",
     address: "Bathoupuri, ISBT Lokhra, Guwahati - 781035",
     chiefInstructor: "Sifu Amar Singh Deori",
-    instructorGrade: "Chief Instructor",
+    instructorGrade: "Founder President & Chief Instructor",
     phone: "+91 78969 62207",
     timing: "6:00 AM - 8:30 AM & 5:00 PM - 7:30 PM",
     trainingDays: "Mon, Wed, Fri",
