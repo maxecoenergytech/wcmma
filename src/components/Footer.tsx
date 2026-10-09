@@ -123,7 +123,37 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href={getRoutePath("/affiliation")} className="hover:text-amber-400 transition-colors text-amber-300 font-semibold">
+                <a href={getRoutePath("/locations/assam/")} className="hover:text-amber-400 transition-colors text-amber-300">
+                  Assam & Northeast Hub
+                </a>
+              </li>
+              <li>
+                <a href={getRoutePath("/dojos/guwahati-national-hq/")} className="hover:text-amber-400 transition-colors">
+                  Guwahati National HQ
+                </a>
+              </li>
+              <li>
+                <a href={getRoutePath("/dojos/guwahati-beltola/")} className="hover:text-amber-400 transition-colors">
+                  Beltola Ground (Guwahati)
+                </a>
+              </li>
+              <li>
+                <a href={getRoutePath("/programs/youth/")} className="hover:text-emerald-400 transition-colors">
+                  Youth Program (10–17)
+                </a>
+              </li>
+              <li>
+                <a href={getRoutePath("/programs/adults/")} className="hover:text-blue-400 transition-colors">
+                  Adult Training (18–40)
+                </a>
+              </li>
+              <li>
+                <a href={getRoutePath("/partnerships/schools-colleges/")} className="hover:text-purple-300 transition-colors">
+                  School & College Workshops
+                </a>
+              </li>
+              <li>
+                <a href={getRoutePath("/affiliation/")} className="hover:text-amber-400 transition-colors text-amber-300 font-semibold">
                   Affiliations
                 </a>
               </li>

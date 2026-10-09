@@ -87,6 +87,11 @@ export default function RootLayout({
           "postalCode": "781035",
           "addressCountry": "IN"
         },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "26.1158",
+          "longitude": "91.7086"
+        },
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+91-78969-62207",
@@ -119,7 +124,12 @@ export default function RootLayout({
           "postalCode": "781028",
           "addressCountry": "IN"
         },
-        "telephone": "+91-78969-62207"
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "26.1264",
+          "longitude": "91.7925"
+        },
+        "telephone": "+91-90852-96178"
       },
       {
         "@type": "Person",

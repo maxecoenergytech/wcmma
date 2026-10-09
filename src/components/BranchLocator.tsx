@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { BRANCHES, BranchRecord, ASSOCIATION_INFO } from "@/data/associationData";
+import { getRoutePath } from "@/utils/paths";
 import {
   MapPin,
   Phone,
@@ -179,10 +180,71 @@ export default function BranchLocator() {
                       Verify / Report Info
                     </button>
                   </div>
+
+                  {branch.id === "ghy-hq" && (
+                    <a
+                      href={getRoutePath("/dojos/guwahati-national-hq/")}
+                      className="text-[11px] font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1 pt-1.5 border-t border-slate-800"
+                    >
+                      <span>Full Dojo Page & Directions &rarr;</span>
+                    </a>
+                  )}
+                  {branch.id === "ghy-ne-academy" && (
+                    <a
+                      href={getRoutePath("/dojos/guwahati-beltola/")}
+                      className="text-[11px] font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1 pt-1.5 border-t border-slate-800"
+                    >
+                      <span>Full Dojo Page & Directions &rarr;</span>
+                    </a>
+                  )}
+                  {branch.id === "ghy-bamunimaidam" && (
+                    <a
+                      href={getRoutePath("/dojos/guwahati-bamunimaidam/")}
+                      className="text-[11px] font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1 pt-1.5 border-t border-slate-800"
+                    >
+                      <span>Full Dojo Page & Directions &rarr;</span>
+                    </a>
+                  )}
                 </div>
               </div>
             );
           })}
+        </div>
+
+        {/* Regional & Program Fast Links */}
+        <div className="mt-12 p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div>
+              <p className="font-bold text-white text-sm">Explore Regional Hubs & Specialized Programs</p>
+              <p className="text-xs text-slate-400">Discover authorized classes, student safeguarding, and institutional partnerships.</p>
+            </div>
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+              <a
+                href={getRoutePath("/locations/assam/")}
+                className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-amber-300 font-semibold border border-slate-700 transition-colors"
+              >
+                Assam State Overview &rarr;
+              </a>
+              <a
+                href={getRoutePath("/programs/youth/")}
+                className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-emerald-300 font-semibold border border-slate-700 transition-colors"
+              >
+                Youth (10–17) Program &rarr;
+              </a>
+              <a
+                href={getRoutePath("/programs/adults/")}
+                className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-blue-300 font-semibold border border-slate-700 transition-colors"
+              >
+                Adult (18–40) Classes &rarr;
+              </a>
+              <a
+                href={getRoutePath("/partnerships/schools-colleges/")}
+                className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-purple-300 font-semibold border border-slate-700 transition-colors"
+              >
+                School & College Workshops &rarr;
+              </a>
+            </div>
+          </div>
         </div>
 
         {filteredBranches.length === 0 && (

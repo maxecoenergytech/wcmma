@@ -1,4 +1,5 @@
 import React from "react";
+import { getRoutePath } from "@/utils/paths";
 import { UserPlus, UserCheck, Heart, Shield, CheckCircle2 } from "lucide-react";
 
 export default function StudentsParentsSection() {
@@ -120,10 +121,20 @@ export default function StudentsParentsSection() {
               <div className="pt-5 mt-5 border-t border-slate-800/80 flex items-center justify-between">
                 <span className="text-[11px] text-slate-400">Classes available at all accredited branches</span>
                 <a
-                  href="#branches"
+                  href={
+                    group.title === "For Children"
+                      ? getRoutePath("/programs/youth/")
+                      : group.title === "For Adults"
+                      ? getRoutePath("/programs/adults/")
+                      : getRoutePath("#branches")
+                  }
                   className="text-xs font-bold text-amber-400 hover:text-amber-300 transition-colors"
                 >
-                  Find Nearest Dojo →
+                  {group.title === "For Children"
+                    ? "Youth Program & Safety →"
+                    : group.title === "For Adults"
+                    ? "Adult Program Details →"
+                    : "Find Nearest Dojo →"}
                 </a>
               </div>
             </div>

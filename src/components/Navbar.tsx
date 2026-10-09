@@ -218,6 +218,20 @@ export default function Navbar() {
             ACADEMY AFFILIATION
           </a>
           <a
+            href={getRoutePath("/locations/assam/")}
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-sm font-bold text-amber-400 hover:bg-slate-800"
+          >
+            ASSAM & NORTHEAST TRAINING HUB
+          </a>
+          <a
+            href={getRoutePath("/programs/youth/")}
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-sm font-bold text-emerald-400 hover:bg-slate-800"
+          >
+            YOUTH PROGRAM (AGES 10–17)
+          </a>
+          <a
             href={getRoutePath("#event")}
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-md text-sm font-bold text-amber-400 hover:bg-slate-800"
