@@ -1,5 +1,5 @@
 {
-  "siteMode": "maintenance",
+  "siteMode": "premium",
   "lastUpdated": "2026-10-09",
   "version": "2.4.0",
   "description": "Set siteMode to 'maintenance', 'simple', or 'premium' to control published website presentation"

@@ -1,4 +1,4 @@
-const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "/wcmma";
 
 export const getAssetPath = (path: string): string => {
   if (!path) return "";
