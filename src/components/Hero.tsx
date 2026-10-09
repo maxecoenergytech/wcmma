@@ -1,9 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ASSOCIATION_INFO } from "@/data/associationData";
 import { getAssetPath, getRoutePath } from "@/utils/paths";
-import WoodenDummyCanvas from "@/components/WoodenDummyCanvas";
 import {
   ShieldCheck,
   Award,
@@ -14,21 +13,76 @@ import {
   Sparkles,
 } from "lucide-react";
 
+const HERO_VIDEO_URL =
+  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260815_034306_165449ef-7d2e-4e81-850f-1939c5cb442d.mp4";
+
 export default function Hero() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [videoFailed, setVideoFailed] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    // Respect user reduced-motion preferences
+    try {
+      const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+      setPrefersReducedMotion(motionQuery.matches);
+
+      const handleMotionChange = (e: MediaQueryListEvent) => {
+        setPrefersReducedMotion(e.matches);
+      };
+
+      motionQuery.addEventListener("change", handleMotionChange);
+      return () => motionQuery.removeEventListener("change", handleMotionChange);
+    } catch {
+      // Gracefully ignored in non-supporting browsers
+    }
+  }, []);
+
   return (
     <section className="relative min-h-[85vh] lg:min-h-[92vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#040810] via-[#090d18] to-[#040810] border-b border-amber-950/40">
-      {/* 3D WebGL Canvas Layer (Muk Yan Jong, Cinematic Lighting & Dust Particles) */}
+      {/* Full-Width Cinematic Background Video Layer with Poster Fallback */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <WoodenDummyCanvas className="w-full h-full" />
-      </div>
+        {/* 1. Base Static Poster Image Fallback (Zero CLS, Instant Render) */}
+        <img
+          src={getAssetPath("/assets/hero_video_poster.webp")}
+          alt=""
+          role="presentation"
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
 
-      {/* Atmospheric Overlays (Vignette & Warm Timber Shimmer) */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/85 to-transparent lg:w-3/5 z-0 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/70 z-0 pointer-events-none" />
-      {/* Indian National Tricolor Atmospheric Ambient Lighting */}
-      <div className="absolute -top-10 left-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-[#FF671F]/15 blur-[140px] rounded-full pointer-events-none" />
-      <div className="absolute top-1/3 right-1/4 w-60 sm:w-80 h-60 sm:h-80 bg-white/[0.04] blur-[130px] rounded-full pointer-events-none" />
-      <div className="absolute -bottom-10 left-1/6 w-72 sm:w-96 h-72 sm:h-96 bg-[#046A38]/16 blur-[140px] rounded-full pointer-events-none" />
+        {/* 2. Premium HTML5 Background Video */}
+        {!prefersReducedMotion && !videoFailed && (
+          <video
+            ref={videoRef}
+            src={HERO_VIDEO_URL}
+            poster={getAssetPath("/assets/hero_video_poster.webp")}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+            tabIndex={-1}
+            onLoadedData={() => setVideoLoaded(true)}
+            onError={() => setVideoFailed(true)}
+            className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${
+              videoLoaded ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        )}
+
+        {/* 3. Dark Cinematic Multi-Layer Contrast & Vignette Overlays */}
+        <div className="absolute inset-0 bg-slate-950/75 sm:bg-slate-950/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-transparent lg:w-3/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#040810] via-transparent to-slate-950/80" />
+
+        {/* 4. Indian National Tricolor Atmospheric Ambient Lighting */}
+        <div className="absolute -top-10 left-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-[#FF671F]/15 blur-[140px] rounded-full" />
+        <div className="absolute top-1/3 right-1/4 w-60 sm:w-80 h-60 sm:h-80 bg-white/[0.04] blur-[130px] rounded-full" />
+        <div className="absolute -bottom-10 left-1/6 w-72 sm:w-96 h-72 sm:h-96 bg-[#046A38]/16 blur-[140px] rounded-full" />
+      </div>
 
       {/* Hero Content Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 relative z-10 w-full">
