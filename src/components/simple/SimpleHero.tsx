@@ -12,8 +12,13 @@ import {
 
 export default function SimpleHero() {
   return (
-    <section className="relative bg-slate-950 text-white border-b border-slate-800 py-10 sm:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-slate-950 text-white border-b border-slate-800 py-10 sm:py-16 overflow-hidden">
+      {/* Indian National Tricolor Atmospheric Ambient Background Glow */}
+      <div className="absolute -top-12 left-1/4 w-80 h-80 bg-[#FF671F]/10 blur-[130px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 right-1/3 w-60 h-60 bg-white/[0.03] blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute -bottom-12 right-1/4 w-80 h-80 bg-[#046A38]/12 blur-[130px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left: Clean Federation Text */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">

@@ -25,8 +25,10 @@ export default function Hero() {
       {/* Atmospheric Overlays (Vignette & Warm Timber Shimmer) */}
       <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/85 to-transparent lg:w-3/5 z-0 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/70 z-0 pointer-events-none" />
-      <div className="absolute top-1/4 left-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-amber-500/10 blur-[130px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-72 sm:w-96 h-72 sm:h-96 bg-red-950/20 blur-[120px] rounded-full pointer-events-none" />
+      {/* Indian National Tricolor Atmospheric Ambient Lighting */}
+      <div className="absolute -top-10 left-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-[#FF671F]/15 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/3 right-1/4 w-60 sm:w-80 h-60 sm:h-80 bg-white/[0.04] blur-[130px] rounded-full pointer-events-none" />
+      <div className="absolute -bottom-10 left-1/6 w-72 sm:w-96 h-72 sm:h-96 bg-[#046A38]/16 blur-[140px] rounded-full pointer-events-none" />
 
       {/* Hero Content Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 relative z-10 w-full">
