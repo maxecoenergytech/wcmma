@@ -220,7 +220,7 @@ export default function VerificationPortal() {
                     </span>
                   </div>
                   <p className="text-xs sm:text-sm text-red-200/90 leading-relaxed">
-                    No active membership record was found for "{searchQuery}". Please verify that the membership number is entered correctly, or contact the association administrative office at <strong>duttasankar88@gmail.com</strong> or call <strong>+91 78969 62207</strong> for manual assistance.
+                    No active membership record was found for "{searchQuery}". Please verify that the membership number is entered correctly, or contact the association administrative office at <strong>wingchun91@gmail.com</strong> or call <strong>+91 78969 62207</strong> for manual assistance.
                   </p>
                 </div>
               </div>

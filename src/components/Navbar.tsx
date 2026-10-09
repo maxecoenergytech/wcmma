@@ -90,6 +90,9 @@ export default function Navbar() {
             <a href={getRoutePath("#leadership")} className="hover:text-amber-400 transition-colors">
               INSTRUCTORS
             </a>
+            <a href={getRoutePath("#hall-of-fame")} className="hover:text-amber-400 transition-colors text-amber-300">
+              HALL OF FAME
+            </a>
             <a href={getRoutePath("/affiliation")} className="hover:text-amber-400 transition-colors text-amber-300">
               AFFILIATIONS
             </a>
@@ -209,6 +212,13 @@ export default function Navbar() {
             className="block px-3 py-2 rounded-md text-sm font-bold text-slate-200 hover:bg-slate-800 hover:text-amber-400"
           >
             INSTRUCTORS & LEADERSHIP
+          </a>
+          <a
+            href={getRoutePath("#hall-of-fame")}
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-sm font-bold text-amber-300 hover:bg-slate-800"
+          >
+            HALL OF FAME (BLACK BELTS)
           </a>
           <a
             href={getRoutePath("/affiliation")}

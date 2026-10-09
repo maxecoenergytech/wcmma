@@ -318,12 +318,12 @@ export default function BranchLocator() {
               </a>
 
               <a
-                href={`mailto:duttasankar88@gmail.com?subject=${encodeURIComponent(
+                href={`mailto:wingchun91@gmail.com?subject=${encodeURIComponent(
                   `Dojo Directory Inquiry: ${reportModalDojo.name}`
                 )}`}
                 className="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs flex items-center justify-center gap-2"
               >
-                Email Secretariat: duttasankar88@gmail.com
+                Email Secretariat: wingchun91@gmail.com
               </a>
             </div>
           </div>

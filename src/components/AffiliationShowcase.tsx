@@ -275,7 +275,7 @@ export default function AffiliationShowcase() {
                 <strong>4. Instructor Grading:</strong> Head instructors must complete standardized technical orientation sessions or grading evaluations supervised by Founder President Sifu Amar Singh Deori and Founder & General Secretary Sifu Sankar Dutta.
               </p>
               <p>
-                <strong>5. Inquiries & Written Draft:</strong> For a formal memorandum of understanding or specific queries regarding academy affiliation, please contact the General Secretary Desk at <strong>+91 78969 62207</strong> or email <strong>duttasankar88@gmail.com</strong>.
+                <strong>5. Inquiries & Written Draft:</strong> For a formal memorandum of understanding or specific queries regarding academy affiliation, please contact the General Secretary Desk at <strong>+91 78969 62207</strong> or email <strong>wingchun91@gmail.com</strong>.
               </p>
             </div>
 

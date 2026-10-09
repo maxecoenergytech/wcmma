@@ -97,7 +97,7 @@ export default function RootLayout({
           "@type": "ContactPoint",
           "telephone": "+91-78969-62207",
           "contactType": "General Secretariat",
-          "email": "duttasankar88@gmail.com",
+          "email": "wingchun91@gmail.com",
           "availableLanguage": ["English", "Hindi", "Assamese"]
         },
         "sameAs": [

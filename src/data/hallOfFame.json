@@ -1,0 +1,107 @@
+[
+  {
+    "id": "hof-sujan-biswas",
+    "name": "Sifu Sujan Biswas",
+    "rank": "Black Belt III",
+    "appointment": "Tripura State Head & Chief Coach",
+    "districtState": "Tripura State",
+    "credentialId": "2060",
+    "specialization": "Traditional Empty-Hand Forms, Fighting Applications & State Team Coaching",
+    "image": "/assets/hall_of_fame/sifu_sujan_biswas.webp",
+    "achievements": [
+      "Authorized Examiner under Singapore Charter",
+      "Head Coach - Tripura State Wing Chun Squad",
+      "Pioneer of Wing Chun Development in Tripura"
+    ]
+  },
+  {
+    "id": "hof-prabin-hazarika",
+    "name": "Sifu Prabin Hazarika",
+    "rank": "Black Belt",
+    "appointment": "National Treasurer, WCMAA India",
+    "districtState": "Assam / National Secretariat",
+    "credentialId": "2015",
+    "specialization": "Classical Wing Chun Stances, Chi Sau Sensitivity & Association Governance",
+    "image": "/assets/hall_of_fame/sifu_prabin_hazarika.webp",
+    "achievements": [
+      "Senior Technical Council & Financial Administrator",
+      "Senior Referee at National Grading Assemblies",
+      "30+ Years Continuous Martial Practice"
+    ]
+  },
+  {
+    "id": "hof-pritam-nath",
+    "name": "Sifu Pritam Kumar Nath",
+    "rank": "Black Belt",
+    "appointment": "Barak Valley Zonal Representative",
+    "districtState": "Barak Valley, Assam",
+    "credentialId": "2031",
+    "specialization": "Close-Range Combat, Centerline Defense & Zonal Development",
+    "image": "/assets/hall_of_fame/sifu_pritam_kumar_nath.webp",
+    "achievements": [
+      "Zonal Coordinator for Southern Assam & Barak Valley",
+      "Active Promoter of Youth Martial Arts & Self Defense",
+      "Certified National Instructor"
+    ]
+  },
+  {
+    "id": "hof-raju-bhowmick",
+    "name": "Sifu Raju Bhowmick",
+    "rank": "Black Belt",
+    "appointment": "President, Barak Valley Chapter",
+    "districtState": "Barak Valley, Assam",
+    "credentialId": "2028",
+    "specialization": "Regional Dojo Expansion, Student Mentorship & Youth Development",
+    "image": "/assets/hall_of_fame/raju_bhowmick.webp",
+    "achievements": [
+      "President - Barak Valley Regional Directorate",
+      "Director of Grassroots School Seminars",
+      "Dedicated Martial Arts Educator"
+    ]
+  },
+  {
+    "id": "hof-hridyananda-das",
+    "name": "Sifu Hridyananda Das",
+    "rank": "Black Belt",
+    "appointment": "President, Barpeta District Chapter",
+    "districtState": "Barpeta District, Assam",
+    "credentialId": "2024",
+    "specialization": "Grassroots Wing Chun Instruction, Physical Conditioning & Ethics",
+    "image": "/assets/hall_of_fame/hridyananda_das.webp",
+    "achievements": [
+      "President - Barpeta District Martial Arts Committee",
+      "Trainer of Inter-District Tournament Competitors",
+      "Community Self-Defense Outreach Leader"
+    ]
+  },
+  {
+    "id": "hof-pranab-k",
+    "name": "Sifu Pranab K.",
+    "rank": "Black Belt II",
+    "appointment": "Senior Instructor, Beltola Training Ground",
+    "districtState": "Guwahati, Assam",
+    "credentialId": "2045",
+    "specialization": "Wooden Dummy Drills, Biu Jee Mechanics & Dynamic Sparring",
+    "image": "/assets/grandmaster_avatar.webp",
+    "achievements": [
+      "Senior Instructor at North East Academy Playground",
+      "Certified Examiner for Junior Sash Grades",
+      "Lead Instructor for Advance Chi Sau Drills"
+    ]
+  },
+  {
+    "id": "hof-jyoti-deori",
+    "name": "Sifu Jyoti Prasad Deori",
+    "rank": "Senior Master Instructor",
+    "appointment": "Associate Chief Instructor, WCMAA India",
+    "districtState": "National Technical Council",
+    "credentialId": "2010",
+    "specialization": "National Grading Examination & Senior Syllabus Standards",
+    "image": "/assets/grandmaster_portrait.webp",
+    "achievements": [
+      "Associate Chief Instructor on National Charter",
+      "Key Technical Examiner on Foundation Day Examinations",
+      "Co-Director of Advanced Weaponry & Mook Yan Jong"
+    ]
+  }
+]

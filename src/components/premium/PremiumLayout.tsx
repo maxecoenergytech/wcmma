@@ -10,6 +10,7 @@ import WhyTrainSection from "@/components/WhyTrainSection";
 import IndiaDojoMap from "@/components/IndiaDojoMap";
 import BranchLocator from "@/components/BranchLocator";
 import Leadership from "@/components/Leadership";
+import HallOfFame from "@/components/HallOfFame";
 import StudentsParentsSection from "@/components/StudentsParentsSection";
 import AffiliationShowcase from "@/components/AffiliationShowcase";
 import VerificationPortal from "@/components/VerificationPortal";
@@ -56,6 +57,9 @@ export default function PremiumLayout() {
 
       {/* 11. Section: Executive Leadership & Verified Profiles */}
       <Leadership />
+
+      {/* 11B. Section: Hall of Fame - Certified Black Belt Holders & State Leaders */}
+      <HallOfFame />
 
       {/* 12. Section: Students & Parents (Who Can Train) */}
       <StudentsParentsSection />

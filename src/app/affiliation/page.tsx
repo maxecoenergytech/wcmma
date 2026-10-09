@@ -523,7 +523,7 @@ export default function AffiliationPage() {
             <div className="mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-400 flex flex-wrap items-center justify-center gap-4">
               <span>Direct Inquiries: <strong>+91 78969 62207</strong> / <strong>+91 90852 96178</strong></span>
               <span>•</span>
-              <span>Email: <strong>duttasankar88@gmail.com</strong></span>
+              <span>Email: <strong>wingchun91@gmail.com</strong></span>
             </div>
           </div>
         </div>

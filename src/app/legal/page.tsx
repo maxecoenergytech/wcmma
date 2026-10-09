@@ -222,7 +222,7 @@ export default function LegalPage() {
                   </span>
                   <span className="flex items-center gap-2">
                     <Mail className="w-4 h-4 text-blue-400" />
-                    <span>Email: <strong>duttasankar88@gmail.com</strong></span>
+                    <span>Email: <strong>wingchun91@gmail.com</strong></span>
                   </span>
                 </div>
               </div>
@@ -274,7 +274,7 @@ export default function LegalPage() {
 
                 <h3 className="font-bold text-white text-base pt-2">6. User Rights & Contact</h3>
                 <p>
-                  Practitioners and visitors may request review, correction, or deletion of their submitted contact information by writing to the General Secretary at <strong>duttasankar88@gmail.com</strong> or calling <strong>+91 78969 62207</strong>.
+                  Practitioners and visitors may request review, correction, or deletion of their submitted contact information by writing to the General Secretary at <strong>wingchun91@gmail.com</strong> or calling <strong>+91 78969 62207</strong>.
                 </p>
               </div>
             </div>
@@ -405,7 +405,7 @@ export default function LegalPage() {
                 <p>
                   Journalists, academic researchers, and affiliated martial schools requesting permission to use official photographs or historical archival material may contact:
                   <br />
-                  <strong>General Secretary Desk:</strong> +91 78969 62207 | duttasankar88@gmail.com
+                  <strong>General Secretary Desk:</strong> +91 78969 62207 | wingchun91@gmail.com
                 </p>
               </div>
             </div>
