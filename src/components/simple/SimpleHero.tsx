@@ -131,25 +131,16 @@ export default function SimpleHero() {
               {/* Leadership Strip */}
               <div className="flex items-center justify-between p-3 rounded-lg bg-slate-950 border border-slate-800 text-xs">
                 <div className="flex items-center gap-2.5">
-                  <div className="flex -space-x-2">
-                    <img
-                      src={getAssetPath("/assets/wcmaai_logo_sm.webp")}
-                      alt="WCMAA India National Insignia"
-                      width={32}
-                      height={32}
-                      className="w-8 h-8 rounded-full border-2 border-amber-500 object-contain bg-slate-900 p-0.5"
-                    />
-                    <img
-                      src={getAssetPath("/assets/sifu_sankar_dutta_avatar.webp")}
-                      alt="Sifu Sankar Dutta"
-                      width={32}
-                      height={32}
-                      className="w-8 h-8 rounded-full border-2 border-red-500 object-cover object-top"
-                    />
-                  </div>
+                  <img
+                    src={getAssetPath("/assets/sifu_sankar_dutta_avatar.webp")}
+                    alt="Sifu Sankar Dutta - Founder & General Secretary"
+                    width={36}
+                    height={36}
+                    className="w-9 h-9 rounded-full border-2 border-amber-500 object-cover object-top shadow"
+                  />
                   <div>
-                    <p className="text-white font-bold leading-tight text-xs">Executive Leadership</p>
-                    <p className="text-[10px] text-slate-400">Amar Singh Deori & Sankar Dutta</p>
+                    <p className="text-white font-bold leading-tight text-xs">Sifu Sankar Dutta</p>
+                    <p className="text-[10px] text-amber-400 font-semibold">Founder & General Secretary</p>
                   </div>
                 </div>
 
@@ -157,7 +148,7 @@ export default function SimpleHero() {
                   href={getRoutePath("#leadership")}
                   className="text-amber-400 hover:text-amber-300 font-bold text-xs flex items-center gap-1"
                 >
-                  <span>Profiles</span>
+                  <span>Profile</span>
                   <ChevronRight className="w-3.5 h-3.5" />
                 </a>
               </div>

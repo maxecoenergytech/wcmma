@@ -163,18 +163,18 @@ export default function LegalPage() {
                 <h3 className="font-bold text-white text-base">Office Bearers & Key Appointments</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="p-4 rounded-xl bg-slate-950 border border-slate-800">
-                    <p className="text-xs text-amber-400 font-bold uppercase">Founder President & Chief Instructor</p>
-                    <p className="text-base font-black text-white mt-1">Sifu Amar Singh Deori</p>
+                    <p className="text-xs text-amber-400 font-bold uppercase">Founder & General Secretary</p>
+                    <p className="text-base font-black text-white mt-1">Sifu Sankar Dutta</p>
                     <p className="text-xs text-slate-400 mt-1">
-                      Pioneer of Wing Chun Kung Fu training in Northeast India since 1991. Authorized examiner for national gradings.
+                      Founder of WCMAA India. Joint Secy. Gen. KUOSHU Federation India; Vice President Assam Kungfu Federation. Secretariat Head.
                     </p>
                   </div>
 
                   <div className="p-4 rounded-xl bg-slate-950 border border-slate-800">
-                    <p className="text-xs text-blue-400 font-bold uppercase">General Secretary</p>
-                    <p className="text-base font-black text-white mt-1">Sifu Sankar Dutta</p>
+                    <p className="text-xs text-blue-400 font-bold uppercase">Chief Instructor</p>
+                    <p className="text-base font-black text-white mt-1">Sifu Amar Singh Deori</p>
                     <p className="text-xs text-slate-400 mt-1">
-                      Joint Secy. Gen. KUOSHU Federation India; Vice President Assam Kungfu Federation. Administrative & Secretariat Head.
+                      Pioneer of Wing Chun Kung Fu training in Northeast India since 1991. Authorized examiner for national gradings.
                     </p>
                   </div>
                 </div>
@@ -310,7 +310,7 @@ export default function LegalPage() {
 
                 <h3 className="font-bold text-white text-base pt-2">4. Credential Verification Registry</h3>
                 <p>
-                  The online verification portal reflects association records. In the event of a technical discrepancy or missing archive record, the physical certificate bearing the official seal and authorized signature of Founder President Amar Singh Deori shall be verified manually by the Secretariat.
+                  The online verification portal reflects association records. In the event of a technical discrepancy or missing archive record, the physical certificate bearing the official seal and authorized signature of Founder & General Secretary Sifu Sankar Dutta or Chief Instructor Sifu Amar Singh Deori shall be verified manually by the Secretariat.
                 </p>
 
                 <h3 className="font-bold text-white text-base pt-2">5. Limitation of Liability</h3>

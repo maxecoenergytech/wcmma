@@ -27,7 +27,64 @@ export default function Leadership() {
 
         {/* Master Profiles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {/* Sifu Amar Singh Deori */}
+          {/* Sifu Sankar Dutta - Founder & General Secretary */}
+          <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 rounded-2xl border-2 border-slate-800 hover:border-amber-500/50 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 shadow-2xl transition-all duration-300 group">
+            <div className="w-full sm:w-48 h-64 sm:h-auto rounded-xl overflow-hidden shrink-0 relative bg-slate-950 border border-slate-700 shadow-md">
+              <img
+                src={getAssetPath("/assets/sifu_sankar_dutta_portrait.webp")}
+                alt="Sifu Sankar Dutta - Founder & General Secretary"
+                width={280}
+                height={350}
+                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+              />
+              <div className="absolute top-2 left-2 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded shadow">
+                Founder
+              </div>
+            </div>
+
+            <div className="flex flex-col justify-between space-y-4 flex-1">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-bold text-amber-400 uppercase tracking-wider">
+                    Founder & General Secretary
+                  </span>
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-black text-white group-hover:text-amber-300 transition-colors">
+                  Sifu Sankar Dutta
+                </h3>
+                <div className="space-y-1">
+                  <p className="text-xs font-bold text-blue-400">
+                    • Joint Secy. Gen. KUOSHU Federation, India
+                  </p>
+                  <p className="text-xs font-bold text-blue-400">
+                    • Vice President Assam Kungfu Federation
+                  </p>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-2">
+                  Founder of Wing Chun Martial Arts Association India and General Secretary. Specialist in the 116 movements of the Wooden Dummy (Muk Yan Jong) and traditional weapon forms. Oversees curriculum dissemination, national camps, referee development, and youth martial arts programs across India.
+                </p>
+              </div>
+
+              <div className="pt-3 border-t border-slate-800/80 flex flex-wrap gap-2 text-[11px] text-slate-300 font-semibold">
+                <span className="bg-slate-800/90 px-3 py-1 rounded-lg border border-slate-700">
+                  ✓ Founder, WCMAA India
+                </span>
+                <span className="bg-slate-800/90 px-3 py-1 rounded-lg border border-slate-700">
+                  ✓ Wooden Dummy (116) Specialist
+                </span>
+                <span className="bg-slate-800/90 px-3 py-1 rounded-lg border border-slate-700">
+                  ✓ National Referee
+                </span>
+                <span className="bg-slate-800/90 px-3 py-1 rounded-lg border border-slate-700">
+                  ✓ 35+ Years Heritage
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Sifu Amar Singh Deori - Chief Instructor */}
           <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 rounded-2xl border-2 border-slate-800 hover:border-amber-500/50 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 shadow-2xl transition-all duration-300 group">
             <div className="w-full sm:w-48 h-56 sm:h-auto rounded-xl overflow-hidden shrink-0 relative bg-slate-950/80 border border-slate-800 shadow-md flex flex-col items-center justify-center p-6 text-center">
               <div className="w-20 h-20 rounded-full bg-amber-500/10 border-2 border-amber-500/40 flex items-center justify-center mb-3">
@@ -43,10 +100,10 @@ export default function Leadership() {
                 National Charter
               </span>
               <span className="text-[9px] text-slate-400 font-medium mt-1">
-                Founder Office
+                Chief Instructor Office
               </span>
-              <div className="absolute top-2 left-2 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded shadow">
-                Founder
+              <div className="absolute top-2 left-2 bg-gradient-to-r from-slate-800 to-slate-900 text-amber-300 text-[10px] font-bold uppercase px-2 py-0.5 rounded shadow border border-slate-700">
+                Chief Instructor
               </div>
             </div>
 
@@ -54,7 +111,7 @@ export default function Leadership() {
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-bold text-amber-400 uppercase tracking-wider">
-                    Founder President & Chief Instructor
+                    Chief Instructor, WCMAA India
                   </span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-black text-white group-hover:text-amber-300 transition-colors">
@@ -77,60 +134,6 @@ export default function Leadership() {
                 </span>
                 <span className="bg-slate-800/90 px-3 py-1 rounded-lg border border-slate-700">
                   ✓ 35+ Years Experience
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Sifu Sankar Dutta */}
-          <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 rounded-2xl border-2 border-slate-800 hover:border-amber-500/50 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 shadow-2xl transition-all duration-300 group">
-            <div className="w-full sm:w-48 h-64 sm:h-auto rounded-xl overflow-hidden shrink-0 relative bg-slate-950 border border-slate-700 shadow-md">
-              <img
-                src={getAssetPath("/assets/sifu_sankar_dutta_portrait.webp")}
-                alt="Sifu Sankar Dutta - General Secretary"
-                width={280}
-                height={350}
-                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-                decoding="async"
-              />
-              <div className="absolute top-2 left-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow">
-                General Secretary
-              </div>
-            </div>
-
-            <div className="flex flex-col justify-between space-y-4">
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold text-amber-400 uppercase tracking-wider">
-                    General Secretary, WCMAA India
-                  </span>
-                </div>
-                <h3 className="text-2xl sm:text-3xl font-black text-white group-hover:text-amber-300 transition-colors">
-                  Sifu Sankar Dutta
-                </h3>
-                <div className="space-y-1">
-                  <p className="text-xs font-bold text-blue-400">
-                    • Joint Secy. Gen. KUOSHU Federation, India
-                  </p>
-                  <p className="text-xs font-bold text-blue-400">
-                    • Vice President Assam Kungfu Federation
-                  </p>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-2">
-                  Specialist in the 116 movements of the Wooden Dummy (Muk Yan Jong) and traditional weapon forms. Oversees curriculum dissemination, national camps, referee development, and youth martial arts programs across India.
-                </p>
-              </div>
-
-              <div className="pt-3 border-t border-slate-800/80 flex flex-wrap gap-2 text-[11px] text-slate-300 font-semibold">
-                <span className="bg-slate-800/90 px-3 py-1 rounded-lg border border-slate-700">
-                  ✓ Wooden Dummy (116) Specialist
-                </span>
-                <span className="bg-slate-800/90 px-3 py-1 rounded-lg border border-slate-700">
-                  ✓ National Referee
-                </span>
-                <span className="bg-slate-800/90 px-3 py-1 rounded-lg border border-slate-700">
-                  ✓ Kuoshu Federation India
                 </span>
               </div>
             </div>
@@ -199,7 +202,7 @@ export default function Leadership() {
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  Caught during an energetic training session, Founder President <strong>Sifu Amar Singh Deori</strong> and General Secretary <strong>Sifu Sankar Dutta</strong> engage in spontaneous <strong>Chi Sau (黏手 - Sticking Hands)</strong> drills. Wing Chun practitioners use sensitivity practice to maintain constant bridge contact and redirect force with relaxed structure.
+                  Caught during an energetic training session, Founder & General Secretary <strong>Sifu Sankar Dutta</strong> and Chief Instructor <strong>Sifu Amar Singh Deori</strong> engage in spontaneous <strong>Chi Sau (黏手 - Sticking Hands)</strong> drills. Wing Chun practitioners use sensitivity practice to maintain constant bridge contact and redirect force with relaxed structure.
                 </p>
               </div>
 

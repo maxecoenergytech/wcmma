@@ -36,7 +36,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-slate-300 text-base leading-relaxed">
-              Established in 1991 under the leadership of <strong>Sifu Amar Singh Deori</strong> and <strong>Sifu Sankar Dutta</strong>, the <strong>Wing Chun Martial Arts Association India (WCMAA India)</strong> is a national martial arts association dedicated to the promotion and structured teaching of traditional Wing Chun Kung Fu in India.
+              Established in 1991 by Founder <strong>Sifu Sankar Dutta</strong> alongside Chief Instructor <strong>Sifu Amar Singh Deori</strong>, the <strong>Wing Chun Martial Arts Association India (WCMAA India)</strong> is a national martial arts association dedicated to the promotion and structured teaching of traditional Wing Chun Kung Fu in India.
             </p>
 
             <p className="text-slate-400 text-sm leading-relaxed">

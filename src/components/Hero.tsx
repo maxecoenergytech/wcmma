@@ -158,30 +158,20 @@ export default function Hero() {
                 <p className="text-[10px] text-slate-400 mt-0.5">6 September 2026 • Guwahati, Assam</p>
               </div>
 
-              {/* Executive Leadership Avatars */}
+              {/* Founder Profile Avatar */}
               <div className="flex items-center justify-between pt-1">
-                <div className="flex items-center gap-2">
-                  <div className="flex -space-x-1.5">
-                    <img
-                      src={getAssetPath("/assets/wcmaai_logo_sm.webp")}
-                      alt="WCMAA India National Insignia"
-                      width={30}
-                      height={30}
-                      className="w-7 h-7 rounded-full border-2 border-amber-500 object-contain bg-slate-900 p-0.5"
-                      loading="eager"
-                    />
-                    <img
-                      src={getAssetPath("/assets/sifu_sankar_dutta_avatar.webp")}
-                      alt="Sifu Sankar Dutta"
-                      width={30}
-                      height={30}
-                      className="w-7 h-7 rounded-full border-2 border-red-500 object-cover object-top"
-                      loading="eager"
-                    />
-                  </div>
+                <div className="flex items-center gap-2.5">
+                  <img
+                    src={getAssetPath("/assets/sifu_sankar_dutta_avatar.webp")}
+                    alt="Sifu Sankar Dutta - Founder & General Secretary"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 rounded-full border-2 border-amber-500 object-cover object-top shadow-md"
+                    loading="eager"
+                  />
                   <div className="text-left">
-                    <p className="text-white font-bold leading-tight text-[11px]">Executive Leadership</p>
-                    <p className="text-[9px] text-slate-400">Amar Singh Deori & Sankar Dutta</p>
+                    <p className="text-white font-bold leading-tight text-[11px]">Sifu Sankar Dutta</p>
+                    <p className="text-[9px] text-amber-400 font-semibold">Founder & General Secretary</p>
                   </div>
                 </div>
 
@@ -189,7 +179,7 @@ export default function Hero() {
                   href={getRoutePath("#leadership")}
                   className="text-[10px] font-bold text-amber-400 hover:text-amber-300 flex items-center gap-0.5"
                 >
-                  <span>Profiles</span>
+                  <span>Profile</span>
                   <ChevronRight className="w-3 h-3" />
                 </a>
               </div>

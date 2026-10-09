@@ -272,7 +272,7 @@ export default function AffiliationShowcase() {
                 <strong>3. Territorial Policy:</strong> Territorial considerations may apply according to local dojo density and the association's regional development guidelines to avoid student conflict.
               </p>
               <p>
-                <strong>4. Instructor Grading:</strong> Head instructors must complete standardized technical orientation sessions or grading evaluations supervised by Founder President Amar Singh Deori and General Secretary Sankar Dutta.
+                <strong>4. Instructor Grading:</strong> Head instructors must complete standardized technical orientation sessions or grading evaluations supervised by Founder & General Secretary Sifu Sankar Dutta and Chief Instructor Amar Singh Deori.
               </p>
               <p>
                 <strong>5. Inquiries & Written Draft:</strong> For a formal memorandum of understanding or specific queries regarding academy affiliation, please contact the General Secretary Desk at <strong>+91 78969 62207</strong> or email <strong>duttasankar88@gmail.com</strong>.
