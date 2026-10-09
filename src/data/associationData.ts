@@ -106,8 +106,8 @@ export const ASSOCIATION_INFO = {
       role: "Founder President & Chief Instructor",
       affiliation: "WCMAA, India",
       experience: "Practicing and teaching Wing Chun in Northeast India since 1991",
-      bio: "Pioneer of traditional Wing Chun Kung Fu education in Northeast India. Serves as Chief Instructor and authorized examiner on national technical gradings and certificates under the WCMAA Singapore charter.",
-      image: getAssetPath("/assets/grandmaster_portrait.webp"),
+      bio: "Sifu Amar Singh Deori is Chief Instructor in Wing Chun Martial Arts Association, India, he is the Pioneer of traditional Wing Chun Kung Fu education in North East India. Serving as National Chief Instructor and authorized examiner on national technical gradings and certificates under the WCMAA Singapore charter.",
+      image: getAssetPath("/assets/wcmaai_logo_sm.webp"),
     },
     {
       name: "Sifu Sankar Dutta",

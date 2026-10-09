@@ -49,14 +49,6 @@ export default function GallerySection() {
         "Senior instructors and certified black-sash practitioners united under the banner 'One Family • One Lineage • One Vision'.",
     },
     {
-      src: getAssetPath("/assets/grandmaster_portrait.webp"),
-      title: "Sifu Amar Singh Deori — Founder President",
-      category: "Leadership",
-      aspect: "aspect-[3/4]",
-      description:
-        "Founder President and National Chief Instructor, pioneer of authentic Wing Chun in Northeast India and authorized examiner.",
-    },
-    {
       src: getAssetPath("/assets/sifu_sankar_dutta_portrait.webp"),
       title: "Sifu Sankar Dutta — General Secretary",
       category: "Leadership",

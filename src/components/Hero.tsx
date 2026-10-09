@@ -163,11 +163,11 @@ export default function Hero() {
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-1.5">
                     <img
-                      src={getAssetPath("/assets/grandmaster_avatar.webp")}
-                      alt="Sifu Amar Singh Deori"
+                      src={getAssetPath("/assets/wcmaai_logo_sm.webp")}
+                      alt="WCMAA India National Insignia"
                       width={30}
                       height={30}
-                      className="w-7 h-7 rounded-full border-2 border-amber-500 object-cover object-top"
+                      className="w-7 h-7 rounded-full border-2 border-amber-500 object-contain bg-slate-900 p-0.5"
                       loading="eager"
                     />
                     <img

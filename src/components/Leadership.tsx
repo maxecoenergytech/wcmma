@@ -29,22 +29,28 @@ export default function Leadership() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Sifu Amar Singh Deori */}
           <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 rounded-2xl border-2 border-slate-800 hover:border-amber-500/50 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 shadow-2xl transition-all duration-300 group">
-            <div className="w-full sm:w-48 h-64 sm:h-auto rounded-xl overflow-hidden shrink-0 relative bg-slate-950 border border-slate-700 shadow-md">
-              <img
-                src={getAssetPath("/assets/grandmaster_portrait.webp")}
-                alt="Sifu Amar Singh Deori - Founder President & Chief Instructor"
-                width={280}
-                height={350}
-                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-                decoding="async"
-              />
+            <div className="w-full sm:w-48 h-56 sm:h-auto rounded-xl overflow-hidden shrink-0 relative bg-slate-950/80 border border-slate-800 shadow-md flex flex-col items-center justify-center p-6 text-center">
+              <div className="w-20 h-20 rounded-full bg-amber-500/10 border-2 border-amber-500/40 flex items-center justify-center mb-3">
+                <img
+                  src={getAssetPath("/assets/wcmaai_logo_sm.webp")}
+                  alt="WCMAA India National Insignia"
+                  width={64}
+                  height={64}
+                  className="w-14 h-14 object-contain"
+                />
+              </div>
+              <span className="text-[10px] font-bold tracking-widest uppercase text-amber-400">
+                National Charter
+              </span>
+              <span className="text-[9px] text-slate-400 font-medium mt-1">
+                Founder Office
+              </span>
               <div className="absolute top-2 left-2 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded shadow">
                 Founder
               </div>
             </div>
 
-            <div className="flex flex-col justify-between space-y-4">
+            <div className="flex flex-col justify-between space-y-4 flex-1">
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-bold text-amber-400 uppercase tracking-wider">
@@ -58,7 +64,7 @@ export default function Leadership() {
                   Wing Chun Martial Arts Association, India
                 </p>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-2">
-                  Pioneer of traditional Wing Chun Kung Fu education in North East India. Serving as National Chief Instructor and authorized examiner on national technical gradings and certificates under the WCMAA Singapore charter.
+                  Sifu Amar Singh Deori is Chief Instructor in Wing Chun Martial Arts Association, India, he is the Pioneer of traditional Wing Chun Kung Fu education in North East India. Serving as National Chief Instructor and authorized examiner on national technical gradings and certificates under the WCMAA Singapore charter.
                 </p>
               </div>
 

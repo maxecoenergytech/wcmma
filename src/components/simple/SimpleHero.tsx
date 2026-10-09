@@ -133,11 +133,11 @@ export default function SimpleHero() {
                 <div className="flex items-center gap-2.5">
                   <div className="flex -space-x-2">
                     <img
-                      src={getAssetPath("/assets/grandmaster_avatar.webp")}
-                      alt="Sifu Amar Singh Deori"
+                      src={getAssetPath("/assets/wcmaai_logo_sm.webp")}
+                      alt="WCMAA India National Insignia"
                       width={32}
                       height={32}
-                      className="w-8 h-8 rounded-full border-2 border-amber-500 object-cover object-top"
+                      className="w-8 h-8 rounded-full border-2 border-amber-500 object-contain bg-slate-900 p-0.5"
                     />
                     <img
                       src={getAssetPath("/assets/sifu_sankar_dutta_avatar.webp")}
