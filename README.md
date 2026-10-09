@@ -27,13 +27,16 @@ For complete step-by-step guides, open the [`docs/`](./docs/) folder:
 | Document | Who It's For | Description |
 | :--- | :--- | :--- |
 | [**CLOUDFLARE-SETUP-GUIDE.md**](./docs/CLOUDFLARE-SETUP-GUIDE.md) | **Owner / Dev** | Step-by-step setup to connect domain `www.wcmaaindia.com` with Cloudflare DNS, SSL, and redirect rules. |
+| [**GITHUB-SECURITY-GUIDE.md**](./docs/GITHUB-SECURITY-GUIDE.md) | **Owner / Dev** | Mandatory GitHub 2FA, branch protection rules for `main`, token policies, and secret scanning. |
+| [**CLOUDFLARE-SECURITY-GUIDE.md**](./docs/CLOUDFLARE-SECURITY-GUIDE.md) | **Owner / Dev** | Cloudflare WAF, Bot Fight Mode evaluation, Full SSL encryption, and edge security headers. |
+| [**INCIDENT-RESPONSE-GUIDE.md**](./docs/INCIDENT-RESPONSE-GUIDE.md) | **Secretariat / Dev** | Emergency playbooks for fake dojos, online impersonators, token revocation, and 30-second rollback. |
+| [**SECURITY-GUIDE.md**](./docs/SECURITY-GUIDE.md) | **Everyone** | Official anti-scam policy, strict no-payment rule, and content protection compliance. |
 | [**OWNER-GUIDE.md**](./docs/OWNER-GUIDE.md) | **Website Owner** | Simple English guide: *"If I want to change something, what do I tell my developer?"* |
 | [**VERSION-SWITCHING-GUIDE.md**](./docs/VERSION-SWITCHING-GUIDE.md) | **Owner / Dev** | How to switch between the **Simple (Lightweight)** and **Premium (3D Cinematic)** versions with 1 click. |
 | [**WEBSITE-HANDOVER.md**](./docs/WEBSITE-HANDOVER.md) | **New Developers** | Complete technical handover explaining the architecture, portability, and structure. |
 | [**CONTENT-UPDATE-GUIDE.md**](./docs/CONTENT-UPDATE-GUIDE.md) | **Developers** | Step-by-step guide to updating phone numbers, dojos, instructors, events, and credentials. |
 | [**DEPLOYMENT-GUIDE.md**](./docs/DEPLOYMENT-GUIDE.md) | **Developers** | How to test locally, build, and publish changes to GitHub Pages. |
 | [**IMAGE-GUIDE.md**](./docs/IMAGE-GUIDE.md) | **Developers / Owner** | Image sizes, WebP formats, naming rules, and how to replace photos. |
-| [**SECURITY-GUIDE.md**](./docs/SECURITY-GUIDE.md) | **Everyone** | Official anti-scam policy, strict no-payment rule, and privacy safeguards. |
 | [**BACKUP-AND-ROLLBACK-GUIDE.md**](./docs/BACKUP-AND-ROLLBACK-GUIDE.md) | **Owner / Dev** | Complete offline backup instructions and 30-second version rollback procedures. |
 | [**CHANGELOG.md**](./docs/CHANGELOG.md) | **Developers** | Record of all website updates, version history, and compliance adjustments. |
 
