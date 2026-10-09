@@ -7,7 +7,7 @@ export default function HeritageTimeline() {
       year: "1991",
       title: "Foundational Transmission in India",
       description:
-        "Founder Sifu Sankar Dutta alongside Chief Instructor Sifu Amar Singh Deori establishes the foundational Wing Chun training ground in Guwahati, initiating authentic martial transmission in Northeast India.",
+        "Founder President Sifu Amar Singh Deori alongside Founder & General Secretary Sifu Sankar Dutta establishes the foundational Wing Chun training ground in Guwahati, initiating authentic martial transmission in Northeast India.",
       badge: "Inception",
       accent: "text-amber-400",
       border: "border-amber-500",

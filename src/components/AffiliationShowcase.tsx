@@ -185,7 +185,7 @@ export default function AffiliationShowcase() {
             <span className="text-xs font-bold text-amber-400 uppercase tracking-wider">Pathway 1</span>
             <h4 className="text-lg font-bold text-white">Guwahati Residency Camp</h4>
             <p className="text-xs text-slate-300 leading-relaxed">
-              Travel to National Headquarters in Guwahati for an intensive technical immersion with Chief Instructors Amar Singh Deori and Sankar Dutta.
+              Travel to National Headquarters in Guwahati for an intensive technical immersion with Founder President Sifu Amar Singh Deori and Founder & General Secretary Sifu Sankar Dutta.
             </p>
           </div>
 
@@ -272,7 +272,7 @@ export default function AffiliationShowcase() {
                 <strong>3. Territorial Policy:</strong> Territorial considerations may apply according to local dojo density and the association's regional development guidelines to avoid student conflict.
               </p>
               <p>
-                <strong>4. Instructor Grading:</strong> Head instructors must complete standardized technical orientation sessions or grading evaluations supervised by Founder & General Secretary Sifu Sankar Dutta and Chief Instructor Amar Singh Deori.
+                <strong>4. Instructor Grading:</strong> Head instructors must complete standardized technical orientation sessions or grading evaluations supervised by Founder President Sifu Amar Singh Deori and Founder & General Secretary Sifu Sankar Dutta.
               </p>
               <p>
                 <strong>5. Inquiries & Written Draft:</strong> For a formal memorandum of understanding or specific queries regarding academy affiliation, please contact the General Secretary Desk at <strong>+91 78969 62207</strong> or email <strong>duttasankar88@gmail.com</strong>.

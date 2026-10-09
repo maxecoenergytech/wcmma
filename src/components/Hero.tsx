@@ -212,28 +212,47 @@ export default function Hero() {
                 <p className="text-[10px] text-slate-400 mt-0.5">6 September 2026 • Guwahati, Assam</p>
               </div>
 
-              {/* Founder Profile Avatar */}
-              <div className="flex items-center justify-between pt-1">
-                <div className="flex items-center gap-2.5">
-                  <img
-                    src={getAssetPath("/assets/sifu_sankar_dutta_avatar.webp")}
-                    alt="Sifu Sankar Dutta - Founder & General Secretary"
-                    width={32}
-                    height={32}
-                    className="w-8 h-8 rounded-full border-2 border-amber-500 object-cover object-top shadow-md"
-                    loading="eager"
-                  />
-                  <div className="text-left">
-                    <p className="text-white font-bold leading-tight text-[11px]">Sifu Sankar Dutta</p>
-                    <p className="text-[9px] text-amber-400 font-semibold">Founder & General Secretary</p>
+              {/* Founding Leadership Avatars */}
+              <div className="flex items-center justify-between pt-2 border-t border-slate-800/80">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-3">
+                  {/* Sifu Amar Singh Deori */}
+                  <div className="flex items-center gap-2">
+                    <img
+                      src={getAssetPath("/assets/grandmaster_avatar.webp")}
+                      alt="Sifu Amar Singh Deori - Founder President & Chief Instructor"
+                      width={30}
+                      height={30}
+                      className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-amber-500 object-cover object-top shadow-md"
+                      loading="eager"
+                    />
+                    <div className="text-left">
+                      <p className="text-white font-bold leading-tight text-[10px] sm:text-[11px]">Sifu Amar Singh Deori</p>
+                      <p className="text-[9px] text-amber-400 font-semibold">Founder President</p>
+                    </div>
+                  </div>
+
+                  {/* Sifu Sankar Dutta */}
+                  <div className="flex items-center gap-2 sm:pl-2 sm:border-l sm:border-slate-800">
+                    <img
+                      src={getAssetPath("/assets/sifu_sankar_dutta_avatar.webp")}
+                      alt="Sifu Sankar Dutta - Founder & General Secretary"
+                      width={30}
+                      height={30}
+                      className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-amber-500 object-cover object-top shadow-md"
+                      loading="eager"
+                    />
+                    <div className="text-left">
+                      <p className="text-white font-bold leading-tight text-[10px] sm:text-[11px]">Sifu Sankar Dutta</p>
+                      <p className="text-[9px] text-amber-400 font-semibold">Founder & Gen. Secy.</p>
+                    </div>
                   </div>
                 </div>
 
                 <a
                   href={getRoutePath("#leadership")}
-                  className="text-[10px] font-bold text-amber-400 hover:text-amber-300 flex items-center gap-0.5"
+                  className="text-[10px] font-bold text-amber-400 hover:text-amber-300 flex items-center gap-0.5 shrink-0 self-end sm:self-center"
                 >
-                  <span>Profile</span>
+                  <span>Profiles</span>
                   <ChevronRight className="w-3 h-3" />
                 </a>
               </div>

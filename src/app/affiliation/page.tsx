@@ -154,7 +154,7 @@ export default function AffiliationPage() {
               </div>
               <h3 className="text-base font-bold text-white">Annual Instructor Upgrade Camps</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Attend periodic instructor-only technical development camps led by Chief Instructor Amar Singh Deori and General Secretary Sifu Sankar Dutta.
+                Attend periodic instructor-only technical development camps led by Founder President Sifu Amar Singh Deori and Founder & General Secretary Sifu Sankar Dutta.
               </p>
             </div>
 

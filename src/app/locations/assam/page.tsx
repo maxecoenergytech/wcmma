@@ -93,7 +93,7 @@ export default function AssamLocationPage() {
                 <span className="text-[10px] text-amber-400 font-black uppercase tracking-wider">National Headquarters</span>
                 <h3 className="text-lg font-bold text-white">National Headquarters Dojo</h3>
                 <p className="text-xs text-slate-400">Bathoupuri, ISBT Lokhra, Guwahati – 781035</p>
-                <p className="text-xs text-slate-300 pt-2">Morning & evening batches. Chief Instructor Sifu Amar Singh Deori.</p>
+                <p className="text-xs text-slate-300 pt-2">Morning & evening batches. Headed by Founder President & Chief Instructor Sifu Amar Singh Deori.</p>
               </div>
               <a
                 href={getRoutePath("/dojos/guwahati-national-hq/")}

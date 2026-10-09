@@ -213,11 +213,12 @@ export default function GuwahatiHqPage() {
                   Instructional Supervision
                 </span>
                 <h3 className="text-lg font-black text-white">Sifu Amar Singh Deori</h3>
-                <p className="text-xs font-semibold text-slate-400">Chief Instructor, WCMAA India</p>
+                <p className="text-xs font-semibold text-amber-400">Founder President & Chief Instructor, WCMAA India</p>
                 <p className="text-xs text-slate-300 leading-relaxed">
                   Pioneer of traditional Wing Chun Kung Fu education in North East India. Serving as National Chief Instructor and authorized examiner on national technical gradings and certificates under the WCMAA Singapore charter.
                 </p>
                 <div className="pt-2 border-t border-slate-800 flex flex-wrap gap-2 text-[10px] text-slate-300 font-semibold">
+                  <span className="bg-slate-800 px-2.5 py-1 rounded">✓ Founder President</span>
                   <span className="bg-slate-800 px-2.5 py-1 rounded">✓ Chief Examiner</span>
                   <span className="bg-slate-800 px-2.5 py-1 rounded">✓ 35+ Yrs Experience</span>
                 </div>
