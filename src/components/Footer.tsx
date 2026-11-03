@@ -61,7 +61,7 @@ export default function Footer() {
               <p>
                 <strong className="text-slate-300">Registration:</strong> {ASSOCIATION_INFO.registrationNo}
               </p>
-              <p className="text-[10px] text-slate-500">
+              <p className="text-[10px] text-slate-400">
                 (Registered under the applicable society/association registration framework in Assam)
               </p>
               <p>
@@ -76,7 +76,7 @@ export default function Footer() {
                 href={ASSOCIATION_INFO.contacts.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#1877F2]/10 border border-[#1877F2]/30 text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition-all text-xs font-bold group"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#1877F2]/10 border border-[#1877F2]/30 text-blue-400 hover:bg-[#1877F2] hover:text-white transition-all text-xs font-bold group"
               >
                 <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -246,7 +246,7 @@ export default function Footer() {
                   <Phone className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                   <a
                     href={`tel:${ASSOCIATION_INFO.contacts.primaryPhone.replace(/[^0-9+]/g, "")}`}
-                    className="hover:text-amber-300 font-medium"
+                    className="hover:text-amber-300 font-medium inline-block py-2 px-1"
                   >
                     {ASSOCIATION_INFO.contacts.primaryPhone}
                   </a>
@@ -255,7 +255,7 @@ export default function Footer() {
                   <Phone className="w-3.5 h-3.5 text-slate-500 shrink-0" />
                   <a
                     href="tel:+919085296178"
-                    className="hover:text-slate-200"
+                    className="hover:text-slate-200 inline-block py-2 px-1"
                   >
                     +91 90852 96178
                   </a>

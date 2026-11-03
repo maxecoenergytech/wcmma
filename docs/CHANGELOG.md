@@ -5,7 +5,18 @@
 
 ---
 
-## [Version 2.3.0] — October 2026
+## [Version 2.4.1] — November 2026
+
+### Full Audit & Self-Test Fixes (QA / Accessibility / Security)
+* **Full audit executed** (Nov 3, 2026): production build gate (18/18 routes, 0 TS errors), 7-page runtime browser test (0 failed requests), credential verification portal end-to-end test (PASS), Lighthouse SEO 100 / Best Practices 100.
+* **Removed invalid security `<meta>` tags** (`X-Frame-Options`, `X-Content-Type-Options`) from `src/app/layout.tsx` — these are HTTP-only headers; browsers ignore them in `<meta>` form and logged a console error on every page. Delivery now documented for the Cloudflare edge ("Security Headers Deployed at the Edge" §5.1 in the Cloudflare Security Guide).
+* **Accessibility pass (Lighthouse 82 → target 95+):**
+  * All 21 admission/affiliation form labels programmatically linked to their controls (`htmlFor`/`id`) in `MembershipApplication.tsx` (fixes `label`, `select-name` audits).
+  * Heading order fixed: TrustBar card labels demoted to `<p>`, VerificationPortal governance cards `h5` → `h3`.
+  * Accessible names now contain the visible label text on the floating WhatsApp button and mobile "Join / Apply" dock (fixes `label-content-name-mismatch`).
+  * Color contrast fixed: `text-slate-500` micro-text raised to `text-slate-400` (footer registration note, membership consent note, floating desk helpline) and the footer "Official Facebook Page" badge text switched from raw `#1877F2` to accessible `blue-400` at 12px.
+  * Touch targets enlarged: footer telephone `tel:` links given `inline-block py-2 px-1` hit areas (fixes `target-size`).
+
 
 ### Safe Premium 3D Landing Page Redesign
 * **Procedural 3D Muk Yan Jong (Three.js):** Created `src/components/WoodenDummyCanvas.tsx` rendering a realistic 3D Wing Chun wooden dummy with aged teak wood textures, cinematic key/rim spotlights, warm golden ambient bounce, and drifting atmospheric golden dust particles.

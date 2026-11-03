@@ -233,7 +233,7 @@ export default function VerificationPortal() {
           <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-3.5 shadow-lg">
             <Award className="w-5 h-5 text-amber-400 shrink-0 mt-1" />
             <div>
-              <h5 className="font-bold text-sm text-white">Government Registration</h5>
+              <h3 className="text-sm font-bold text-white">Government Registration</h3>
               <p className="text-xs text-slate-400 mt-1 leading-relaxed">
                 Registered under the applicable society framework in Assam: KAM/240/W/08 of 2005–2006.
               </p>
@@ -242,7 +242,7 @@ export default function VerificationPortal() {
           <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-3.5 shadow-lg">
             <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0 mt-1" />
             <div>
-              <h5 className="font-bold text-sm text-white">International Charter</h5>
+              <h3 className="text-sm font-bold text-white">International Charter</h3>
               <p className="text-xs text-slate-400 mt-1 leading-relaxed">
                 Chartered with WCMAA Singapore and aligned with The World Kuoshu Federation (TWKSF).
               </p>
@@ -251,7 +251,7 @@ export default function VerificationPortal() {
           <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-3.5 shadow-lg">
             <FileCheck className="w-5 h-5 text-blue-400 shrink-0 mt-1" />
             <div>
-              <h5 className="font-bold text-sm text-white">Standardized Examinations</h5>
+              <h3 className="text-sm font-bold text-white">Standardized Examinations</h3>
               <p className="text-xs text-slate-400 mt-1 leading-relaxed">
                 Structured technical grading maintaining curriculum integrity across affiliated academies.
               </p>

@@ -253,11 +253,12 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                        <label htmlFor="app-name" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                           Applicant Full Name *
                         </label>
                         <input
                           type="text"
+                          id="app-name"
                           required
                           placeholder="e.g. Rahul Sharma"
                           value={formData.name}
@@ -267,10 +268,11 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
                       </div>
 
                       <div>
-                        <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                        <label htmlFor="app-gender" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                           Gender / Sex *
                         </label>
                         <select
+                          id="app-gender"
                           value={formData.gender}
                           onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
                           className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white focus:outline-none focus:border-amber-500"
@@ -284,25 +286,27 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                       <div>
-                        <label className="block text-xs font-bold text-slate-300 uppercase mb-1 flex items-center justify-between">
+                        <label htmlFor="app-dob" className="block text-xs font-bold text-slate-300 uppercase mb-1 flex items-center justify-between">
                           <span>Date of Birth *</span>
                         </label>
                         <input
                           type="date"
+                          id="app-dob"
                           required
                           value={formData.dob}
                           onChange={(e) => setFormData({ ...formData, dob: e.target.value })}
                           className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500"
                         />
-                        <span className="text-[10px] text-slate-500 block mt-1">Minors &lt;18 require guardian consent</span>
+                        <span className="text-[10px] text-slate-400 block mt-1">Minors &lt;18 require guardian consent</span>
                       </div>
 
                       <div>
-                        <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                        <label htmlFor="app-phone" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                           Contact Phone (WhatsApp) *
                         </label>
                         <input
                           type="tel"
+                          id="app-phone"
                           required
                           placeholder="+91 98765 43210"
                           value={formData.phone}
@@ -312,11 +316,12 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
                       </div>
 
                       <div>
-                        <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                        <label htmlFor="app-email" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                           Email Address *
                         </label>
                         <input
                           type="email"
+                          id="app-email"
                           required
                           placeholder="name@domain.com"
                           value={formData.email}
@@ -328,11 +333,12 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                       <div className="sm:col-span-2">
-                        <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                        <label htmlFor="app-address" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                           Residential Address (Street / Area)
                         </label>
                         <input
                           type="text"
+                          id="app-address"
                           placeholder="House No, Street, Landmark"
                           value={formData.address}
                           onChange={(e) => setFormData({ ...formData, address: e.target.value })}
@@ -341,11 +347,12 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
                       </div>
 
                       <div>
-                        <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
-                          City & State *
+                        <label htmlFor="app-city" className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                          City &amp; State *
                         </label>
                         <input
                           type="text"
+                          id="app-city"
                           required
                           placeholder="Guwahati, Assam"
                           value={formData.city}
@@ -364,10 +371,11 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                        <label htmlFor="app-mode" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                           Training Mode / Program *
                         </label>
                         <select
+                          id="app-mode"
                           value={formData.trainingType}
                           onChange={(e) => setFormData({ ...formData, trainingType: e.target.value })}
                           className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white focus:outline-none focus:border-amber-500"
@@ -380,10 +388,11 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
                       </div>
 
                       <div>
-                        <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                        <label htmlFor="app-dojo" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                           Preferred Dojo Center *
                         </label>
                         <select
+                          id="app-dojo"
                           value={formData.dojoCenter}
                           onChange={(e) => setFormData({ ...formData, dojoCenter: e.target.value })}
                           className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white focus:outline-none focus:border-amber-500 text-xs sm:text-sm"
@@ -431,11 +440,12 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                        <label htmlFor="app-emName" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                           Emergency Contact Person Name *
                         </label>
                         <input
                           type="text"
+                          id="app-emName"
                           required
                           placeholder="e.g. Parent / Spouse / Guardian Name"
                           value={formData.emergencyName}
@@ -445,11 +455,12 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
                       </div>
 
                       <div>
-                        <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                        <label htmlFor="app-emPhone" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                           Emergency Contact Phone *
                         </label>
                         <input
                           type="tel"
+                          id="app-emPhone"
                           required
                           placeholder="+91 98765 43210"
                           value={formData.emergencyPhone}
@@ -461,10 +472,11 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                        <label htmlFor="app-experience" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                           Prior Martial Arts Background
                         </label>
                         <select
+                          id="app-experience"
                           value={formData.experience}
                           onChange={(e) => setFormData({ ...formData, experience: e.target.value })}
                           className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white focus:outline-none focus:border-amber-500"
@@ -478,11 +490,12 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
                       </div>
 
                       <div>
-                        <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                        <label htmlFor="app-medical" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                           Medical History / Physical Limitations
                         </label>
                         <input
                           type="text"
+                          id="app-medical"
                           placeholder="e.g. None / Asthma / Past knee surgery"
                           value={formData.medicalHistory}
                           onChange={(e) => setFormData({ ...formData, medicalHistory: e.target.value })}
@@ -562,11 +575,12 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                      <label htmlFor="acad-instructor" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                         Chief Instructor / Sifu Name *
                       </label>
                       <input
                         type="text"
+                        id="acad-instructor"
                         required
                         placeholder="e.g. Sifu Amit Sen"
                         value={academyData.chiefInstructor}
@@ -575,11 +589,12 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                      <label htmlFor="acad-name" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                         Academy / School Name *
                       </label>
                       <input
                         type="text"
+                        id="acad-name"
                         required
                         placeholder="e.g. Northeast Martial Arts Academy"
                         value={academyData.academyName}
@@ -591,11 +606,12 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                      <label htmlFor="acad-phone" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                         Contact Phone (WhatsApp) *
                       </label>
                       <input
                         type="tel"
+                        id="acad-phone"
                         required
                         placeholder="+91 98765 43210"
                         value={academyData.phone}
@@ -604,11 +620,12 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                      <label htmlFor="acad-email" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                         Official Email *
                       </label>
                       <input
                         type="email"
+                        id="acad-email"
                         required
                         placeholder="academy@domain.com"
                         value={academyData.email}
@@ -617,11 +634,12 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
-                        City & State *
+                      <label htmlFor="acad-city" className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                        City &amp; State *
                       </label>
                       <input
                         type="text"
+                        id="acad-city"
                         required
                         placeholder="e.g. Siliguri, West Bengal"
                         value={academyData.city}
@@ -633,10 +651,11 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                      <label htmlFor="acad-students" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                         Active Students Count
                       </label>
                       <select
+                        id="acad-students"
                         value={academyData.studentsCount}
                         onChange={(e) => setAcademyData({ ...academyData, studentsCount: e.target.value })}
                         className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white focus:outline-none focus:border-amber-500"
@@ -649,11 +668,12 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
                       </select>
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                      <label htmlFor="acad-style" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                         Current Martial Arts Style / Lineage
                       </label>
                       <input
                         type="text"
+                        id="acad-style"
                         placeholder="Wing Chun / Kung Fu / Mixed Striking"
                         value={academyData.currentStyle}
                         onChange={(e) => setAcademyData({ ...academyData, currentStyle: e.target.value })}
@@ -663,10 +683,11 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
+                    <label htmlFor="acad-message" className="block text-xs font-bold text-slate-300 uppercase mb-1">
                       Affiliation Objectives / Message
                     </label>
                     <textarea
+                      id="acad-message"
                       rows={3}
                       placeholder="Tell us about your dojo, current certifications, and expectations from WCMAA India affiliation..."
                       value={academyData.message}

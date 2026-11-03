@@ -48,7 +48,7 @@ export default function MobileActionDock() {
         <a
           href={getRoutePath("#join")}
           className="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 active:scale-95 transition-all text-slate-950 font-black shadow"
-          aria-label="Join or Affiliate"
+          aria-label="Join / Apply — Student admission or academy affiliation"
         >
           <UserPlus className="w-4 h-4 text-slate-950 mb-0.5" />
           <span className="text-[10px] font-extrabold tracking-tight">Join / Apply</span>

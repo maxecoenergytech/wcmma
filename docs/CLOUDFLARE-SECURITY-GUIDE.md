@@ -65,6 +65,20 @@ The repository includes a [`public/_headers`](../public/_headers) file that Clou
 | `Strict-Transport-Security` | `max-age=31536000; includeSubDomains; preload` | Forces all browsers to use HTTPS for a minimum of 1 year |
 | `Referrer-Policy` | `strict-origin-when-cross-origin` | Protects visitor referral paths |
 
+### 5.1 Header Delivery by Deployment Path (Updated Nov 2026)
+
+The `public/_headers` file is honored by **Cloudflare's own asset serving** (Cloudflare Pages / Workers Static Assets via `npm run deploy` + `wrangler.jsonc`). It is **NOT honored when the origin is GitHub Pages**, because GitHub Pages cannot send custom headers. In that path, keep the same protection with a **Cloudflare Response Header Transform Rule** on the zone:
+
+1. Cloudflare Dashboard → `wcmaaindia.com` zone → **Rules → Transform Rules → Response Header Transform → Create rule**.
+2. Filter: `Hostname equals www.wcmaaindia.com` (set all "Set" actions below under that filter).
+3. Add **Static header** actions:
+   * `X-Frame-Options` → `SAMEORIGIN`
+   * `X-Content-Type-Options` → `nosniff`
+   * `Strict-Transport-Security` → `max-age=31536000; includeSubDomains; preload`
+   * `Referrer-Policy` → `strict-origin-when-cross-origin`
+
+**Important correction (QA audit Nov 2026):** These headers are **HTTP-only headers** and cannot be set with `<meta httpEquiv>` tags in the HTML document — the previous `<meta>` versions in `src/app/layout.tsx` were dead code that only produced a browser console error on every page and have therefore been removed. Deliver them at the Cloudflare edge as described above.
+
 ---
 
 ## 6. What Cloudflare Does NOT Protect (Owner Reality Check)

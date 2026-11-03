@@ -180,8 +180,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="SAMEORIGIN" />
+        {/* Security headers (X-Frame-Options, nosniff, HSTS, Referrer-Policy) are HTTP-only
+            headers and MUST be delivered by the Cloudflare edge / response headers, never via
+            <meta> tags. See docs/CLOUDFLARE-SECURITY-GUIDE.md, Section 5. */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}

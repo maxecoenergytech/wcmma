@@ -52,9 +52,10 @@ export default function TrustBar() {
                   <Icon className={`w-5 h-5 ${item.accent}`} />
                 </div>
                 <div className="min-w-0">
-                  <h3 className="text-xs sm:text-sm font-extrabold text-white truncate">
+                  {/* Card label (not a document heading) — plain text keeps outline correct for screen readers */}
+                  <p className="text-xs sm:text-sm font-extrabold text-white truncate">
                     {item.title}
-                  </h3>
+                  </p>
                   <p className="text-[11px] text-slate-400 truncate">
                     {item.subtitle}
                   </p>
