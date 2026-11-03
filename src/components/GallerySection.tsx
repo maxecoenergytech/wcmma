@@ -13,9 +13,25 @@ export default function GallerySection() {
     description: string;
   } | null>(null);
 
-  const categories = ["All", "Training & Chi Sau", "Academy Camps", "Leadership", "Milestones"];
+  const categories = ["All", "Weapons & Forms", "Training & Chi Sau", "Academy Camps", "Leadership", "Milestones"];
 
   const galleryItems = [
+    {
+      src: getAssetPath("/assets/sifu_butterfly_swords.webp"),
+      title: "Bart Cham Dao — Traditional Butterfly Swords Mastery",
+      category: "Weapons & Forms",
+      aspect: "aspect-[4/5]",
+      description:
+        "Sifu Sankar Dutta demonstrating the legendary eight-slash twin butterfly swords (Bart Cham Dao / Baat Jaam Do) in outdoor mountain terrain.",
+    },
+    {
+      src: getAssetPath("/assets/member_senior_instructor.webp"),
+      title: "Senior Instructor & Certified Member — North East Academy Ground",
+      category: "Leadership",
+      aspect: "aspect-[4/5]",
+      description:
+        "Dedicated senior certified instructor and black-sash practitioner at the North East Academy training ground in Guwahati, Assam.",
+    },
     {
       src: getAssetPath("/assets/sifu_chisau_practice.webp"),
       title: "Dynamic Chi Sau Movement Practice",
@@ -105,13 +121,13 @@ export default function GallerySection() {
               onClick={() => setActiveModalImg(item)}
               className="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden shadow-xl hover:border-amber-500/50 transition-all duration-300 cursor-pointer group flex flex-col justify-between"
             >
-              <div className={`w-full overflow-hidden relative bg-slate-950 ${item.aspect}`}>
+              <div className="w-full h-64 sm:h-72 overflow-hidden relative bg-slate-950">
                 <img
                   src={item.src}
                   alt={item.title}
                   width={600}
                   height={400}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-20 transition-opacity"></div>
