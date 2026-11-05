@@ -68,7 +68,7 @@ export default function FoundationEvent() {
           <p className="text-amber-400 font-bold text-base sm:text-lg">
             6 September 2026 • Guwahati, Assam
           </p>
-          <div className="p-4 sm:p-5 rounded-2xl bg-slate-900/90 border border-slate-800 text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto shadow-lg">
+          <div className="wsa-card p-4 sm:p-5 text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
             "WCMAA India successfully commemorated its 35th Foundation Day on 6 September 2026 in Guwahati, Assam, bringing together instructors, practitioners, students and members of the Wing Chun community."
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function FoundationEvent() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
           {/* Left: Event Highlights & Historical Summary */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-slate-900 rounded-2xl border border-slate-800 p-6 sm:p-7 shadow-2xl space-y-5">
+            <div className="wsa-card p-6 sm:p-7 space-y-5">
               <div className="flex items-center justify-between pb-3 border-b border-slate-800">
                 <h3 className="text-base font-extrabold text-white flex items-center gap-2">
                   <Award className="w-4 h-4 text-amber-400" />
@@ -140,7 +140,7 @@ export default function FoundationEvent() {
 
           {/* Right: EVENT RECAP Gallery */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="bg-slate-900 rounded-2xl border border-slate-800 p-6 sm:p-7 shadow-2xl space-y-5">
+            <div className="wsa-card p-6 sm:p-7 space-y-5">
               <div className="flex items-center justify-between pb-3 border-b border-slate-800">
                 <div className="flex items-center gap-2">
                   <Camera className="w-4 h-4 text-amber-400" />

@@ -100,7 +100,7 @@ export default function BranchLocator() {
             return (
               <div
                 key={branch.id}
-                className="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between hover:border-blue-500/50 hover:bg-slate-900 transition-all shadow-xl group"
+                className="wsa-card p-6 flex flex-col justify-between hover:border-blue-500/50 hover:-translate-y-0.5 group"
               >
                 <div className="space-y-4">
                   <div className="flex items-start justify-between flex-wrap gap-2">
@@ -311,7 +311,7 @@ export default function BranchLocator() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow"
+                className="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-bold text-xs flex items-center justify-center gap-2 shadow"
               >
                 <MessageSquare className="w-4 h-4" />
                 Contact Secretariat via WhatsApp (+91 78969 62207)

@@ -91,21 +91,21 @@ export default function AdultsProgramPage() {
 
         <section className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 space-y-3">
+            <div className="wsa-card p-6 space-y-3">
               <h3 className="text-lg font-bold text-white">Posture & Spinal Health</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
                 Reverse the negative physical effects of prolonged desk sitting. The Yee Jee Kim Yeung Ma stance strengthens hip flexors, stabilizes the lumbar spine, and reinforces upright ergonomics.
               </p>
             </div>
 
-            <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 space-y-3">
+            <div className="wsa-card p-6 space-y-3">
               <h3 className="text-lg font-bold text-white">Tactile Reflex Sensitivity (Chi Sau)</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
                 Learn to react to touch and pressure rather than relying on visual reaction time alone. Sticking-hands drills allow you to deflect incoming force effortlessly and maintain positional advantage.
               </p>
             </div>
 
-            <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 space-y-3">
+            <div className="wsa-card p-6 space-y-3">
               <h3 className="text-lg font-bold text-white">Wooden Dummy (Muk Yan Jong)</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
                 Master the classic 116 movements of the Wooden Dummy under Senior Master Sifu Sankar Dutta. Develop bone conditioning, precise angle deflection, and coordinated whole-body footwork.

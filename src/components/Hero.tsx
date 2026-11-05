@@ -147,21 +147,21 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2.5 pt-2">
               <a
                 href={getRoutePath("#branches")}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-slate-950 font-black text-xs sm:text-sm hover:from-amber-400 hover:to-amber-500 shadow-xl shadow-amber-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="w-full sm:w-auto wsa-btn-gold text-xs sm:text-sm font-bold"
               >
                 <Users className="w-4 h-4 text-slate-950 shrink-0" />
                 BEGIN YOUR WING CHUN JOURNEY
               </a>
               <a
                 href={getRoutePath("/affiliation")}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-red-800 to-red-700 hover:from-red-700 hover:to-red-600 text-white font-bold text-xs sm:text-sm shadow-lg shadow-red-900/30 transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-red-800 to-red-700 hover:from-red-700 hover:to-red-600 text-white font-bold text-xs sm:text-sm shadow-card transition-all hover:-translate-y-0.5 hover:shadow-card-hover"
               >
                 <Building2 className="w-4 h-4 text-amber-300 shrink-0" />
                 AFFILIATE YOUR ACADEMY
               </a>
               <a
                 href={getRoutePath("#verify")}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 hover:border-amber-500/60 text-slate-200 font-semibold text-xs hover:bg-slate-800 hover:text-white transition-all backdrop-blur-md"
+                className="w-full sm:w-auto wsa-btn-ghost text-xs"
               >
                 <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
                 VERIFY CREDENTIAL
@@ -192,8 +192,7 @@ export default function Hero() {
           {/* Right Column: Open Showcase for 3D Wooden Dummy + Tasteful Floating Badge */}
           <div className="lg:col-span-5 xl:col-span-5 flex flex-col items-center lg:items-end justify-end mt-4 lg:mt-0">
             {/* Elegant Floating Glass Badge (Does not block the 3D dummy!) */}
-            <div className="w-full max-w-sm bg-slate-950/80 backdrop-blur-md border border-amber-500/30 rounded-2xl p-3.5 sm:p-4 shadow-2xl space-y-3">
-              <div className="flex items-center justify-between pb-2 border-b border-slate-800/80 text-[11px]">
+            <div className="w-full max-w-sm bg-slate-950/80 backdrop-blur-md border border-amber-500/30 rounded-2xl p-3.5 sm:p-4 shadow-card-hover space-y-3">              <div className="flex items-center justify-between pb-2 border-b border-slate-800/80 text-[11px]">
                 <span className="text-amber-400 font-bold uppercase tracking-wider flex items-center gap-1">
                   <Sparkles className="w-3 h-3 text-amber-400" />
                   National Secretariat

@@ -105,7 +105,7 @@ export default function GuwahatiBamunimaidamPage() {
                 </a>
                 <a
                   href="https://wa.me/917896962207?text=Hello%20WCMAA%20India,%20I%20am%20enquiring%20about%20admissions%20at%20Bamunimaidam%20Dojo,%20Guwahati"
-                  className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-colors flex items-center gap-2"
+                  className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-bold text-xs transition-colors flex items-center gap-2"
                 >
                   WhatsApp Admissions
                 </a>
@@ -117,7 +117,7 @@ export default function GuwahatiBamunimaidamPage() {
         <section className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 space-y-8">
-              <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 sm:p-8 space-y-6">
+              <div className="wsa-card p-6 sm:p-8 space-y-6">
                 <h2 className="text-xl font-bold text-white flex items-center gap-2.5">
                   <Clock className="w-5 h-5 text-amber-400" />
                   Evening Batch Timings & Secretariat Hours
@@ -129,7 +129,7 @@ export default function GuwahatiBamunimaidamPage() {
                 </div>
               </div>
 
-              <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 sm:p-8 space-y-4">
+              <div className="wsa-card p-6 sm:p-8 space-y-4">
                 <h2 className="text-xl font-bold text-white flex items-center gap-2.5">
                   <Navigation className="w-5 h-5 text-amber-400" />
                   Address & Landmarks
@@ -144,7 +144,7 @@ export default function GuwahatiBamunimaidamPage() {
             </div>
 
             <div className="space-y-6">
-              <div className="bg-slate-900/90 rounded-2xl border border-amber-500/30 p-6 space-y-3">
+              <div className="wsa-card border-amber-500/30 p-6 space-y-3">
                 <div className="flex items-center gap-2 text-amber-400 font-bold text-xs uppercase tracking-wider">
                   <Shield className="w-4 h-4" />
                   Secretariat Verification Desk

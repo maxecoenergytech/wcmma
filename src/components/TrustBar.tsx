@@ -46,7 +46,7 @@ export default function TrustBar() {
             return (
               <div
                 key={idx}
-                className="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 transition-colors"
+                className="wsa-card p-3 flex items-center gap-3 hover:border-amber-500/40 hover:-translate-y-0.5"
               >
                 <div className="w-10 h-10 rounded-lg bg-slate-950 flex items-center justify-center shrink-0 border border-slate-800">
                   <Icon className={`w-5 h-5 ${item.accent}`} />

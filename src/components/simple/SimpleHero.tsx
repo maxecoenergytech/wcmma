@@ -78,21 +78,21 @@ export default function SimpleHero() {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-3">
               <a
                 href={getRoutePath("#branches")}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs uppercase tracking-wider shadow transition-colors"
+                className="w-full sm:w-auto wsa-btn-gold text-xs font-bold"
               >
                 <Users className="w-4 h-4 text-slate-950 shrink-0" />
                 BEGIN YOUR WING CHUN JOURNEY
               </a>
               <a
                 href={getRoutePath("/affiliation")}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-red-800 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider transition-colors"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-red-800 hover:bg-red-700 text-white font-bold text-xs shadow-card hover:shadow-card-hover transition-colors"
               >
                 <Building2 className="w-4 h-4 text-amber-300 shrink-0" />
                 AFFILIATE YOUR ACADEMY
               </a>
               <a
                 href={getRoutePath("#verify")}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-200 hover:text-white hover:border-slate-500 font-semibold text-xs transition-colors"
+                className="w-full sm:w-auto wsa-btn-ghost text-xs"
               >
                 <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
                 VERIFY CREDENTIAL
@@ -102,7 +102,7 @@ export default function SimpleHero() {
 
           {/* Right: Clean Static Visual Showcase */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+            <div className="w-full max-w-md wsa-card p-6 space-y-4">
               <div className="flex items-center justify-between pb-3 border-b border-slate-800 text-xs">
                 <span className="text-amber-400 font-bold uppercase tracking-wider text-[11px]">
                   National Secretariat

@@ -119,7 +119,7 @@ export default function LegalPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           {/* TAB 1: ORGANIZATIONAL DETAILS */}
           {activeTab === "org" && (
-            <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-10 space-y-6 shadow-2xl">
+            <div className="wsa-card p-6 sm:p-10 space-y-6">
               <div className="border-b border-slate-800 pb-4">
                 <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
                   Legal Registry & Office Bearers
@@ -231,7 +231,7 @@ export default function LegalPage() {
 
           {/* TAB 2: PRIVACY POLICY */}
           {activeTab === "privacy" && (
-            <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-10 space-y-6 shadow-2xl text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <div className="wsa-card p-6 sm:p-10 space-y-6 text-xs sm:text-sm text-slate-300 leading-relaxed">
               <div className="border-b border-slate-800 pb-4">
                 <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
                   Data Governance
@@ -282,7 +282,7 @@ export default function LegalPage() {
 
           {/* TAB 3: TERMS & CONDITIONS */}
           {activeTab === "terms" && (
-            <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-10 space-y-6 shadow-2xl text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <div className="wsa-card p-6 sm:p-10 space-y-6 text-xs sm:text-sm text-slate-300 leading-relaxed">
               <div className="border-b border-slate-800 pb-4">
                 <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
                   Site Terms of Use
@@ -328,7 +328,7 @@ export default function LegalPage() {
 
           {/* TAB 4: DISCLAIMER */}
           {activeTab === "disclaimer" && (
-            <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-10 space-y-6 shadow-2xl text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <div className="wsa-card p-6 sm:p-10 space-y-6 text-xs sm:text-sm text-slate-300 leading-relaxed">
               <div className="border-b border-slate-800 pb-4">
                 <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
                   Physical Training & Health Notice
@@ -371,7 +371,7 @@ export default function LegalPage() {
 
           {/* TAB 5: COPYRIGHT & IP */}
           {activeTab === "copyright" && (
-            <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-10 space-y-6 shadow-2xl text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <div className="wsa-card p-6 sm:p-10 space-y-6 text-xs sm:text-sm text-slate-300 leading-relaxed">
               <div className="border-b border-slate-800 pb-4">
                 <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
                   Intellectual Property Notice

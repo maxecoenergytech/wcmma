@@ -88,7 +88,7 @@ export default function StudentsParentsSection() {
           {groups.map((group, idx) => (
             <div
               key={idx}
-              className={`bg-slate-900/90 rounded-2xl border border-slate-800 p-6 sm:p-8 flex flex-col justify-between shadow-xl transition-all duration-300 ${group.border} group`}
+              className={`wsa-card p-6 sm:p-8 flex flex-col justify-between ${group.border} group`}
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">

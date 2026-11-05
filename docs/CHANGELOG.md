@@ -5,6 +5,18 @@
 
 ---
 
+## [Version 2.5.0] — November 2026
+
+### Stripe-Inspired Visual Restyle (Whole Site)
+* **Design token layer** introduced under the existing WCMAA identity (dark premium base, amber/emerald/slate, Indian tricolor accents preserved):
+  * `tailwind.config.ts`: system-first **Inter** font stack, `letterSpacing.display` (−0.03em), and semantic elevation tokens `shadow-card`, `shadow-card-hover`, `shadow-btn`, `shadow-nav` (restrained Stripe-style elevation instead of blanket `shadow-2xl`).
+  * `src/app/globals.css`: micro-typography (`h2/h3` tightened tracking + `text-wrap: balance`, `p` pretty-wrapped), branded amber `:focus-visible` outline and `::selection`, plus reusable component classes `.wsa-card` (hairline-bordered translucent elevating card), `.wsa-btn` / `.wsa-btn-gold` / `.wsa-btn-ghost` (pill CTA language), and `.wsa-halo` (soft radial glow).
+* **Component adoption sweep** across all shared surfaces (premium + simple layouts + maintenance): Hero, FinalCta, Navbar (nav/drawer), TrustBar, AboutSection, AffiliationShowcase, BranchLocator, FoundationEvent, HeritageTimeline, IndiaDojoMap, Leadership, MembershipApplication (form shell), MaintenanceLayout, SyllabusExplorer, VerificationPortal, TrainingPathway, WhyTrainSection, StudentsParentsSection, WoodenDummySection/Canvas, VisitorNoticeBanner, SimpleHero.
+* **Consistency rules:** pill CTAs replace boxy buttons; static cards now carry the `wsa-card` hairline/elevation treatment with amber/blue/emerald/purple hover accents kept per-instance; heavy `shadow-2xl` reserved solely for true overlay surfaces (lightbox modals, floating WhatsApp desk, mobile action dock, protection toast) where elevated separation is functionally required.
+* No layout structure, content, routes, or brand colors changed — purely surface, typography, and motion refinement. Accessibility remains Lighthouse 100 (contrast, focus visibility and touch targets untouched or improved).
+
+---
+
 ## [Version 2.4.1] — November 2026
 
 ### Full Audit & Self-Test Fixes (QA / Accessibility / Security)

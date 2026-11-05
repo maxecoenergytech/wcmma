@@ -175,7 +175,7 @@ Submitted via official portal: https://www.wcmaaindia.com/#join`;
         </div>
 
         {/* Form Container */}
-        <div className="max-w-3xl mx-auto bg-slate-900/90 rounded-2xl border border-slate-800 p-6 sm:p-10 shadow-2xl backdrop-blur-md">
+        <div className="max-w-3xl mx-auto wsa-card p-6 sm:p-10">
           {submitted ? (
             <div className="text-center py-10 space-y-5 animate-fadeIn">
               <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mx-auto text-emerald-400 shadow-lg shadow-emerald-500/10">

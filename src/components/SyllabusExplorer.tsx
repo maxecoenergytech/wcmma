@@ -69,7 +69,7 @@ export default function SyllabusExplorer() {
             return (
               <div
                 key={idx}
-                className="bg-slate-900/90 rounded-2xl border border-slate-800/90 p-6 flex flex-col justify-between hover:border-amber-500/60 hover:bg-slate-900 transition-all duration-300 shadow-xl group relative overflow-hidden"
+                className="wsa-card p-6 flex flex-col justify-between hover:border-amber-500/60 group relative overflow-hidden"
               >
                 {/* Subtle Card Accent Light */}
                 <div className="absolute -top-12 -right-12 w-28 h-28 bg-amber-500/5 rounded-full blur-2xl group-hover:bg-amber-500/10 transition-colors pointer-events-none"></div>
@@ -130,7 +130,7 @@ export default function SyllabusExplorer() {
         </div>
 
         {/* Centerline Philosophy Box */}
-        <div className="mt-14 bg-gradient-to-r from-blue-950/40 via-slate-900 to-amber-950/30 rounded-2xl border border-slate-800/90 p-6 sm:p-8 shadow-2xl">
+        <div className="mt-14 bg-gradient-to-r from-blue-950/40 via-slate-900 to-amber-950/30 rounded-2xl border border-slate-800/90 p-6 sm:p-8 shadow-card">
           <div className="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-4">
             <Shield className="w-4 h-4 text-amber-400" />
             Core Lineage Principles • 詠春三要

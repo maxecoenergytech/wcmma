@@ -28,7 +28,7 @@ export default function Leadership() {
         {/* Master Profiles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Sifu Amar Singh Deori - Founder President & Chief Instructor */}
-          <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 rounded-2xl border-2 border-slate-800 hover:border-amber-500/50 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 shadow-2xl transition-all duration-300 group">
+          <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 rounded-2xl border-2 border-slate-800 hover:border-amber-500/50 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 shadow-card-hover hover:-translate-y-0.5 transition-all duration-300 group">
             <div className="w-full sm:w-48 h-64 sm:h-auto rounded-xl overflow-hidden shrink-0 relative bg-slate-950 border border-slate-700 shadow-md">
               <img
                 src={getAssetPath("/assets/grandmaster_portrait.webp")}
@@ -80,7 +80,7 @@ export default function Leadership() {
           </div>
 
           {/* Sifu Sankar Dutta - Founder & General Secretary */}
-          <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 rounded-2xl border-2 border-slate-800 hover:border-amber-500/50 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 shadow-2xl transition-all duration-300 group">
+          <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 rounded-2xl border-2 border-slate-800 hover:border-amber-500/50 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 shadow-card-hover hover:-translate-y-0.5 transition-all duration-300 group">
             <div className="w-full sm:w-48 h-64 sm:h-auto rounded-xl overflow-hidden shrink-0 relative bg-slate-950 border border-slate-700 shadow-md">
               <img
                 src={getAssetPath("/assets/sifu_sankar_dutta_portrait.webp")}
@@ -154,7 +154,7 @@ export default function Leadership() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             {/* Card 1: Mr. Amar Singh & Mr. Shankar Dutta Playful Movement Practicing Time */}
-            <div className="bg-slate-900/90 rounded-2xl border-2 border-amber-500/40 p-6 flex flex-col justify-between shadow-2xl hover:border-amber-400 transition-all duration-300 group">
+            <div className="wsa-card border-2 border-amber-500/40 p-6 flex flex-col justify-between hover:border-amber-400 hover:-translate-y-0.5 group">
               <div className="space-y-4">
                 <div
                   className="rounded-xl overflow-hidden border border-slate-800 shadow-lg relative bg-slate-950 cursor-pointer aspect-[3/2]"
@@ -216,7 +216,7 @@ export default function Leadership() {
             </div>
 
             {/* Card 2: Full Association Training Camp & Practitioner Family */}
-            <div className="bg-slate-900/90 rounded-2xl border-2 border-slate-800 p-6 flex flex-col justify-between shadow-2xl hover:border-blue-400 transition-all duration-300 group">
+            <div className="wsa-card border-2 p-6 flex flex-col justify-between hover:border-blue-400 hover:-translate-y-0.5 group">
               <div className="space-y-4">
                 <div
                   className="rounded-xl overflow-hidden border border-slate-800 shadow-lg relative bg-slate-950 cursor-pointer aspect-[3/2]"

@@ -88,7 +88,7 @@ export default function AssamLocationPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between space-y-4">
+            <div className="wsa-card p-6 flex flex-col justify-between space-y-4">
               <div className="space-y-2">
                 <span className="text-[10px] text-amber-400 font-black uppercase tracking-wider">National Headquarters</span>
                 <h3 className="text-lg font-bold text-white">National Headquarters Dojo</h3>
@@ -104,7 +104,7 @@ export default function AssamLocationPage() {
               </a>
             </div>
 
-            <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between space-y-4">
+            <div className="wsa-card p-6 flex flex-col justify-between space-y-4">
               <div className="space-y-2">
                 <span className="text-[10px] text-blue-400 font-black uppercase tracking-wider">Historical Training Ground</span>
                 <h3 className="text-lg font-bold text-white">North East Academy Ground</h3>
@@ -120,7 +120,7 @@ export default function AssamLocationPage() {
               </a>
             </div>
 
-            <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between space-y-4">
+            <div className="wsa-card p-6 flex flex-col justify-between space-y-4">
               <div className="space-y-2">
                 <span className="text-[10px] text-emerald-400 font-black uppercase tracking-wider">Administrative Secretariat</span>
                 <h3 className="text-lg font-bold text-white">Bamunimaidam Dojo</h3>

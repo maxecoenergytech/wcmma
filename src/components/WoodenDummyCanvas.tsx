@@ -378,7 +378,7 @@ export default function WoodenDummyCanvas({ className = "" }: WoodenDummyCanvasP
       <div className={`relative overflow-hidden ${className}`}>
         {/* High quality CSS fallback */}
         <div className="absolute inset-0 bg-gradient-to-tr from-slate-950 via-[#1a0f0d] to-slate-950 flex items-center justify-center">
-          <div className="w-64 h-96 rounded-2xl border border-amber-500/20 bg-gradient-to-b from-amber-950/40 to-slate-950 shadow-2xl flex flex-col items-center justify-center p-6 text-center">
+          <div className="w-64 h-96 rounded-2xl border border-amber-500/20 bg-gradient-to-b from-amber-950/40 to-slate-950 shadow-card-hover flex flex-col items-center justify-center p-6 text-center">
             <span className="text-4xl mb-3 text-amber-400 font-serif font-black">木人樁</span>
             <p className="text-sm font-bold text-white">Muk Yan Jong</p>
             <p className="text-xs text-slate-400 mt-1">116 Traditional Wooden Dummy Techniques</p>

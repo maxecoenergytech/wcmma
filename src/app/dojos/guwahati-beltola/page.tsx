@@ -117,7 +117,7 @@ export default function GuwahatiBeltolaPage() {
                 </a>
                 <a
                   href="https://wa.me/917896962207?text=Hello%20WCMAA%20India,%20I%20am%20enquiring%20about%20Wing%20Chun%20training%20at%20Beltola%20Training%20Ground,%20Guwahati"
-                  className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-colors flex items-center gap-2"
+                  className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-bold text-xs transition-colors flex items-center gap-2"
                 >
                   WhatsApp Admissions
                 </a>
@@ -131,7 +131,7 @@ export default function GuwahatiBeltolaPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 space-y-8">
               {/* Batch Timings */}
-              <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 sm:p-8 space-y-6">
+              <div className="wsa-card p-6 sm:p-8 space-y-6">
                 <h2 className="text-xl font-bold text-white flex items-center gap-2.5">
                   <Clock className="w-5 h-5 text-amber-400" />
                   Class Schedule & Sunday Special Intensives
@@ -157,7 +157,7 @@ export default function GuwahatiBeltolaPage() {
               </div>
 
               {/* Transit & Landmarks */}
-              <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 sm:p-8 space-y-4">
+              <div className="wsa-card p-6 sm:p-8 space-y-4">
                 <h2 className="text-xl font-bold text-white flex items-center gap-2.5">
                   <Navigation className="w-5 h-5 text-amber-400" />
                   Address & Neighborhood Guide
@@ -174,7 +174,7 @@ export default function GuwahatiBeltolaPage() {
               </div>
 
               {/* Training Highlights */}
-              <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 sm:p-8 space-y-4">
+              <div className="wsa-card p-6 sm:p-8 space-y-4">
                 <h2 className="text-xl font-bold text-white flex items-center gap-2.5">
                   <Flame className="w-5 h-5 text-amber-400" />
                   Training Ground Heritage & Drills
@@ -188,7 +188,7 @@ export default function GuwahatiBeltolaPage() {
 
             {/* Right Column: Instructor Profile */}
             <div className="space-y-6">
-              <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 space-y-4">
+              <div className="wsa-card p-6 space-y-4">
                 <div className="w-16 h-16 rounded-xl overflow-hidden border border-slate-700 bg-slate-950 shadow mb-2">
                   <img
                     src={getAssetPath("/assets/sifu_sankar_dutta_avatar.webp")}
@@ -214,7 +214,7 @@ export default function GuwahatiBeltolaPage() {
               </div>
 
               {/* Safety notice */}
-              <div className="bg-slate-900/90 rounded-2xl border border-amber-500/30 p-6 space-y-3">
+              <div className="wsa-card border-amber-500/30 p-6 space-y-3">
                 <div className="flex items-center gap-2 text-amber-400 font-bold text-xs uppercase tracking-wider">
                   <Shield className="w-4 h-4" />
                   Direct In-Person Enrollment

@@ -93,7 +93,7 @@ export default function YouthProgramPage() {
         {/* Core Pillars */}
         <section className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 space-y-3">
+            <div className="wsa-card p-6 space-y-3">
               <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold">
                 1
               </div>
@@ -103,7 +103,7 @@ export default function YouthProgramPage() {
               </p>
             </div>
 
-            <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 space-y-3">
+            <div className="wsa-card p-6 space-y-3">
               <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold">
                 2
               </div>
@@ -113,7 +113,7 @@ export default function YouthProgramPage() {
               </p>
             </div>
 
-            <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 space-y-3">
+            <div className="wsa-card p-6 space-y-3">
               <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">
                 3
               </div>
@@ -125,7 +125,7 @@ export default function YouthProgramPage() {
           </div>
 
           {/* Parental Safeguarding Policy Box */}
-          <div className="bg-slate-900 rounded-2xl border-2 border-emerald-500/30 p-8 space-y-6">
+          <div className="wsa-card border-2 border-emerald-500/30 p-8 space-y-6">
             <div className="flex items-center gap-3">
               <FileCheck2 className="w-6 h-6 text-emerald-400 shrink-0" />
               <div>

@@ -84,7 +84,7 @@ export default function HeritageTimeline() {
               </div>
 
               {/* Content Card */}
-              <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 sm:p-7 shadow-xl hover:border-amber-500/40 hover:-translate-y-1 transition-all">
+              <div className="wsa-card p-6 sm:p-7 hover:border-amber-500/40 hover:-translate-y-0.5">
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                   <span className="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-slate-950 text-slate-300 border border-slate-800">
                     {item.badge}

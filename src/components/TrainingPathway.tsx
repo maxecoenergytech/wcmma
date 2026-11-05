@@ -101,7 +101,7 @@ export default function TrainingPathway() {
           {pathwaySteps.map((step, idx) => (
             <div key={idx} className="flex flex-col items-center">
               <div
-                className={`w-full bg-gradient-to-b ${step.color} rounded-2xl border border-slate-800 p-5 flex flex-col justify-between shadow-xl hover:border-amber-500/50 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 min-h-[300px] text-left group`}
+                className={`w-full bg-gradient-to-b ${step.color} rounded-2xl border border-slate-800 p-5 flex flex-col justify-between shadow-card hover:border-amber-500/50 hover:-translate-y-1.5 hover:shadow-card-hover transition-all duration-300 min-h-[300px] text-left group`}
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">

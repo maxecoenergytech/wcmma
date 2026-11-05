@@ -71,7 +71,7 @@ export default function WhyTrainSection() {
             return (
               <div
                 key={idx}
-                className={`bg-slate-900/80 rounded-2xl border border-slate-800 p-6 sm:p-7 flex flex-col justify-between shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ${pillar.border} group`}
+                className={`wsa-card p-6 sm:p-7 flex flex-col justify-between hover:-translate-y-1.5 ${pillar.border} group`}
               >
                 <div className="space-y-4">
                   <div className="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">

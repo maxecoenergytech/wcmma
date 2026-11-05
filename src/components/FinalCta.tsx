@@ -38,7 +38,7 @@ export default function FinalCta() {
         <div className="pt-4 flex justify-center">
           <a
             href={getRoutePath("#branches")}
-            className="inline-flex items-center justify-center gap-3 px-9 py-4 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-sm tracking-wider uppercase shadow-2xl shadow-amber-500/25 transition-all hover:scale-105 active:scale-95"
+            className="inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-sm shadow-btn transition-all hover:-translate-y-0.5 active:scale-95"
           >
             <Users className="w-4 h-4 text-slate-950 shrink-0" />
             <span>BEGIN YOUR JOURNEY</span>

@@ -70,7 +70,7 @@ export default function InstitutionalPartnershipsPage() {
 
         <section className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 space-y-3">
+            <div className="wsa-card p-6 space-y-3">
               <Building2 className="w-6 h-6 text-amber-400" />
               <h3 className="text-lg font-bold text-white">School Sports Camps</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
@@ -78,7 +78,7 @@ export default function InstitutionalPartnershipsPage() {
               </p>
             </div>
 
-            <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 space-y-3">
+            <div className="wsa-card p-6 space-y-3">
               <ShieldCheck className="w-6 h-6 text-emerald-400" />
               <h3 className="text-lg font-bold text-white">College Self-Defense Seminars</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
@@ -86,7 +86,7 @@ export default function InstitutionalPartnershipsPage() {
               </p>
             </div>
 
-            <div className="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 space-y-3">
+            <div className="wsa-card p-6 space-y-3">
               <Award className="w-6 h-6 text-blue-400" />
               <h3 className="text-lg font-bold text-white">Faculty & Staff Wellness</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
@@ -96,7 +96,7 @@ export default function InstitutionalPartnershipsPage() {
           </div>
 
           {/* Institutional Request Form */}
-          <div id="institutional-form" className="bg-slate-900 rounded-2xl border border-slate-800 p-6 sm:p-10 max-w-3xl mx-auto space-y-6">
+          <div id="institutional-form" className="wsa-card p-6 sm:p-10 max-w-3xl mx-auto space-y-6">
             <div className="space-y-2 text-center">
               <h2 className="text-2xl font-black text-white">Request an Institutional Demonstration or Workshop</h2>
               <p className="text-xs text-slate-400">

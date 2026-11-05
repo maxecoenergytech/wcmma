@@ -76,7 +76,7 @@ export default function IndiaDojoMap() {
         {/* Interactive Map Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left: Interactive Stylized Map */}
-          <div className="lg:col-span-7 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 relative backdrop-blur-md shadow-2xl">
+          <div className="lg:col-span-7 wsa-card p-6 relative">
             <div className="flex items-center justify-between pb-4 border-b border-slate-800 text-xs">
               <span className="text-slate-400 font-semibold flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -189,7 +189,7 @@ export default function IndiaDojoMap() {
 
           {/* Right: Active Dojo Inspector Card */}
           <div className="lg:col-span-5">
-            <div className="bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-950 border border-amber-500/30 rounded-2xl p-6 sm:p-7 shadow-2xl relative">
+            <div className="bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-950 border border-amber-500/30 rounded-2xl p-6 sm:p-7 shadow-card-hover relative">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 Verified WCMAA India Branch

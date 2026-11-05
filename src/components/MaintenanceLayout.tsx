@@ -44,7 +44,7 @@ export default function MaintenanceLayout() {
 
       {/* Main Maintenance Card Container */}
       <main className="flex-1 flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 relative z-10">
-        <div className="max-w-2xl w-full mx-auto bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur-md text-center space-y-6">
+        <div className="max-w-2xl w-full mx-auto wsa-card rounded-3xl p-6 sm:p-10 text-center space-y-6">
           {/* Association Crest & Emblems */}
           <div className="flex items-center justify-center gap-3">
             <div className="relative w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full p-1.5 ring-4 ring-amber-500/50 shadow-xl mx-auto">

@@ -45,7 +45,7 @@ export default function AffiliationShowcase() {
 
         {/* 4 Core Pillars Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between hover:border-amber-500/40 transition-colors shadow-lg">
+          <div className="wsa-card p-6 flex flex-col justify-between hover:border-amber-500/40 hover:-translate-y-0.5">
             <div className="space-y-3">
               <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
                 <Award className="w-6 h-6" />
@@ -58,7 +58,7 @@ export default function AffiliationShowcase() {
             <span className="text-[11px] font-semibold text-amber-400 mt-4 block">✓ Verifiable Belt Credentials</span>
           </div>
 
-          <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between hover:border-blue-500/40 transition-colors shadow-lg">
+          <div className="wsa-card p-6 flex flex-col justify-between hover:border-blue-500/40 hover:-translate-y-0.5">
             <div className="space-y-3">
               <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
                 <BookOpen className="w-6 h-6" />
@@ -71,7 +71,7 @@ export default function AffiliationShowcase() {
             <span className="text-[11px] font-semibold text-blue-400 mt-4 block">✓ Standardized Course Manuals</span>
           </div>
 
-          <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between hover:border-emerald-500/40 transition-colors shadow-lg">
+          <div className="wsa-card p-6 flex flex-col justify-between hover:border-emerald-500/40 hover:-translate-y-0.5">
             <div className="space-y-3">
               <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
                 <Globe2 className="w-6 h-6" />
@@ -84,7 +84,7 @@ export default function AffiliationShowcase() {
             <span className="text-[11px] font-semibold text-emerald-400 mt-4 block">✓ Directory Listing & Recognition</span>
           </div>
 
-          <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between hover:border-purple-500/40 transition-colors shadow-lg">
+          <div className="wsa-card p-6 flex flex-col justify-between hover:border-purple-500/40 hover:-translate-y-0.5">
             <div className="space-y-3">
               <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
                 <Users2 className="w-6 h-6" />
@@ -99,7 +99,7 @@ export default function AffiliationShowcase() {
         </div>
 
         {/* Comparison: Commercial Franchise vs WCMAA India Association Model */}
-        <div className="bg-slate-900 rounded-2xl border border-slate-800 p-6 sm:p-8 shadow-2xl mb-16 overflow-hidden">
+        <div className="wsa-card p-6 sm:p-8 mb-16 overflow-hidden">
           <div className="max-w-2xl mb-6">
             <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
               Association Distinction

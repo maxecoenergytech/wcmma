@@ -120,7 +120,7 @@ export default function VerificationPortal() {
                 )}
 
                 {/* Professional Privacy-Conscious Result Card */}
-                <div className="bg-slate-900/95 border-2 border-emerald-500/60 rounded-2xl p-6 sm:p-8 shadow-2xl space-y-6">
+                <div className="bg-slate-900/95 border-2 border-emerald-500/60 rounded-2xl p-6 sm:p-8 shadow-card-hover space-y-6">
                   {/* Status Banner */}
                   <div className="flex items-center justify-between pb-4 border-b border-slate-800">
                     <div className="flex items-center gap-2.5">

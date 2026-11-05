@@ -99,7 +99,7 @@ export default function AboutSection() {
 
           {/* Right: Official Heritage Card */}
           <div className="lg:col-span-5">
-            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative space-y-6">
+            <div className="wsa-card p-6 sm:p-8 relative space-y-6">
               <div className="flex items-center gap-3 pb-4 border-b border-slate-800">
                 <img
                   src={getAssetPath("/assets/wcmaai_logo_sm.webp")}

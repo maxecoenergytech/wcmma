@@ -108,7 +108,7 @@ export default function AffiliationPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-800 space-y-3 hover:border-amber-500/40 transition-colors">
+            <div className="wsa-card p-6 space-y-3 hover:border-amber-500/40 hover:-translate-y-0.5">
               <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
                 <Award className="w-5 h-5" />
               </div>
@@ -118,7 +118,7 @@ export default function AffiliationPage() {
               </p>
             </div>
 
-            <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-800 space-y-3 hover:border-amber-500/40 transition-colors">
+            <div className="wsa-card p-6 space-y-3 hover:border-amber-500/40 hover:-translate-y-0.5">
               <div className="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
                 <BookOpen className="w-5 h-5" />
               </div>
@@ -128,7 +128,7 @@ export default function AffiliationPage() {
               </p>
             </div>
 
-            <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-800 space-y-3 hover:border-amber-500/40 transition-colors">
+            <div className="wsa-card p-6 space-y-3 hover:border-amber-500/40 hover:-translate-y-0.5">
               <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
                 <ShieldCheck className="w-5 h-5" />
               </div>
@@ -138,7 +138,7 @@ export default function AffiliationPage() {
               </p>
             </div>
 
-            <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-800 space-y-3 hover:border-amber-500/40 transition-colors">
+            <div className="wsa-card p-6 space-y-3 hover:border-amber-500/40 hover:-translate-y-0.5">
               <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
                 <MapPin className="w-5 h-5" />
               </div>
@@ -148,7 +148,7 @@ export default function AffiliationPage() {
               </p>
             </div>
 
-            <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-800 space-y-3 hover:border-amber-500/40 transition-colors">
+            <div className="wsa-card p-6 space-y-3 hover:border-amber-500/40 hover:-translate-y-0.5">
               <div className="w-10 h-10 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400">
                 <GraduationCap className="w-5 h-5" />
               </div>
@@ -158,7 +158,7 @@ export default function AffiliationPage() {
               </p>
             </div>
 
-            <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-800 space-y-3 hover:border-amber-500/40 transition-colors">
+            <div className="wsa-card p-6 space-y-3 hover:border-amber-500/40 hover:-translate-y-0.5">
               <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
                 <Briefcase className="w-5 h-5" />
               </div>
@@ -187,7 +187,7 @@ export default function AffiliationPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800 space-y-3">
+            <div className="wsa-card p-6 space-y-3">
               <div className="text-xs font-mono font-bold text-amber-400">MODULE 01</div>
               <h3 className="text-lg font-bold text-white">Empty-Hand Combat & Centerline Dynamics</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
@@ -195,7 +195,7 @@ export default function AffiliationPage() {
               </p>
             </div>
 
-            <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800 space-y-3">
+            <div className="wsa-card p-6 space-y-3">
               <div className="text-xs font-mono font-bold text-amber-400">MODULE 02</div>
               <h3 className="text-lg font-bold text-white">Muk Yan Jong (Wooden Dummy 116)</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
@@ -203,7 +203,7 @@ export default function AffiliationPage() {
               </p>
             </div>
 
-            <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800 space-y-3">
+            <div className="wsa-card p-6 space-y-3">
               <div className="text-xs font-mono font-bold text-amber-400">MODULE 03</div>
               <h3 className="text-lg font-bold text-white">Tactical Weapon & Blunt Impact Defense</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
@@ -211,7 +211,7 @@ export default function AffiliationPage() {
               </p>
             </div>
 
-            <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800 space-y-3">
+            <div className="wsa-card p-6 space-y-3">
               <div className="text-xs font-mono font-bold text-amber-400">MODULE 04</div>
               <h3 className="text-lg font-bold text-white">Anti-Grappling & Ground Recovery</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
@@ -219,7 +219,7 @@ export default function AffiliationPage() {
               </p>
             </div>
 
-            <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800 space-y-3">
+            <div className="wsa-card p-6 space-y-3">
               <div className="text-xs font-mono font-bold text-amber-400">MODULE 05</div>
               <h3 className="text-lg font-bold text-white">Traditional Qigong & Tendon Power</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
@@ -227,7 +227,7 @@ export default function AffiliationPage() {
               </p>
             </div>
 
-            <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800 space-y-3">
+            <div className="wsa-card p-6 space-y-3">
               <div className="text-xs font-mono font-bold text-amber-400">MODULE 06</div>
               <h3 className="text-lg font-bold text-white">Dojo Pedagogy & Class Architecture</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
@@ -241,7 +241,7 @@ export default function AffiliationPage() {
       {/* Instructor Eligibility Criteria */}
       <section className="py-20 bg-slate-950 border-b border-slate-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-slate-900 rounded-2xl border border-slate-800 p-8 sm:p-10 shadow-2xl">
+          <div className="wsa-card p-8 sm:p-10">
             <div className="max-w-2xl mb-8">
               <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
                 Prerequisites & Eligibility
@@ -314,7 +314,7 @@ export default function AffiliationPage() {
             </p>
           </div>
 
-          <div className="bg-slate-900 rounded-2xl border-2 border-amber-500/30 p-6 sm:p-10 shadow-2xl">
+          <div className="wsa-card border-2 border-amber-500/30 p-6 sm:p-10">
             {submitted ? (
               <div className="text-center py-10 space-y-4 animate-fadeIn">
                 <CheckCircle2 className="w-16 h-16 text-emerald-400 mx-auto" />
@@ -511,7 +511,7 @@ export default function AffiliationPage() {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-sm tracking-wide shadow-xl shadow-amber-500/20 transition-all flex items-center justify-center gap-2"
+                    className="w-full inline-flex items-center justify-center gap-2 py-4 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-sm shadow-btn transition-all hover:-translate-y-0.5"
                   >
                     <Send className="w-4 h-4" />
                     Submit Official Affiliation Application

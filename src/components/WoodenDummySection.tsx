@@ -44,7 +44,7 @@ export default function WoodenDummySection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left: Traditional Visual Dummy Representation */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-sm bg-gradient-to-b from-[#1c0f0a] via-[#140a07] to-slate-950 border-2 border-amber-600/30 rounded-3xl p-6 sm:p-8 shadow-2xl text-center gold-border-glow">
+            <div className="relative w-full max-w-sm bg-gradient-to-b from-[#1c0f0a] via-[#140a07] to-slate-950 border-2 border-amber-600/30 rounded-3xl p-6 sm:p-8 shadow-card-hover text-center gold-border-glow">
               {/* Emblem Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold mb-6">
                 <Sparkles className="w-3.5 h-3.5 text-amber-400" />

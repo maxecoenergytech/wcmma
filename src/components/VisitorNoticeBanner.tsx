@@ -118,7 +118,7 @@ export default function VisitorNoticeBanner() {
           : "opacity-0 translate-y-6 pointer-events-none"
       } bottom-20 sm:bottom-6 right-3 sm:right-6 left-3 sm:left-auto sm:max-w-md w-auto`}
     >
-      <div className="relative rounded-2xl bg-slate-900/95 backdrop-blur-md border border-slate-700/80 shadow-2xl overflow-hidden text-slate-100">
+      <div className="relative rounded-2xl bg-slate-900/95 backdrop-blur-md border border-slate-700/80 shadow-nav overflow-hidden text-slate-100">
         {/* Indian National Tricolor Heritage Ribbon */}
         <div
           className="h-[2.5px] w-full bg-gradient-to-r from-[#FF671F] via-[#FFFFFF] to-[#046A38]"
