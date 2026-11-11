@@ -1,0 +1,98 @@
+[
+  {
+    "id": "patron-adv-idrish-chaudhary",
+    "name": "Adv. Idrish Chaudhary",
+    "role": "Legal Advisor of WCMAA. INDIA",
+    "designation": "Legal Advisor",
+    "department": "Legal Affairs & Constitutional Governance",
+    "districtState": "Assam / National Directorate",
+    "category": "Advisory & Legal",
+    "image": "/assets/patron_members/adv_idrish_chaudhary.webp",
+    "description": "Providing legal counsel, constitutional governance, statutory society compliance, and institutional intellectual property oversight for WCMAA India.",
+    "badges": ["Legal Advisor", "National Directorate", "Statutory Compliance"]
+  },
+  {
+    "id": "patron-jiten-das",
+    "name": "Jiten Das",
+    "role": "Joint Sec WCMAA",
+    "designation": "Joint Secretary",
+    "department": "National Executive Secretariat",
+    "districtState": "Assam / National Secretariat",
+    "category": "National Executive",
+    "image": "/assets/patron_members/jiten_das_hq.webp",
+    "description": "Joint Secretary overseeing national executive affairs, traditional weapons & forms dissemination, technical camps, and association operations.",
+    "badges": ["Joint Secretary", "National Executive", "Weapons & Forms"]
+  },
+  {
+    "id": "patron-utkal-hazowari",
+    "name": "Utkal Hazowari",
+    "role": "Senior Instructor WCMAA",
+    "designation": "Senior Instructor",
+    "department": "Technical Instruction & Training Grounds",
+    "districtState": "Guwahati, Assam",
+    "category": "Senior Instructors",
+    "image": "/assets/patron_members/utkal_hazowari_hq.webp",
+    "description": "Senior Instructor directing regular student curriculum, stance conditioning, and foundational Wing Chun instruction at the training ground.",
+    "badges": ["Senior Instructor", "National Training Ground", "Technical Instruction"]
+  },
+  {
+    "id": "patron-joysing-deori",
+    "name": "Joysing Deori",
+    "role": "Instructor Lakhimpur",
+    "designation": "Instructor - Lakhimpur Chapter",
+    "department": "District Training & Branch Development",
+    "districtState": "Lakhimpur District, Assam",
+    "category": "District Leadership",
+    "image": "/assets/patron_members/joysing_deori.webp",
+    "description": "Chief Instructor directing traditional forms, balance mastery, and student martial development across Lakhimpur District.",
+    "badges": ["Instructor", "Lakhimpur District", "Forms & Applications"]
+  },
+  {
+    "id": "patron-sifu-someswar-basumatary",
+    "name": "Sifu Someswar Basumatary",
+    "role": "President of Wing Chun Kung Fu Martial arts Association of Udalguri District, BTC, Assam",
+    "designation": "District President",
+    "department": "Udalguri District Directorate (BTC)",
+    "districtState": "Udalguri District, BTC, Assam",
+    "category": "District Leadership",
+    "image": "/assets/patron_members/sifu_someswar_basumatary.webp",
+    "description": "President leading the Wing Chun Kung Fu Martial Arts Association across Udalguri District, Bodoland Territorial Region (BTC), Assam.",
+    "badges": ["District President", "Udalguri BTC", "Traditional Kung Fu"]
+  },
+  {
+    "id": "patron-bijoy-boro",
+    "name": "Bijoy Boro",
+    "role": "Secretary of Wing Chun Kung Fu Marial Arts Association of Udalguri District, BTC, Assam",
+    "designation": "District Secretary",
+    "department": "Udalguri District Directorate (BTC)",
+    "districtState": "Udalguri District, BTC, Assam",
+    "category": "District Leadership",
+    "image": "/assets/patron_members/bijoy_boro.webp",
+    "description": "Secretary coordinating dojo operations, student grading assemblies, and regional tournaments in Udalguri District, BTC.",
+    "badges": ["District Secretary", "Udalguri BTC", "Martial Operations"]
+  },
+  {
+    "id": "patron-sifu-bonjar-daimari",
+    "name": "Sifu Bonjar Daimari",
+    "role": "Chief Adviser of Wing Chun Kung Fu Martial Arts Association of Udalguri District, BTC, Assam",
+    "designation": "Chief Adviser",
+    "department": "Udalguri District Directorate (BTC)",
+    "districtState": "Udalguri District, BTC, Assam",
+    "category": "Advisory & Legal",
+    "image": "/assets/patron_members/sifu_bonjar_daimari.webp",
+    "description": "Chief Adviser providing strategic leadership, ethical guidance, and technical advisory to the Udalguri District martial community.",
+    "badges": ["Chief Adviser", "Udalguri BTC", "Senior Council"]
+  },
+  {
+    "id": "patron-nipen-boro",
+    "name": "Nipen Boro",
+    "role": "Joint Sec India",
+    "designation": "Joint Secretary (National)",
+    "department": "National Executive Secretariat",
+    "districtState": "All-India Secretariat",
+    "category": "National Executive",
+    "image": "/assets/patron_members/nipen_boro.webp",
+    "description": "Joint Secretary directing traditional Wooden Dummy (Muk Yan Jong) techniques, national events, and inter-state association expansion.",
+    "badges": ["Joint Secretary India", "Wooden Dummy Specialist", "National Executive"]
+  }
+]

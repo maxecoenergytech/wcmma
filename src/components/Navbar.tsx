@@ -93,6 +93,9 @@ export default function Navbar() {
             <a href={getRoutePath("#hall-of-fame")} className="hover:text-amber-400 transition-colors text-amber-300">
               HALL OF FAME
             </a>
+            <a href={getRoutePath("#patron-members")} className="hover:text-amber-400 transition-colors text-amber-300">
+              PATRONS
+            </a>
             <a href={getRoutePath("/affiliation")} className="hover:text-amber-400 transition-colors text-amber-300">
               AFFILIATIONS
             </a>
@@ -219,6 +222,13 @@ export default function Navbar() {
             className="block px-3 py-2 rounded-md text-sm font-bold text-amber-300 hover:bg-slate-800"
           >
             HALL OF FAME (BLACK BELTS)
+          </a>
+          <a
+            href={getRoutePath("#patron-members")}
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-sm font-bold text-amber-300 hover:bg-slate-800"
+          >
+            PATRON MEMBERS & ADVISORS
           </a>
           <a
             href={getRoutePath("/affiliation")}

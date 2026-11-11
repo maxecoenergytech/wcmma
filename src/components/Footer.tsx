@@ -128,6 +128,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href={getRoutePath("#patron-members")} className="hover:text-amber-400 transition-colors text-amber-300 font-semibold">
+                  Patron Members & Advisors
+                </a>
+              </li>
+              <li>
                 <a href={getRoutePath("/locations/assam/")} className="hover:text-amber-400 transition-colors text-amber-300">
                   Assam & Northeast Hub
                 </a>

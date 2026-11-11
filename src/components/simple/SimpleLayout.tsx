@@ -9,6 +9,7 @@ import WhyTrainSection from "@/components/WhyTrainSection";
 import BranchLocator from "@/components/BranchLocator";
 import Leadership from "@/components/Leadership";
 import HallOfFame from "@/components/HallOfFame";
+import PatronMembersSection from "@/components/PatronMembersSection";
 import StudentsParentsSection from "@/components/StudentsParentsSection";
 import AffiliationShowcase from "@/components/AffiliationShowcase";
 import VerificationPortal from "@/components/VerificationPortal";
@@ -51,6 +52,9 @@ export default function SimpleLayout() {
 
       {/* 9B. Hall of Fame - Certified Black Belt Holders & State Leaders */}
       <HallOfFame />
+
+      {/* 9C. Patron Members & Executive Advisors */}
+      <PatronMembersSection />
 
       {/* 10. Students & Parents (Who Can Train) */}
       <StudentsParentsSection />
